@@ -1,0 +1,748 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'HelveticaNeueLTStdThCn';
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdThCn.eot?ln=css");
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdThCn.eot?ln=css?#iefix")
+		format('embedded-opentype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdThCn.woff2?ln=css") format('woff2'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdThCn.woff?ln=css") format('woff'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdThCn.ttf?ln=css") format('truetype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdThCn.svg?ln=css#HelveticaNeueLTStdThCn") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStdCn';
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdCn.eot?ln=css");
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdCn.eot?ln=css?#iefix")
+		format('embedded-opentype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdCn.woff2?ln=css") format('woff2'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdCn.woff?ln=css") format('woff'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdCn.ttf?ln=css") format('truetype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdCn.svg?ln=css#HelveticaNeueLTStdCn")
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStdMdCn';
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdMdCn.eot?ln=css");
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdMdCn.eot?ln=css?#iefix#")
+		format('embedded-opentype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdMdCn.woff2?ln=css") format('woff2'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdMdCn.woff?ln=css") format('woff'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdMdCn.ttf?ln=css") format('truetype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdMdCn.svg?ln=css#HelveticaNeueLTStdMdCn")
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStdBdCn';
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdBdCn.eot?ln=css");
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdBdCn.eot?ln=css?#iefix")
+		format('embedded-opentype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdBdCn.woff2?ln=css") format('woff2'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdBdCn.woff?ln=css") format('woff'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdBdCn.ttf?ln=css") format('truetype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdBdCn.svg?ln=css#HelveticaNeueLTStdBdCn")
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStdHvCn';
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdHvCn.eot?ln=css");
+	src: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdHvCn.eot?ln=css?#iefix")
+		format('embedded-opentype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdHvCn.woff2?ln=css") format('woff2'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdHvCn.woff?ln=css") format('woff'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdHvCn.ttf?ln=css") format('truetype'),
+		url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fonts/HelveticaNeueLTStdHvCn.svg?ln=css#HelveticaNeueLTStdHvCn")
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "HelveticaNeueLTStdThCn", serif;
+    font-size: 18px;
+    margin: 0;
+    overflow: visible !important;
+    color: #FFFFFF !important;
+}
+
+a:link {
+    color: #CC3333;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #CC3333;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #CC3333;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.textosExplicativos a:link {
+    color: #CC3333;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.textosExplicativos a:hover {
+    color: #CC3333;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.textosExplicativos a:visited {
+    color: #CC3333;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.contenedorSeleccion a:link {
+    color: #999999;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.contenedorSeleccion a:hover {
+    color: #999999;
+    font-size: 11px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.contenedorSeleccion a:visited {
+    color: #999999;
+    font-size: 11px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.contenedorTabla a:link {
+    color: #999999;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.contenedorTabla a:hover {
+    color: #999999;
+    font-size: 11px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.contenedorTabla a:visited {
+    color: #999999;
+    font-size: 11px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/*Caja Contenedora para objetos comunes*/
+.contenedorArticulos {
+    height: 600px;
+    margin: 0 0 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 70px;
+}
+
+.contenedorJuridico {
+    height: 750px;
+    margin: 0 0 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 70px;
+}
+
+.contenedorInterno {
+    height: auto;
+    margin: 0 0 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 28px;
+    padding-top: 28px;
+}
+
+.contenedorInternoComprobante {
+    height: auto;
+    margin: 0 0 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 38px;
+    padding-top: 38px;
+}
+
+/*Caja Contenedora para tablas*/
+.contenedorTabla{
+	text-align: center;
+    height: 450px;
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 80px;
+}
+
+.bodyPersonas {
+	background-image: url("./background.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+}
+
+.bodyJuridico {
+	background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/background-empresas.jpg?ln=images");
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+}
+
+.bodyGenerico {
+	background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/background-generico.jpg?ln=img");
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+}
+
+/*Caja Contenedora para selección de tipo de cliente*/
+.contenedorSeleccion {
+    float: left;
+    height: auto;
+    margin: 0 0 15px;
+    position: relative;
+}
+
+/*Botón sin imagen de fondo*/
+.boton {
+	background-color: #F10707;
+    background: -webkit-linear-gradient(#F10707, #9A0201);
+	background: -moz-linear-gradient(#F10707, #9A0201);
+	background: -o-linear-gradient(#F10707, #9A0201);
+	background: -ms-linear-gradient(#F10707, #9A0201);
+	background: linear-gradient(#F10707, #9A0201);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#F10707', endColorstr='#9A0201')";
+	border-color:#BF1311;
+	border-width:1px 1px 1px 1px;
+    color: #FFFFFF;
+    font-size: 12px !important;
+    font-weight: bold;
+    padding: 6px 6.5px;
+    text-transform: uppercase;
+    font-stretch: condensed;
+    height: 33px;
+    width: 85px;
+}
+
+/*Botón con imagen*/
+.botonContinuar {
+    background: white;
+    background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/btnContinuar.png?ln=img");
+    height: 33px; 
+    width: 82px;
+    border-width: 0px;
+    margin: 0px; 
+}
+
+/*Botón con imagen*/
+.botonIngresar{
+    background: white;
+    background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/btnIngresar.jpg?ln=img");
+    height: 33px; 
+    width: 79px;
+    border-width: 0px;
+    margin: 0px; 
+}
+
+input[type=submit][readonly].boton{
+    overflow: visible;
+}
+
+input[type=submit][readonly].boton:active, 
+input[type=submit][readonly].boton-active{ 
+    text-decoration: none;
+    padding-top: 5px !important;
+    padding-left: 5.5px !important;
+    padding-right: 7.5px !important;
+    padding-bottom: 7px !important;
+}
+
+/*Botón con imagen de fondo*/
+.botonBackground {
+    background-color: #CC0000;
+    background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fondo_forms.png?ln=img");
+    background-position: right center;
+    color: #FFFFFF !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    border-color:#CC0000;
+	border-width:1px 1px 1px 1px;
+}
+
+/*Caja para ingreso de datos de la tabla*/
+.TableInputbox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid rgb(221,0,0);
+    font-size: 12px;
+    /*line-height: 32px;*/
+    position: relative;
+    width: 290px;
+}
+
+/*Estilo de fecha*/
+.text_horaFecha {
+    color: #E17272 !important;
+    font-size: 11px !important;
+    text-align: right;
+}
+
+/*Texto en viñetas*/
+
+.textoNormalVinetaDavivienda {
+    margin: 0;
+    padding-left: 0px;
+}
+
+.textoNormalVinetaDavivienda li {
+    background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/flecha_click_15x15.png?ln=img");
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+    list-style-type: none;
+    padding-left: 25px;
+    padding-top: 2px;
+    white-space: nowrap;
+}
+
+/*Viñeta*/
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/*Texto rojo grande informativo*/
+.textoRojoGrande{
+    color: #9b0001;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*Texto rojo grande de advertencia*/
+.textoRojoGrandeBoldVerdana {
+    color: #CC3333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*Texto de advertencia*/
+.textoWarning {
+    text-align: center;
+}
+
+/*Div de la Tabla*/
+.tableBase {
+    text-align: center;
+    padding:0px;
+		
+/*Declaración de la Tabla*/
+}.tableBase table{
+    border-collapse: collapse;
+    border-spacing: 0;
+	height:4%;
+	margin:0 auto;
+    padding:0px;
+    border:1px solid #b2b2b2;
+}
+
+.tableEven{
+	background-color:rgb(242, 242, 242);
+	vertical-align:middle;
+	border:1px solid #b2b2b2;
+	border-width:1px 1px 1px 1px;
+	text-align:left;
+	padding:5px 1px;
+	font-size:11px;
+	font-weight:normal;
+	color:#000000;
+}
+
+.tableEvenDos{
+	background-color:rgb(242, 242, 242);
+	vertical-align:middle;
+	border:1px solid #b2b2b2;
+	border-width:1px 1px 1px 1px;
+	text-align:center;
+	padding:5px 1px;
+	font-size:11px;
+	font-weight:normal;
+	color:#000000;
+	line-height: 12px;
+}
+
+.tableOdd{
+	background-color:#ffffff;
+	vertical-align:middle;
+	border:1px solid #b2b2b2;
+	border-width:1px 1px 1px 1px;
+	text-align:left;
+	padding:5px 1px;
+	font-size:11px;
+	font-weight:normal;
+	color:#000000;
+	line-height: 12px;
+}
+
+
+/*Definición filas de la tabla*/
+.tableBase tr:nth-child(even){ background-color:rgb(242, 242, 242); }
+.tableBase tr:nth-child(odd){ background-color:#ffffff; }.tableBase td{
+	vertical-align:middle;
+	border:1px solid #b2b2b2;
+	border-width:1px 1px 1px 1px;
+	padding:5px 1px;
+	font-size:11px;
+	font-weight:normal;
+	color:#000000;
+	line-height: 12px;
+}
+
+/*Definicion del Header(primera fila) de la tabla*/
+/*.tableBase tr:first-child td{
+	background-color: #F10707;
+	background: -webkit-linear-gradient(#9A0201, #F10707);
+	background: -moz-linear-gradient(#9A0201, #F10707);
+	background: -o-linear-gradient(#9A0201, #F10707);
+	background: -ms-linear-gradient(#9A0201, #F10707);
+	background: linear-gradient(#9A0201, #F10707);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#9A0201', endColorstr='#F10707')";
+	text-align:center;
+	border:1px solid rgb(204,204,204);
+	border-width:1px 1px 1px 1px;
+	font-size:10px;
+	font-weight:bold;
+	color:#ffffff;
+	line-height: 12px;
+}*/
+
+.centrar {
+	margin: 0 auto !important;
+}
+
+.textoNegroPequenoBold {
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.textoRojoMedianoBold {
+    color: #CC3333;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.wpsPortletBody {
+    margin: 0 !Important;
+}
+
+.titularIngreso h2 {
+    margin: 0 !Important;
+    padding: 0 !Important;
+}
+.titularIngreso p {
+    margin: 0 !Important;
+    padding: 0 0 15px !Important;
+}
+
+.clear {
+    clear: both !Important;
+}
+
+.camposLeft {
+    float: left !Important;
+    width: 430px !Important;
+}
+
+.camposRight {
+    float: right !Important;
+    width: 300px !Important;
+}
+
+.textosExplicativos {
+    margin: 10px 0 !Important;
+}
+
+.wrapperTransaccionales {
+    width: 775px !Important;
+}
+
+.oculto{
+	max-height: 0px;
+	max-width: 0px;
+	display: none;
+}
+
+.jconfirm_wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#102000000, endColorstr=#102000000);
+}
+
+.jconfirm_inner{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .2em;
+	outline: 0;
+	background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fondo_popup.png?ln=img");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	height: auto !important;
+    min-height: 147px !important;
+    width: auto;
+    
+}
+.jconfirm_message{
+	font-weight: bold;
+    font-size: 11px;
+    font-weight: bold;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.jconfirm_title{
+	color: #FFF;
+	background-color:rgb(204, 0, 0);
+	background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/fondo_cabezote.png?ln=img");
+	height: 15%;
+	font-weight: bold;
+	font-size: 11px !important;
+	padding: 0.4em 1em !important;
+	border: 1px solid #E3A1A1;
+}
+
+.jconfirm_close{
+	color: #FFF;
+	font-weight: bold;
+	font-size: 11px !important;
+}
+
+.jconfirm_buttons{
+	text-align: center;
+}
+
+.jconfirm_buttons a {
+	margin: 11px;
+	padding: 5px 10px;
+}
+
+.camposOutputLeft {
+    float: left !Important;
+}
+
+.camposInputRight {
+    float: right !Important;
+}
+
+.camposCentrados {
+    text-align: center;
+}
+
+.width290 {
+    width: 290px;
+}
+
+.width100{
+	width: 100%;
+}
+
+.campoDerecha{
+	width: 100%;
+	text-align: right;
+}
+
+.textoConfirmacionVirtual{
+	width:410px; 
+	text-align: center; 
+	font-size: 12px;
+}
+
+/*Se usa para identificar boton con jquery*/
+.idClassBtnRedirigirError{
+}
+
+.letraError {
+	list-style: none;
+	padding-right: 36px;
+	font-size: 16px !important;
+	color: #000000;
+    font-family: "HelveticaNeueLTStdBdCn", serif;
+}
+
+.botonRojo {
+    background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/btn_rojo_bg.png?ln=images") no-repeat;
+	cursor: pointer;
+	width: 110px;
+	height: 35px;
+	border: none;
+	color: white;
+	margin-top: 16px;
+	font-size: 14px;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	outline: none;
+}
+
+.contenedorError{
+	display: table;
+	table-layout: fixed;
+	margin:  0 auto;
+	padding: 23px;
+	background: #F2F2F2;
+	border-radius: 25px;
+	margin-top: 30px;
+}
+
+.colIzq {
+	text-align: center;
+}
+
+.colCen {
+	padding-top: 18px;
+	text-align: center;
+	color: black;
+}
+
+.colDer {
+	padding-top: 10px;
+	text-align: center;
+}
+
+@media screen and (min-width: 993px) {
+	.contenedorError{
+		display: table;
+		table-layout: fixed;
+		margin:  0 auto;
+		padding: 23px;
+		background: #F2F2F2;
+		border-radius: 25px;
+		margin-top: 30px;
+	}
+	
+	.colIzq {
+		display: table-cell;
+		float: left;
+	}
+	
+	.colCen {
+		display: table-cell;
+		float: left;
+		padding-top: 18px;
+		padding-left: 25px;
+		text-align: left;
+		color: black;
+	}
+	
+	.colDer {
+		display: table-cell;
+		float: left;
+		padding-left: 20px;
+		padding-top: 82px;
+	}
+}
+
+.instructionsInfo{
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+    color: black !important;
+    font-size: 16px !important;
+}
+
+.instructionsInput{
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+    color: #7A7B7F !important;
+    font-size: 18px !important;
+}
+
+.importantInstructionsInfo{
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+    color: black !important;
+    font-size: 16px !important;
+}
+
+.importantInstructionsInput{
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+    color: #7A7B7F !important;
+    font-size: 18px !important;
+}
+
+.instructionsInputJuridico{
+	font-size: 14px;
+	color: #000000 !important;
+   	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+}
+
+.importantInstructionsInputJuridico{
+	font-size: 14px;
+	color: #000000 !important;
+   	font-family: "HelveticaNeueLTStdCn", serif !important;
+}
+
+.botonGrisPDF,
+.botonGrisPDF:visited,
+.botonGrisPDF:link,
+.botonGrisPDF:hover {
+	background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/btn_gris_bg.png?ln=images") no-repeat;
+    background-size: 118px 36px;
+    cursor: pointer;
+    color: white;
+    margin-top: 16px;
+    font-size: 14px;
+    font-family: "HelveticaNeueLTStdBdCn", serif !important;
+    text-decoration: none !important;
+    padding: 10px 25px;
+}
+

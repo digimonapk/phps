@@ -1,0 +1,50 @@
+/** design mode styles **/
+html.bd-designMode-true .user-dragging-help #main{
+  padding-top: 100px;
+}
+a.skiplinks {
+  position:absolute;
+  left: -1000px;
+  top: -1000px;
+  width: 1px;
+  height: 1px;
+  text-align: left;
+  overflow: hidden;
+}
+
+a.skiplinks:focus, a.skiplinks:active, a.skiplinks:hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+.bp-container,
+.bp-widget {
+    clear: both;
+    width: 100%;
+}
+
+.sticky-top-outline {
+  margin-top: 50px;
+}
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 991px) {
+  .rb-row-content {
+    position: relative;
+  }
+
+  .rb-sidebar {
+    position: absolute;
+    top: 0;
+    width: 41.6%;
+    left: -41.6%;
+  }
+
+  .rb-row-content-left.active {
+    left: 41.6%;
+  }
+}

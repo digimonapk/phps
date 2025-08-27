@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="57" viewBox="0 0 53 57">
+  <defs>
+    <clipPath id="clip-_20_BCS_Pagina_Web_Boton_Accesibilidad">
+      <rect width="53" height="57"/>
+    </clipPath>
+  </defs>
+  <g id="_20_BCS_Pagina_Web_Boton_Accesibilidad" data-name="20_BCS_Pagina_Web_Boton_Accesibilidad" clip-path="url(#clip-_20_BCS_Pagina_Web_Boton_Accesibilidad)">
+    <g id="_20_BCS_Pagina_Web_Boton_Accesabilidad" data-name="20 BCS_Pagina_Web_Boton_Accesabilidad" transform="translate(0 -1.48)">
+      <circle id="Elipse_141" data-name="Elipse 141" cx="25.17" cy="25.17" r="25.17" transform="translate(2.66 7.18)" fill="#fea9be" opacity="0.7"/>
+      <circle id="Elipse_142" data-name="Elipse 142" cx="25.17" cy="25.17" r="25.17" transform="translate(0 1.48)" fill="#d50000"/>
+      <g id="Grupo_381" data-name="Grupo 381">
+        <path id="Trazado_454" data-name="Trazado 454" d="M11.04,22.7l3.1,8.93H12.21l-.64-1.93H8.04l-.67,1.93H5.55L8.77,22.7Zm.05,5.55-1.23-3.8-1.32,3.8Z" fill="#fff"/>
+        <path id="Trazado_455" data-name="Trazado 455" d="M23.15,19.14l4.34,12.49H24.8l-.9-2.69H18.96l-.93,2.69H15.47l4.51-12.49Zm.07,7.77-1.73-5.32-1.85,5.32Z" fill="#fff"/>
+        <path id="Trazado_456" data-name="Trazado 456" d="M38.7,15.3l5.67,16.33H40.85l-1.17-3.52H33.22L32,31.62H28.66l5.89-16.33H38.7Zm.09,10.16L36.53,18.5l-2.42,6.96Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

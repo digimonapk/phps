@@ -1,0 +1,21 @@
+* {
+	font-family: Arial !important;
+}
+
+.drag-handle{ /*Overwrite default drag handle bar background color with below*/
+background-color: #03277C;
+}
+
+#interVeil{ /*CSS for veil that covers entire page while modal window is visible*/
+position: absolute;
+/* background: black url(blackdot.gif); */
+width: 10px;
+left: 0;
+top: 0px !important;
+z-index: 5;
+visibility: hidden;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+filter: alpha(opacity=50);
+opacity: 0.8;
+background-color: #000000;
+}

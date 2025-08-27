@@ -1,0 +1,68 @@
+* {
+	font-family: Arial !important;
+}
+
+.dhtmlwindow{
+position: absolute;
+visibility: hidden;
+border:0px;
+width: 500px !important;
+top: 118px !important;
+}
+
+.drag-handle{ /*CSS for Drag Handle*/
+padding: 0px;
+text-indent: 3px;
+font: bold 14px Arial;
+cursor: move;
+overflow: hidden;
+width: auto;
+}
+
+.drag-handle .drag-controls{ /*CSS for controls (min, close etc) within Drag Handle*/
+position: absolute;
+right: 1px;
+top: 2px;
+/*cursor: hand;*/
+cursor: pointer;
+border:0px;
+}
+
+* html .drag-handle{ /*IE6 and below CSS hack. Width must be set to 100% in order for opaque title bar to render*/
+width: 100%;
+}
+
+
+.drag-contentarea{ /*CSS for Content Display Area div*/
+	height: 370px !important;
+	padding: 0px;
+	overflow: auto;
+	border:0px;
+}
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	.drag-contentarea{ /*CSS for Content Display Area div*/
+		height: 100% !important;
+	}
+
+	.dhtmlwindow{
+		left: 0px !important;
+	}
+}
+
+.drag-statusarea{ /*CSS for Status Bar div (includes resizearea)*/
+background-color: #F8F8F8;
+height: 13px; /*height of resize image*/
+border: 0px;
+}
+
+
+.drag-resizearea{ /*CSS for Resize Area itself*/
+float: right;
+width: 13px; /*width of resize image*/
+height: 13px; /*height of resize image*/
+cursor: nw-resize;
+font-size: 0;
+border:0px;
+}

@@ -1,0 +1,196 @@
+.bbva-foundations-spinner {
+    height: 100%
+}
+
+figure.spinner {
+    margin: auto;
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+  }
+  
+  svg {
+    display: block;
+  }
+  
+  /* Rotating wrapper */
+  .wrap {
+    transform-origin: 20rem 20rem;
+  }
+  
+  /* Background ellipse */
+  .bg {
+    fill: #004481;
+  }
+  
+  /* Outline */
+  .outline {
+    fill: none;
+    opacity: .16;
+    stroke:  #f2f2f2;
+    stroke-width: 2px;
+    transform: translate(.21875rem, .21875rem);
+  }
+  
+  /* Gradient */
+  .gradient-path {
+    opacity: 1;
+    fill-opacity: .6;
+    stroke-opacity: 1;
+    transform: scale(1, .7);
+  }
+  
+  .gr-stop-color {
+    stop-color: #2DCCCD;
+  }
+  
+  .gr-stop-bg-color {
+    stop-color: #004481;
+  }
+  
+  /* White bright */
+  .bright {
+    fill: #fff;
+    stroke: none;
+    mix-blend-mode: normal;
+    transform: translate(12.5rem, 12.5rem) rotate(180deg);
+  }
+  
+  .bright-mask {
+    mask-type: luminance;
+  }
+  
+  .bright-mask-path {
+    fill: #4afcfd;
+    stroke-linecap: square;
+    stroke: none;
+    transform: translate(-10.40625rem, 6.53125rem);
+    mix-blend-mode: normal;
+  }
+  
+  /* Outline shine */
+  .shine {
+    fill: none;
+    opacity: .8;
+    stroke-width: 2px;
+    transform: translate(.21875rem, .21875rem);
+  }
+  
+  .shine-stop-color {
+    stop-color: #2DCCCD;
+  }
+  
+  /* Animations */
+  .anim {
+    animation-duration: 1.6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  
+  :host([paused]) .anim {
+    animation-play-state: paused;
+  }
+  
+  .rotation-anim {
+    animation-name: rotation;
+  }
+  
+  .gradient-anim {
+    animation-name: gradientPulse;
+  }
+  
+  .gradient-path-anim {
+    animation-name: gradientDisplacement, gradientFillOpacity;
+  }
+  
+  .gradient-path-offset-anim {
+    animation-name: gradientFillOffset;
+  }
+  
+  .bright-anim {
+    animation-name: brightOpacity;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+      animation-timing-function: cubic-bezier(0.75124, 0.00386, 0.25186, 1.00696);
+    }
+    100% {
+      transform: rotate(359.99457deg);
+    }
+  }
+  
+  @keyframes gradientPulse {
+    0% {
+      transform: scale(1, .7);
+      animation-timing-function: cubic-bezier(0.68442, 0, 0.58, 1);
+    }
+    50% {
+      transform: scale(1.4, .8);
+      animation-timing-function: cubic-bezier(0.42, 0, 0.30322, 1);
+    }
+    100% {
+      transform: scale(1, .7);
+      animation-timing-function: cubic-bezier(0.68442, 0, 0.58, 1);
+    }
+  }
+  
+  @keyframes gradientDisplacement {
+    0% {
+      transform: translate(0, 0);
+      animation-timing-function: cubic-bezier(0.42, 0, 0.25, 1);
+    }
+    50% {
+      transform: translate(-3.75rem, 0);
+      animation-timing-function: cubic-bezier(0.74752, 0, 0.58, 1);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes gradientFillOpacity {
+    0% {
+      fill-opacity: .6;
+      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    }
+    50% {
+      fill-opacity: .8;
+      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    }
+    100% {
+      fill-opacity: .6;
+    }
+  }
+  
+  @keyframes gradientFillOffset {
+    0% {
+      offset: .143991;
+      animation-timing-function: steps(1);
+    }
+    50% {
+      offset: .133991;
+      animation-timing-function: steps(1);
+    }
+    100% {
+      offset: .153991;
+      animation-timing-function: steps(1);
+    }
+  }
+  
+  @keyframes brightOpacity {
+    0% {
+      opacity: .2;
+      animation-timing-function: cubic-bezier(0.87624, 0, 0.62376, 1);
+    }
+    50% {
+      opacity: .9;
+      animation-timing-function: cubic-bezier(0.37376, 0, 0.12499, 1);
+    }
+    100% {
+      opacity: .2;
+      animation-timing-function: cubic-bezier(0.62005, 0, 0.38614, 1);
+    }
+  }

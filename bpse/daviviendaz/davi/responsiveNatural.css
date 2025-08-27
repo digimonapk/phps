@@ -1,0 +1,1532 @@
+/*Estilos persona natural*/
+
+
+p {
+	margin: 0;
+}
+
+h1 {
+	font-family: "HelveticaNeueLTStdThCn", serif !important;
+	color: #FFFFFF !important;
+	font-size: 28px !important;
+	font-weight: normal !important;
+	margin: 0px;
+}
+
+h2 {
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	color: #FFFFFF !important;
+	font-size: 22px !important;
+	font-weight: normal !important;
+	margin: 0px;
+}
+
+h3 {
+	color: #9A0001 !important;
+	font-size: 18px !important;
+	font-weight: bold !important;
+}
+
+hr {
+	display: block;
+	border: 1px solid #DDDDDD;
+}
+
+div.natural {
+	width: 95px;
+	height: 95px;
+	display: block;
+	color: white;
+	background-color: rgba(0,0,0,.6);
+	border-radius: 10px;
+	margin-right: 8px;
+}
+
+div.juridico {
+	width: 95px;
+	height: 95px;
+	display: block;
+	color: white;
+	background-color: rgba(0,0,0,.6);
+	border-radius: 10px;
+	margin-left: 8px;
+}
+
+div.natural:hover,
+div.natural:focus {
+	width: 95px;
+	height: 95px;
+	display: block;
+	color: red;
+	background-color: white;
+	border-radius: 10px;
+	margin-right: 8px;
+}
+
+div.juridico:hover,
+div.juridico:focus {
+	width: 95px;
+	height: 95px;
+	display: block;
+	color: red;
+	background-color: white;
+	border-radius: 10px;
+	margin-left: 8px;
+}
+
+i.iconoNatural {
+	display: block;
+	margin: 0 auto 5px;
+	background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/persona_natural_inactive.png?ln=images") no-repeat top left;
+}
+
+i.iconoJuridico {
+	display: block;
+	margin: 0 auto 5px;
+	background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/empresa_inactive.png?ln=images") no-repeat top left;
+}
+
+div.natural:hover i.iconoNatural,
+div.natural:focus i.iconoNatural {
+	display: block;
+	margin: 0 auto 5px;
+	background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/persona_natural_active.png?ln=images") no-repeat top left;
+}
+
+div.juridico:hover i.iconoJuridico,
+div.juridico:focus i.iconoJuridico {
+	display: block;
+	margin: 0 auto 5px;
+	background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/empresa_active.png?ln=images") no-repeat top left;
+}
+
+i.iconoNatural.ico-app {
+	width: 35px;
+	height: 50px;
+	background-position: 0px 16px;
+}
+
+i.iconoJuridico.ico-app {
+	width: 38px;
+	height: 54px;
+	background-position: 0px 17px;
+}
+
+div.natural:hover i.iconoNatural.ico-app,
+div.natural:focus i.iconoNatural.ico-app {
+	width: 35px;
+	height: 50px;
+	background-position: 0px 16px;
+}
+
+div.juridico:hover i.iconoJuridico.ico-app,
+div.juridico:focus i.iconoJuridico.ico-app {
+	width: 38px;
+	height: 54px;
+	background-position: 0px 17px;
+}
+
+/*Header y Footer*/
+
+header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: block;
+	position: fixed;
+	z-index: 100;
+}
+
+header div.cabecera {
+	width: 100%;
+	font-family: "HelveticaNeueLTStdCn", serif;
+}
+
+header div.cabecera div.wrapLeft {
+	width: 100%;
+	float: left;
+	padding-top: 3px;
+	text-align: center;
+	padding-bottom: 11px;
+	display: inline-block;
+	background-color: #ed1c27;
+}
+
+header div.cabecera div.wrapRight {
+	font-size: 14px;
+	text-align: center;
+	background-color: #FFFFFF;
+	color: #7A7B7F !important;
+	text-decoration: none;
+}
+
+footer {
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	width: 100%;
+	display: block;
+	position: fixed;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	background-color: #000;
+	z-index: 100;
+	font-size: 14px;
+	font-family: "HelveticaNeueLTStdCn", serif;
+}
+
+footer div.wrapLeft {
+	width: 100%;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	padding-bottom: 7px;
+}
+
+footer div.wrapCenter {
+	width: 100%;
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	display: inline-block;
+}
+
+footer div.wrapRight {
+	display: none;
+}
+
+.botones {
+	text-align: right;
+	padding-top: 17px;
+}
+
+.botonRojo {
+	background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/btn_rojo_bg.png?ln=images") no-repeat;
+	cursor: pointer;
+	width: 110px;
+	height: 35px;
+	border: none;
+	color: white;
+	margin-top: 16px;
+	font-size: 14px;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	outline: none;
+}
+
+.botonGris {
+	background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/btn_gris_bg.png?ln=images") no-repeat;
+	cursor: pointer;
+	width: 110px;
+	height: 35px;
+	border: none;
+	color: white;
+	margin-top: 16px;
+	font-size: 14px;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	outline: none;
+}
+
+/*Estructura general*/
+
+div.colIzquierda {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+div.colDerecha {
+	width: 100%;
+	text-align: center;
+}
+
+div.contFila {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+div.fila {
+	text-align: center;
+}
+
+.internoDer {
+	width: 100%;
+	padding-top: 6px;
+	border-left: none;
+}
+
+.internoIzq {
+	width: 100%;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.BGSelectboxCuenta {
+	background: none repeat scroll 0 0 #F2F2F2;
+	border: 1px solid #CFCFCF;
+	border-radius: 9px 9px 9px 9px;
+	font-size: 14px !important;
+	height: 34px;
+	line-height: 32px;
+	padding: 4px 0;
+	position: relative;
+	width: 282px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-family: "HelveticaNeueLTStdCn", serif;
+	outline: none;
+	text-indent: 5px;
+}
+
+.BGSelectboxCuenta option {
+	font-size: 14px !important;
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+	height: 15.5px;
+}
+
+div.columna {
+	display: block;
+	text-align: center;
+}
+
+.labels {
+	display: inherit;
+	padding-left: 14px;
+	font-size: 13px !important;
+	text-align: center;
+	color: #000000 !important;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+}
+
+.BGSelectbox {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #CFCFCF;
+	border-radius: 9px 9px 9px 9px;
+	font-size: 14px !important;
+	height: 36px;
+	line-height: 32px;
+	padding: 4px 0;
+	position: relative;
+	width: 200px;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: "HelveticaNeueLTStdCn", serif;
+	outline: none;
+	text-indent: 5px;
+}
+
+.BGSelectbox option {
+	font-size: 14px !important;
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+	height: 15.5px;
+}
+
+.BGinputboxToken {
+	border-radius: 9px 9px 9px 9px;
+	font-size: 14px;
+	height: 30px;
+	line-height: 32px;
+	position: relative;
+	width: 150px;
+	margin-left: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	outline: none;
+	text-indent: 10px;
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+}
+
+.BGinputboxTokenError {
+	border: 1px solid #ed1c27;
+	background-color: #F4777D;
+	border-radius: 9px 9px 9px 9px;
+	font-size: 14px;
+	height: 30px;
+	line-height: 32px;
+	position: relative;
+	width: 150px;
+	margin-left: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	outline: none;
+	text-indent: 10px;
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+}
+
+.BGinputbox {
+	border-radius: 9px 9px 9px 9px;
+	font-size: 14px;
+	height: 30px;
+	line-height: 32px;
+	position: relative;
+	width: 140px;
+	margin-left: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	outline: none;
+	text-indent: 10px;
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+}
+
+.BGinputboxError {
+	border: 1px solid #ed1c27;
+	background-color: #F4777D;
+	border-radius: 9px 9px 9px 9px;
+	font-size: 14px;
+	height: 30px;
+	line-height: 32px;
+	position: relative;
+	width: 140px;
+	margin-left: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	outline: none;
+	text-indent: 10px;
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+}
+
+div.contenedor {
+	margin:  0 auto;
+	border: 4px solid #E7E5E6;
+	padding: 15px;
+	background: rgba(255,255,255,0.45);
+	border-radius: 30px;
+	display: table;
+}
+
+div.contenedorMsg {
+	border: 4px solid #E7E5E6;
+	background: rgba(255,255,255,0.45);
+	border-radius: 30px;
+	display: table;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+div.ocultar {
+	display: none;
+}
+
+div.ocultarLinea {
+	display: block;
+}
+
+div.colReferenciaPago {
+	text-align: center;
+	word-wrap: break-word;
+	margin-right: 10px;
+}
+
+.txtMostrar {
+	font-style: italic;
+	font-size: 13px !important;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	color: #ED1C27;
+	margin-left: 9px;
+}
+
+.txtOcultar {
+	display: none;
+}
+
+.colIzqMsg {
+	padding: 15px;
+	text-align: center;
+}
+
+.colCenMsg {
+	padding: 15px;
+	text-align: center;
+}
+
+.colDerMsg {
+	float: right;
+	text-align: center;
+}
+
+.letraError {
+	list-style: none;
+	font-size: 16px !important;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	text-align: center;
+	padding: 0px;
+}
+
+.enunciado {
+	font-size: 16px !important;
+	color: #000000;
+	font-family: "HelveticaNeueLTStdBdCn", serif;
+}
+
+.mensajesGral {
+	margin: 0 auto !important;
+	display: table;
+	background: none repeat scroll 0% 0% #fcd6a5;
+	border: 1px solid #f9a333;
+	border-radius: 10px;
+	color: #cd7f19;
+	padding: 0px 0px 0px 5px;
+	margin-bottom: 4px;
+	border-radius: 5px;
+	margin-top: 3px;
+	width: 96%;
+}
+
+.tablaMensaje {
+	width: 97%;
+	padding-bottom: 0px;
+	float: left;
+	color: #cd7f19;
+}
+
+.imagenError{
+	background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/alerta.png?ln=images");
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 16px;
+	height: 23px;
+	float: left;
+	padding: 0;
+}
+
+.mensajeTexto {
+	text-align: center;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	font-size: 14px;
+	margin-top: 3px;
+}
+
+.tituloAutenticacion {
+	list-style: none;
+	font-family: "HelveticaNeueLTStdThCn", serif !important;
+	color: #7A7B7F !important;
+	font-size: 20px !important;
+	font-weight: normal !important;
+	margin: 0px;
+}
+
+.tituloPSE {
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	color: #D41018 !important;
+	font-size: 22px !important;
+	font-weight: normal !important;
+}
+
+.titulos{
+	font-size: 14px;
+	color: #000000 !important;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	text-decoration: none;
+}
+
+.titulos2{
+	font-size: 14px;
+	color: #000000 !important;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	text-decoration: none;
+}
+
+.avisoPagoTC{
+	font-size: 14px;
+	color: #000000 !important;
+	font-family:"HelveticaNeueLTStdBdCn", serif !important ;
+	text-align: center;
+	text-decoration: none;
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
+
+.subtitulos{
+	display: block;
+	font-size: 14px;
+	color: #000000 !important;
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+	text-decoration: none;
+	word-wrap: break-word;
+	margin-right: 10px;
+}
+
+.verificacion{
+	text-align: center;
+	font-size: 15px;
+	color: #000000 !important;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	list-style: none;
+	padding: 1%;
+	display: block;
+}
+
+.verificacionMsg{
+	text-align: center;
+	font-size: 15px;
+	color: #D51E25 !important;
+	font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	list-style: none;
+	padding: 1%;
+	display: block;
+}
+
+
+.colPSE {
+	text-align: center;
+	margin-top: 110px;
+}
+
+.colPSEComprobante {
+	text-align: center;
+	margin-top: 15%;
+}
+
+.espacio {
+	margin: 18px;
+}
+
+#datosTarjetaCredito{
+	width: 350px;
+	border: 0px;
+	padding: 10px;
+	text-align: right;
+	margin: 10px auto 10px auto;
+}
+
+#datosTarjetaCredito label{
+	float: left;
+	padding-top: 12px;
+}
+
+#datosTarjetaCredito p {
+		margin: 2px 0;
+}
+
+.avisoPagoTC{
+		font-size: 14px;
+		color: #000000 !important;
+		font-family:"HelveticaNeueLTStdBdCn", serif !important ;
+		text-align: center;
+		text-decoration: none;
+		margin: auto;
+		width: 60%;
+		padding: 5px;
+}
+
+
+/* Tooltip container */
+.tooltip {
+	position: relative;
+	display: inline-block;
+	color: #006080;
+	vertical-align: middle;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	visibility: hidden;
+	position: absolute;
+	width: 120px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 1s;
+	font-size: 14px;
+}
+
+/* Tooltip arrow */
+.tooltip-right::after {
+	content: "";
+	position: absolute;
+	top: -6%;
+	right: 35%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent #555 transparent;
+}
+
+.tooltip-right {
+	top: 30px;
+	left: -250%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.imagen-ayuda{
+	padding-bottom: 5px;
+}
+
+.BGSelectboxCuotas{
+	background: none repeat scroll 0 0 #F2F2F2;
+	border: 1px solid #CFCFCF;
+	border-radius: 9px 9px 9px 9px;
+	font-size: 14px !important;
+	height: 34px;
+	line-height: 32px;
+	padding: 4px 0;
+	position: relative;
+	width: 114px;
+	margin-top: 4px;
+	font-family: "HelveticaNeueLTStdCn", serif;
+	outline: none;
+	text-indent: 5px;
+}
+
+.BGinputboxTarjetaCredito{
+	background: none repeat scroll 0 0 #F2F2F2;
+	border-radius: 9px 9px 9px 9px;
+	font-size: 14px;
+	height: 30px;
+	line-height: 32px;
+	position: relative;
+	width: 108px;
+	margin-left: 12px;
+	margin-top: 3px;
+	text-align: left;
+	outline: none;
+	text-indent: 10px;
+	font-family: "HelveticaNeueLTStdCn", serif !important;
+}
+
+fieldset .txtMostrar{
+		padding-right : 32px;
+}
+
+@media screen and (min-width: 411px) {
+
+	.mensajesGral {
+		margin: 0 auto !important;
+		display: table;
+		background: none repeat scroll 0% 0% #fcd6a5;
+		border: 1px solid #f9a333;
+		border-radius: 10px;
+		color: #cd7f19;
+		padding: 0px 0px 0px 5px;
+		margin-bottom: 4px;
+		border-radius: 5px;
+		margin-top: 3px;
+		width: 96%;
+	}
+
+	.imagenError{
+		background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/alerta.png?ln=images");
+		background-size: 15px 15px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 16px;
+		height: 23px;
+		float: left;
+	}
+
+	.verificacion{
+		text-align: center;
+		font-size: 15px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		list-style: none;
+		padding: 1%;
+		display: block;
+	}
+
+	.verificacionMsg{
+		text-align: center;
+		font-size: 15px;
+		color: #D51E25 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		list-style: none;
+		padding: 1%;
+		display: block;
+	}
+
+	.espacio {
+		margin: 18px;
+	}
+
+	#datosTarjetaCredito{
+		width: 350px;
+		border: 0px;
+		padding: 10px;
+		text-align: right;
+		margin: 10px auto 10px auto;
+	}
+
+	#datosTarjetaCredito label{
+		float: left;
+		padding-top: 12px;
+	}
+
+	.titulos3{
+		display: inherit;
+		font-size: 14px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+		text-align: center;
+	}
+
+	.avisoPagoTC{
+		font-size: 14px;
+		color: #000000 !important;
+		font-family:"HelveticaNeueLTStdBdCn", serif !important ;
+		text-align: center;
+		text-decoration: none;
+		margin: auto;
+		width: 60%;
+		padding: 10px;
+	}
+
+}
+
+@media screen and (min-width: 690px) {
+
+	.mensajesGral {
+		margin: 0 auto !important;
+		display: table;
+		background: none repeat scroll 0% 0% #fcd6a5;
+		border: 1px solid #f9a333;
+		border-radius: 10px;
+		color: #cd7f19;
+		padding: 0px 0px 0px 5px;
+		margin-bottom: 4px;
+		border-radius: 5px;
+		margin-top: 3px;
+		width: 70%;
+	}
+
+	.imagenError{
+		background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/alerta.png?ln=images");
+		background-size: 15px 15px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 16px;
+		height: 23px;
+		float: left;
+	}
+
+	.verificacion{
+		text-align: center;
+		font-size: 15px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		list-style: none;
+		padding: 1%;
+		display: block;
+	}
+
+	.verificacionMsg{
+		text-align: center;
+		font-size: 15px;
+		color: #D51E25 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		list-style: none;
+		padding: 1%;
+		display: block;
+	}
+
+	.espacio {
+		margin: 18px;
+	}
+
+	#datosTarjetaCredito{
+		width: 350px;
+		border: 0px;
+		padding: 10px;
+		text-align: right;
+		margin: 10px auto 10px auto;
+	}
+
+	#datosTarjetaCredito label{
+		float: left;
+		padding-top: 12px;
+	}
+
+	.titulos3{
+		display: inherit;
+		font-size: 14px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+		text-align: center;
+	}
+
+	.avisoPagoTC{
+		font-size: 14px;
+		color: #000000 !important;
+		font-family:"HelveticaNeueLTStdBdCn", serif !important ;
+		text-align: center;
+		text-decoration: none;
+		margin: auto;
+		width: 60%;
+		padding: 10px;
+	}
+
+}
+
+@media screen and (min-width: 976px) {
+
+	h1 {
+		font-family: "HelveticaNeueLTStdThCn", serif !important;
+		color: #FFFFFF !important;
+		font-size: 38px !important;
+		font-weight: normal !important;
+		margin: 0px;
+	}
+
+	h2 {
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		color: #FFFFFF !important;
+		font-size: 35px !important;
+		font-weight: normal !important;
+		margin: 0px;
+	}
+
+	div.ocultar {
+		display: block;
+	}
+
+	div.ocultarLinea {
+		display: none;
+	}
+
+	header div.cabecera {
+		color: #fff;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		background-color: #ed1c27;
+	}
+
+	header div.cabecera div.wrapLeft {
+		width: 42%;
+		float: left;
+	}
+
+	header div.cabecera div.wrapRight {
+		width: 50%;
+		font-size: 15px;
+		display: inline-block;
+		text-align: right;
+		background: none;
+		color: #FFFFFF !important;
+		text-decoration: none;
+	}
+
+	footer {
+		color: #fff;
+		display: block;
+		position: fixed;
+		padding-top: 18px;
+		padding-bottom: 11px;
+		background-color: #000;
+		font-size: 15px;
+		font-family: "HelveticaNeueLTStdCn", serif;
+	}
+
+	footer div.wrapLeft {
+		width: 23%;
+		float: left;
+		display: inline-block;
+	}
+
+	footer div.wrapCenter {
+		width: 47%;
+		float: left;
+		font-size: 16px;
+		text-align: left;
+		display: inline-block;
+	}
+
+	footer div.wrapRight {
+		width: 30%;
+		font-size: 15px;
+		text-align: center;
+		display: inline-block;
+	}
+
+	div.general {
+		width: 100%;
+	}
+
+	div.colIzquierda {
+		width: 50%;
+		float: left;
+		text-align: center;
+		display: inline-block;
+	}
+
+	div.colDerecha {
+		width: 50%;
+		display: inline-block;
+		text-align: left;
+	}
+
+	.internoDer {
+		padding-left: 50px;
+		border-left: 1px solid #DDDDDD;
+		border-top: none;
+		width: 90%;
+	}
+
+	.internoIzq {
+		width: 100%;
+		border-right: 1px solid #DDDDDD;
+		border-bottom: none;
+	}
+
+	div.contReferencia {
+		display: table;
+		table-layout: fixed;
+		width: 80%;
+	}
+
+	div.contReferenciaCentrado {
+		display: table;
+		table-layout: fixed;
+		width: 40%;
+		margin: 0 auto;
+	}
+
+	div.colReferencia {
+		display: table-cell;
+		text-align: left;
+	}
+
+	div.colReferenciaPago {
+		display: table-cell;
+		text-align: center;
+	}
+
+	div.fila {
+		display: table-cell;
+		text-align: left;
+	}
+
+	.BGSelectboxCuenta {
+		background: none repeat scroll 0 0 #F2F2F2;
+		border: 1px solid #CFCFCF;
+		border-radius: 9px 9px 9px 9px;
+		font-size: 14px !important;
+		height: 34px;
+		line-height: 32px;
+		padding: 4px 0;
+		position: relative;
+		width: 300px;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		font-family: "HelveticaNeueLTStdCn", serif;
+		outline: none;
+		text-indent: 5px;
+	}
+
+	.BGSelectboxCuenta option {
+		font-size: 14px !important;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+		height: 15.5px;
+	}
+
+	div.mensaje {
+		display: block;
+		background: none repeat scroll 0% 0% #fcd6a5;
+		border: 1px solid #f9a333;
+		color: #cd7f19;
+		padding: 0px 0px 0px 5px;
+		border-radius: 5px;
+		width: 25%;
+		height: 24px;
+		margin: 0 auto;
+	}
+
+	div.msj {
+		width: 97%;
+		padding-bottom: 0px;
+		float: left;
+		color: #cd7f19;
+	}
+
+	div.imagen {
+		background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/alerta.png?ln=images");
+		background-size: 15px 15px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 25px;
+		height: 25px;
+		padding: 0;
+	}
+
+	div.letra {
+		padding-top: 2px;
+		padding-left: 30px;
+	}
+
+	div.mostrar {
+		display: none;
+	}
+
+	div.contenedorMsg {
+		display: table;
+		table-layout: fixed;
+		margin:  0 auto;
+		border: 4px solid #E7E5E6;
+		padding: 15px;
+		background: rgba(255,255,255,0.45);
+		border-radius: 30px;
+		margin-top: 20px;
+	}
+
+	.colIzqMsg {
+		display: table-cell;
+		float: left;
+	}
+
+	.colDerMsg {
+		float: right;
+		text-align: center;
+	}
+
+	.colCenMsg {
+		float: left;
+		padding-top: 15px;
+		padding-left: 25px;
+		text-align: center;
+	}
+
+	.mensajesGral {
+		margin: 0 auto !important;
+		display: table;
+		background: none repeat scroll 0% 0% #fcd6a5;
+		border: 1px solid #f9a333;
+		border-radius: 10px;
+		color: #cd7f19;
+		padding: 0px 0px 0px 5px;
+		margin-bottom: 4px;
+		border-radius: 5px;
+		margin-top: 3px;
+		width: 60%;
+	}
+
+	.imagenError {
+		background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/alerta.png?ln=images");
+		background-size: 15px 15px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 16px;
+		height: 23px;
+		float: left;
+	}
+
+	.tituloPSE {
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		color: #D41018 !important;
+		font-size: 28px !important;
+		font-weight: normal !important;
+	}
+
+	.colPSE {
+		width: 25%;
+		margin-top: 7.3%
+	}
+
+	.colPSEComprobante {
+		width: 25%;
+		margin-top: 4%
+	}
+
+	.verificacion{
+		text-align: center;
+		font-size: 15px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		list-style: none;
+		padding: 1%;
+		display: block;
+	}
+
+	.verificacionMsg{
+		text-align: center;
+		font-size: 15px;
+		color: #D51E25 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		list-style: none;
+		padding: 1%;
+		display: block;
+	}
+
+	.espacio {
+		display: none;
+
+	}
+
+	#datosTarjetaCredito{
+		width: 350px;
+		border: 0px;
+		padding: 10px;
+		text-align: right;
+		margin: 10px auto 10px auto;
+	}
+
+	#datosTarjetaCredito label{
+		float: left;
+		padding-top: 12px;
+	}
+
+	.titulos3{
+		display: inherit;
+		font-size: 14px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+		text-align: center;
+	}
+
+	.avisoPagoTC{
+		font-size: 14px;
+		color: #000000 !important;
+		font-family:"HelveticaNeueLTStdBdCn", serif !important ;
+		text-align: center;
+		text-decoration: none;
+		margin: auto;
+		width: 60%;
+		padding: 10px;
+	}
+
+}
+
+@media screen and (min-width: 1076px) {
+
+	.labels {
+		display: inherit;
+		padding-left: 13px;
+		font-size: 13px;
+		text-align: left;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+	}
+
+	div.contenedor {
+		display: table;
+		table-layout: fixed;
+		margin:  0 auto;
+		border: 4px solid #E7E5E6;
+		padding: 32px 12px 35px 12px;
+		background: rgba(255,255,255,0.45);
+		border-radius: 30px;
+	}
+
+	div.columna {
+		display: table-cell;
+		text-align: center;
+		float: left;
+		padding-left: 4px;
+	}
+
+	.BGSelectbox {
+		background: none repeat scroll 0 0 #FFFFFF;
+		border: 1px solid #CFCFCF;
+		border-radius: 9px 9px 9px 9px;
+		font-size: 14px !important;
+		height: 36px;
+		line-height: 32px;
+		padding: 4px 0;
+		position: relative;
+		width: 190px;
+		margin-top: 3px;
+		font-family: "HelveticaNeueLTStdCn", serif;
+		outline: none;
+		text-indent: 4px;
+	}
+
+	.BGSelectbox option {
+		font-size: 14px !important;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+		height: 15.5px;
+	}
+
+	.BGinputboxToken {
+		border-radius: 9px 9px 9px 9px;
+		font-size: 14px;
+		height: 30px;
+		line-height: 32px;
+		position: relative;
+		width: 155px;
+		margin-left: 12px;
+		margin-top: 3px;
+		text-align: left;
+		outline: none;
+		text-indent: 10px;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+	}
+
+	.BGinputboxTokenError {
+		border: 1px solid #ed1c27;
+		background-color: #F4777D;
+		border-radius: 9px 9px 9px 9px;
+		font-size: 14px;
+		height: 30px;
+		line-height: 32px;
+		position: relative;
+		width: 155px;
+		margin-left: 12px;
+		margin-top: 3px;
+		text-align: left;
+		outline: none;
+		text-indent: 10px;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+	}
+
+	.BGinputbox {
+		border-radius: 9px 9px 9px 9px;
+		font-size: 14px;
+		height: 30px;
+		line-height: 32px;
+		position: relative;
+		width: 108px;
+		margin-left: 12px;
+		margin-top: 3px;
+		text-align: left;
+		outline: none;
+		text-indent: 10px;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+	}
+
+	.BGinputboxError {
+		border: 1px solid #ed1c27;
+		background-color: #F4777D;
+		border-radius: 9px 9px 9px 9px;
+		font-size: 14px;
+		height: 30px;
+		line-height: 32px;
+		position: relative;
+		width: 108px;
+		margin-left: 12px;
+		margin-top: 3px;
+		text-align: left;
+		outline: none;
+		text-indent: 10px;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+	}
+
+	.imgBack {
+		background-image: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/background-personas.jpg?ln=images");
+	}
+
+	.enunciado {
+		font-size: 16px !important;
+		color: #000000;
+		font-family: "HelveticaNeueLTStdBdCn", serif;
+	}
+
+	.tituloAutenticacion {
+		list-style: none;
+		font-family: "HelveticaNeueLTStdThCn", serif !important;
+		color: #7A7B7F !important;
+		font-size: 25px !important;
+		font-weight: normal !important;
+		margin: 0px;
+	}
+
+	.tituloPSE {
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		color: #D41018 !important;
+		font-size: 28px !important;
+		font-weight: normal !important;
+	}
+
+	.titulos{
+		font-size: 14px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		text-decoration: none;
+	}
+
+	.titulos2{
+		display: inherit;
+		font-size: 14px;
+		color: #7D7E82 !important;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+		text-align: center;
+	}
+
+	.subtitulos{
+		display: block;
+		font-size: 14px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+		text-decoration: none;
+	}
+
+	.verificacion{
+		text-align: center;
+		font-size: 15px;
+		color: #000000 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		list-style: none;
+		padding: 1%;
+		display: block;
+	}
+
+	.verificacionMsg{
+		text-align: center;
+		font-size: 15px;
+		color: #D51E25 !important;
+		font-family: "HelveticaNeueLTStdBdCn", serif !important;
+		list-style: none;
+		padding: 1%;
+		display: block;
+	}
+
+	.mensajesGral {
+		margin: 0 auto !important;
+		display: table;
+		background: none repeat scroll 0% 0% #fcd6a5;
+		border: 1px solid #f9a333;
+		border-radius: 10px;
+		color: #cd7f19;
+		padding: 0px 0px 0px 5px;
+		margin-bottom: 4px;
+		border-radius: 5px;
+		margin-top: 3px;
+		width: 45%;
+	}
+
+	.imagenError{
+		background: url("/wps/PA_PseDavivienda/faces/javax.faces.resource/alerta.png?ln=images");
+		background-size: 15px 15px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 16px;
+		height: 23px;
+		float: left;
+	}
+
+	.internoDer {
+		padding-left: 50px;
+		border-left: 1px solid #DDDDDD;
+		border-top: none;
+		width: 90%;
+	}
+
+	.espacio {
+		display: none;
+	}
+
+	#datosTarjetaCredito{
+		width: 350px;
+		border: 0px;
+		padding: 5px;
+		text-align: right;
+		margin: 10px auto 10px auto;
+	}
+
+	#datosTarjetaCredito label{
+		float: left;
+		padding-top: 12px;
+	}
+
+	#datosTarjetaCredito p {
+		margin: 2px 0;
+	}
+
+	.avisoPagoTC{
+		font-size: 14px;
+		color: #000000 !important;
+		font-family:"HelveticaNeueLTStdBdCn", serif !important ;
+		text-align: center;
+		text-decoration: none;
+		margin: auto;
+		width: 60%;
+		padding: 5px;
+	}
+
+
+	/* Tooltip container */
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		color: #006080;
+		vertical-align: middle;
+	}
+
+	/* Tooltip text */
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		position: absolute;
+		width: 225px;
+		background-color: #555;
+		color: #fff;
+		text-align: center;
+		padding: 5px 0;
+		border-radius: 6px;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 1s;
+		font-size: 14px;
+	}
+
+	/* Tooltip arrow */
+	.tooltip-right::after {
+		content: "";
+		position: absolute;
+		top: 25%;
+		right: 100%;
+		margin-top: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent #555 transparent transparent;
+	}
+
+	.tooltip-right {
+		top: -5px;
+		left: 125%;
+	}
+
+	/* Show the tooltip text when you mouse over the tooltip container */
+	.tooltip:hover .tooltiptext {
+	    visibility: visible;
+	    opacity: 1;
+	}
+
+	.imagen-ayuda{
+		padding-bottom: 5px;
+	}
+
+	.BGSelectboxCuotas{
+		background: none repeat scroll 0 0 #F2F2F2;
+		border: 1px solid #CFCFCF;
+		border-radius: 9px 9px 9px 9px;
+		font-size: 14px !important;
+		height: 34px;
+		line-height: 32px;
+		padding: 4px 0;
+		position: relative;
+		width: 114px;
+		font-family: "HelveticaNeueLTStdCn", serif;
+		outline: none;
+		text-indent: 5px;
+	}
+
+	.BGinputboxTarjetaCredito{
+		background: none repeat scroll 0 0 #F2F2F2;
+		border-radius: 9px 9px 9px 9px;
+		font-size: 14px;
+		height: 30px;
+		line-height: 32px;
+		position: relative;
+		width: 108px;
+		margin-left: 12px;
+		margin-top: 3px;
+		text-align: left;
+		outline: none;
+		text-indent: 10px;
+		font-family: "HelveticaNeueLTStdCn", serif !important;
+	}
+
+}
+

@@ -1,0 +1,76 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+* {
+	font-family: Arial !important;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.form-submit{
+  cursor:pointer;
+  font-size:13px;
+  color:#FFFFFF;
+  border: 1px solid #EC7404;
+  height: 25px;
+/*   background:url(../img/u_btn.jpg) #EC7404 right no-repeat; */
+  padding:0px 8px 0px 5px;
+  margin:2px 0px 2px 0px;
+  background-color: #EC7404;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.form-submit:hover {
+  color:#E2DDDB;
+  border: 1px solid #6D6E71;
+  background-color: #6D6E71;
+}

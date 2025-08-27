@@ -1,0 +1,784 @@
+/**
+* Novatec - 28102015 -  General - se crean estilos para tablas en general
+*/
+/* Estilo para datatables */
+.tablaBBVA{
+    font-size: 11px;
+/*// novatec - SP11 - 2015-11-05 - ini - alertas y notificaciones*/
+    display: inline;
+/*// Novatec - SP11 - 2015-11-05 - fin - alertas y notificaciones*/
+}
+
+/*// novatec - SP11 - 2016-03-16 - ini - alertas y notificaciones*/
+.boton-menu-alert{
+    font-family: "BBVA Web Light", Arial, sans-serif !important;
+    border:1px solid #dddddd !important;
+    margin-right: 10px;
+    box-shadow: 0px;
+}
+/*// novatec - SP11 - 2016-03-16 - fin - alertas y notificaciones*/
+.tablaBBVA strong{
+    font-size: 12px;
+}
+
+/* encabezados de tabla*/
+.tablaBBVA thead > tr > th{
+    background: #f8f8f5 !important;
+    border-color: #e5e5e5 !important;
+    border-style: solid !important;
+    color: black !important;
+    font-size: 13px;
+    height: 32px;
+}
+
+.tablaBBVA .ui-datatable .ui-widget-header {
+    border: 0px !important;
+}
+
+.tablaBBVA thead > tr > th .ui-column-title{
+    margin-left:5px;
+}
+
+/* tabla scrollable */
+.tablaBBVA .ui-datatable-scrollable-header{
+    border: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+/* mensaje cuando no hay registros*/
+.tablaBBVA .ui-datatable-empty-message{
+    font-size: 16px;
+    text-align: center;
+    border-color: #e5e5e5 !important;
+}
+
+/* footer tabla mostrar mas */
+.tablaBBVA  .ui-datatable-footer{
+    padding:0px !important;
+    border: 0px !important;
+}
+
+.tablaBBVA .ui-datatable-footer .mostrarMas{
+    background-color: #f3f5f7;
+    border-color: #e5e5e5;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 30px !important;
+}
+
+.tablaBBVA .ui-datatable-footer .mostrarMas a{
+    color: rgb(0, 120, 210) !important;
+    position: relative;
+    top: 6px;
+    display:block;
+}
+
+.tablaBBVA .mostrarMas .flechaAbajo {
+    background-image: url(../img/link-bg-triangled-down.png);
+    position: relative;
+    float: right;
+    top: -4px;
+    right: 7px !important;
+    width: 14px !important;
+    height: 10px !important;
+}
+
+/* // novatec - SP11 - 2016-04-26 - ini - color check seleccion total de elementos */
+.tablaBBVA thead > tr > th > div > div > span.ui-icon {
+    background-image: url("/kqco_co_web/page/javax.faces.resource/images/ui-icons_6da8d5_256x240.png?ln=primefaces-redmond");
+}
+/* // novatec - SP11 - 2016-04-26 - fin - color check seleccion total de elementos */
+
+/* // novatec - SP11 - 2015-11-05 - ini - alertas y notificaciones */
+/* set de iconos azules*/
+.blue-icons-24{
+    /* Posiciones de iconos de 74 en 74 */
+    background: url(../img/sprite-blue-x24.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 3px !important;
+}
+
+.icon-mail-new{
+    background-position: -592px -296px;
+}
+
+.icon-mail-read{
+    background-position: -592px -370px;
+}
+
+.icon-pencil{
+    background-position: -592px -1184px;
+}
+
+.btn-blanco{
+    background-color: white !important;
+    color: rgb(0, 120, 210) !important;
+}
+.onlyForPrinter{
+    display:none;
+}
+@media print{
+    .onlyForPrinter{
+        display:block;
+    }
+    .noPrint{
+        display: none;
+    }
+}
+/* // novatec - SP11 - 2015-11-05 - fin - alertas y notificaciones */
+
+/* novatec - SP11 - personalizacion - ini - 30112015 - estilos para acordeones de prime */
+/* Estilo para acordeones BBVA */
+.acordionBBVA .ui-accordion-header{
+    width: 100% !important;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #d5e2ee;
+    margin-bottom: 10px;
+}
+
+.acordionBBVA > h3.ui-accordion-header{
+    color: rgb(0, 101, 183) !important;
+    font-size: 0.9em;
+    font-weight: bold !important;
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(245, 247, 248) 100%);
+    padding-left: 1em;
+}
+
+.acordionBBVA.ui-accordion .ui-accordion-header > span.ui-icon{
+    position: relative;
+    float: right !important;
+    left: initial;
+    margin-top: initial;
+}
+
+.acordionBBVA.ui-accordion .ui-accordion-content{
+    top: -13px;
+    border: 1px solid #d5e2ee;
+}
+/* novatec - SP11 - personalizacion - fin - 30112015 - estilos para acordeones de prime */
+
+/* novatec - General - inicio - ajuste ancho boton dropdown menu y ubicacion de flecha */
+.BBVASelect .ui-selectonemenu-trigger {
+    width: 25px !important;
+}
+
+.BBVASelect.ui-selectonemenu .ui-selectonemenu-trigger .ui-icon {
+    margin-top: 8px !important;
+}
+/* novatec - General - fin - ajuste ancho boton dropdown menu y ubicacion de flecha */
+/* novatec - sp06 - ini - 20150125- icono agenda */
+.icono-agenda24{
+    background-position: -592px -1776px;
+}
+/* novatec - sp06 - fin - 20150125- icono agenda
+/* novatec - sp12 - ini - 20150126- estilos varios */
+.blue-icons-16{
+    /* Posiciones de iconos de 66 en 66 */
+    background: url(../img/sprite-blue-x16.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 3px !important;
+}
+.icono-editar16{
+    background-position: -462px -1386px
+}
+.icono-eliminar16{
+    background-position: -462px -1452px;
+}
+.tablaBBVA .ui-datatable-header.ui-widget-header{
+    background: #f8f8f5 !important;
+    border-color: #e5e5e5 !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-radius: 0px !important;
+}
+
+.tablaBBVA.headerSeparado .ui-datatable-header.ui-widget-header{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+.white-icons-16{
+    /* Posiciones de iconos de 66 en 66 */
+    background: url(../img/sprite-white-x16.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 3px !important;
+}
+.icono-buscar16{
+    background-position: -462px -1716px;
+}
+/* novatec - sp12 - fin - 20150126- estilos varios */
+
+/* NOVATEC - SP16 - 1 - GP13365- 28032016 - INI */
+.textTableBBVA{
+    margin: 5% 2% 5% 2%;
+    text-align: left !important;
+    font-size: 12px !important;
+    color: #434a58 !important;
+}
+
+.ttBBVA_center{
+    text-align: center !important;
+}
+
+.ttBBVA_left{
+    text-align: left !important;
+}
+
+.ttBBVA_right{
+    text-align: right !important;
+}
+
+.ttBBVA_blue{
+    font-weight: bold !important;
+    color: #0065b7 !important;
+}
+
+.tablaBBVA thead > tr > th.ttBBVA_theader{
+    font-size: 11px !important;
+    color: #434a58 !important;
+}
+
+/* NOVATEC - SP16 - 1 - GP13365- 28032016 - FIN */
+
+/* NOVATEC - SP19 - 20160406 - INI - ajuste look and feel tabla para subtablas */
+.tablaBBVA td.ui-datatable-subtable-header{
+    color: black;
+    background-color: rgb(248, 248, 245);
+}
+
+.tablaBBVA tr.ui-widget-header{
+    border-left: none !important;
+    border-right: none !important;
+}
+/* NOVATEC - SP19 - 20160406 - FIN - ajuste look and feel tabla para subtablas */
+
+/* NOVATEC - SP11 - 20160428 - INI - ajuste look and feel para checks  */
+.checkBBVA > div > span.ui-icon {
+    background-image: url("/kqco_co_web/page/javax.faces.resource/images/ui-icons_6da8d5_256x240.png?ln=primefaces-redmond");
+}
+/* NOVATEC - SP11 - 20160428 - FIN - ajuste look and feel para checks  */
+/***** INICIO GRUPO CMC SPRINT 18 ChangePeriod GP13827****/
+	
+.tableTermChange thead th {
+padding: 10px !important;
+}
+
+.stepTerm > .step-content{
+    padding: 9px !important;
+}
+.stepTerm > .step-content .col-md-12{
+	font-size: 12px !important;
+	padding: 0px !important;
+} 
+
+.stepTerm > .step-content .col-md-12 center{
+	color: #0078d2;
+    font-family: BBVA Web Light;
+    font-size: 17px;
+    font-weight: bold;
+   padding-top: 17px !important;
+} 
+
+.stepTerm > .step-content .col-md-6:first-child{
+	color:#5F646B !important;
+}
+
+.stepTerm > .step-content .col-md-6{
+	padding: 5px;
+}
+.stepTerm .titleCP{
+	color: #0078d2;
+    font-family: BBVA Web Light;
+}
+.allContentVirtualTerm .panel-tab-body .filters{
+    border: 0px !important;
+    margin-bottom: 0px !important;
+
+}
+.tableTermChange td{
+	vertical-align:middle !important; 
+}
+
+.transfer-confirmationCP{
+font-size:12px !important;
+padding: 0px 20px 0px 20px !important;
+
+}
+.tableChangePeriod .ui-widget-content{
+	font-size: 13px !important;
+} 
+
+.stepTerm .col-xs-3 {
+ padding-left: 0px !important;
+}
+
+.stepTerm .right{
+	color:#0078d2 !important;
+	font-weight:normal !important;
+	text-transform: lowerCase !important;	
+	text-align: right;
+} 
+
+.stepTerm .left{
+	color:#5F646B !important;	
+}
+
+.stepTerm span.ui-radiobutton-icon.ui-icon.ui-icon-blank {
+    margin: -2px !important;
+}
+
+.stepTerm span.ui-radiobutton-icon.ui-icon.ui-icon-bullet{
+	    margin: -2px !important;
+} 
+
+.stepTerm .radioButtonT .ui-state-active .ui-icon, .stepTerm.radioBT .ui-state-active .ui-icon, .stepTerm.investRadio .ui-state-active .ui-icon {
+    background: repeat scroll -61px -110px/200px auto transparent !important;
+}
+
+
+/***** FIN GRUPO CMC ChangePeriod******/
+
+/*************************Inicio Grupo CMC Sprint 18 CDT************************/
+
+.TitleCdt{
+color: #0078d2; 
+font-family: "BBVA Web Light",Arial,sans-serif;  	
+text-align:center;
+}
+
+.contCDT{
+font-size: 14px !important;
+color: #0078d2 !important; 
+font-family: "BBVA Web Light",Arial,sans-serif !important;  		
+}
+
+
+.allContentVirtualTerm input.ui-inputfield.ui-widget.ui-state-default.ui-corner-all.hasDatepicker {
+width:80%!important;
+}
+
+.allContentVirtualTerm .control input {
+	width:80%!important;
+}
+
+.termsConditionsCDT .btn:hover,.termsConditionsCDT .btn:focus{
+	color:white !important;
+	
+}
+
+.fillCDT .col-md-6{
+	    padding-top: 9px !important;
+}
+
+.pendingValue{
+	
+	margin-top: 19px !importat;
+}
+
+.constitutionCDT > ul {
+    padding: 9px !important;
+}
+
+.valuesOutstandingReceivables .ui-panelgrid-cell{
+	   border-width: 0px !important;	
+}
+
+.valuesOutstandingReceivables .ui-widget-content{
+	border-width:0px !important;
+		text-align: center !important;
+	
+}
+
+.valuesOutstandingReceivables tr:hover {
+    background: none repeat scroll 0% 0% transparent !important;
+}
+
+
+.valuesOutstandingReceivables .ui-datatable thead th, .virtualTermDepositConditions .ui-datatable tbody td, .virtualTermDepositConditions .ui-datatable tfoot td {
+    background: transparent none !important;
+        text-align: center !important;
+}
+
+.valuesOutstandingReceivables .ui-datatable .ui-datatable-scrollable-body{
+	
+	margin-left: 1px;
+}
+
+.btnCDT:focus {
+color: white !important;
+}
+
+.virtualTermDepositConditions .ui-state-default,.virtualTermDepositConditions .ui-widget-content .ui-state-default, .virtualTermDepositConditions .ui-widget-header .ui-state-default {
+    font-size: 12px !important;
+}
+
+.virtualTermDepositConditions .ui-datatable thead th, .virtualTermDepositConditions .ui-datatable tbody td, .virtualTermDepositConditions .ui-datatable tfoot td {
+    font-size: 11px !important;
+    
+}
+.allContentVirtualTerm .ui-datatable thead th, .virtualTermDepositConditions .ui-datatable tbody td, .virtualTermDepositConditions .ui-datatable tfoot td {
+     text-align: center !important;
+   
+}
+
+.virtualTermDepositConditions .ui-widget-content {
+	border:none !important;
+}
+.valuesOutstandingReceivables .ui-widget-header {
+    border: 2px solid #FFF !important;
+    border-top-left-radius: 0px !important;
+    margin-left: -7px !important;
+    
+	}
+.valuesOutstandingReceivables span.ui-radiobutton-icon.ui-icon.ui-icon-bullet{	
+	background-image: url("/kqco_co_web/page/javax.faces.resource/images/ui-icons_2e83ff_256x240.png?ln=primefaces-redmond") !important;
+}
+
+.virtualTermDepositConditions div.ui-selectonemenu-trigger.ui-state-default.ui-corner-right {
+    width: 30px;
+    background: linear-gradient(to bottom, #ffffff 40%, #e1e1e1 200%);
+    border-color: #d5e2ee;
+    font-size: 0.95em;
+    color: #0093e2;
+	}
+	
+
+.virtualTermDepositConditions span.ui-icon.ui-icon-triangle-1-s.ui-c {
+    background-image: url("../../assets/img/icons/arrows/arrow-down-small.png") !important;
+    background-position: 7px 8px !important;
+    background-repeat: no-repeat;
+    width: 100% !important;
+    height: 100% !important;
+	}
+	
+.virtualTermDepositConditions .selectors {
+    width: 95% !important;
+    color: #000000 !important;
+    font: inherit;
+	}
+	
+.virtualTermDepositConditions div.ui-selectonemenu-trigger.ui-state-default.ui-corner-right {
+    width: 30px;
+    background: -moz-linear-gradient(top, #ffffff 40%, #e1e1e1 200%);
+    background: -o-linear-gradient(top, #ffffff 40%, #e1e1e1 200%);
+    background: -webkit-linear-gradient(top, #ffffff 40%, #e1e1e1 200%);
+    background: linear-gradient(to bottom, #ffffff 40%, #e1e1e1 200%);
+    border-color: #d5e2ee;
+    font-size: 0.95em;
+    color: #0093e2;
+	}
+	
+.virtualTermDepositConditions ul.ui-selectonemenu-items.ui-selectonemenu-list.ui-widget-content.ui-widget.ui-corner-all.ui-helper-reset {
+    font: inherit;
+    font-size: 0.9em;
+}
+
+.virtualTermDepositConditions .ui-selectonemenu-panel .ui-selectonemenu-list {
+    padding: 0px !important;
+}
+
+
+.virtualTermDepositConditions  li.ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all {
+    border-bottom: 1px solid #DDE3EA;
+    border-radius: 0 !important;
+    color: #003f8c;
+    font-weight: bold;
+ }
+ .consultas .tab-bodyCDT .filters>ul>li a.header+* label {
+font-size: 14px !important;
+color: #0078d2 !important; 
+font-family: "BBVA Web Light",Arial,sans-serif !important;  
+font-weight: 700;
+}
+
+
+.virtualTermDepositConditions .ui-inputfield,.virtualTermDepositConditions .ui-widget-content .ui-inputfield,.virtualTermDepositConditions .ui-widget-header .ui-inputfield {
+    
+     -webkit-box-shadow: none;
+     box-shadow: none; 
+	 }
+.virtualTermDepositConditions  div.ui-selectonemenu-items-wrapper {
+    border: 1px solid #a6c9e2;
+    width: inherit;
+    background: #FFFFFF;
+    max-height: 200px !important;
+}	
+
+.virtualTermDepositConditions div.ui-selectonemenu-panel.ui-widget-content.ui-corner-all.ui-helper-hidden.ui-shadow {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: medium none; 
+	max-width: none !important;
+	max-width: none !important; 
+	border-radius: 0 !important;
+}	
+
+.tablePendingValue {
+   font-size: 12px;
+
+}
+   
+.virtualTermDepositConditions .error-icon-container {
+    border-right: 0px solid !important;
+}
+/*// novatec -  2016-10-20 - ini - SELECT */
+.select .ui-selectonemenu-trigger{
+    padding: 0 3px;
+    width: 25px;
+
+}
+.select span.ui-icon.ui-icon-triangle-1-s.ui-c {
+    background-image: url("../../assets/img/icons/arrows/arrow-down-small.png") !important;
+    background-position: 4px 8px !important;
+    background-repeat: no-repeat;
+    height: 100% !important;
+    width: 100% !important;
+}
+/*// novatec -  2016-10-20 - FIN - SELECT*/
+/************************Fin Grupo CMC Sprint 18 CDT***************************/
+/**Ini Covered Card Grupo CMC Sprint18**/
+ .coveredCard .field-group {
+ display: flex !important;
+ }
+.coveredCard .field-group__label{
+	    font-size: 14px !important;
+	    width: 50%;
+}
+
+.coveredCard .field-group__field{
+    	 width: 50%;	
+}
+.coveredCard .field-group__label label {
+    font-weight: normal !important;
+}
+/**Fin Covered Card Grupo CMC Sprint18**/
+.submenu #submenu li.search {
+    width: 8%;
+    float: left !important;  /*Temporal Oculta Seguros*/
+    padding: 10px;
+}
+
+/*Ini incidencias Sprint 18 Pago de una Compra Especifica Cambios cmc*/
+.scppM{
+    
+	background: #0079c1;
+    background-image: -moz-linear-gradient(top, #0079c1 0%, #00559d 100%);
+    background-image: -o-linear-gradient(top, #0079c1 0%, #00559d 100%);
+    background-image: -webkit-linear-gradient(top, #0079c1 0%, #00559d 100%);
+    background-image: linear-gradient(to bottom, #0079c1 0%, #00559d 100%);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid #00559d;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: none;
+    position: relative;
+    font: 1.2em "BBVA Web Medium", Arial, sans-serif;
+	margin-left:78%;
+	font-size: 11px; 
+}
+
+@media (max-width: 769px){
+.divAccordionSpecific{
+	font-size: 11px !important;	
+}
+.mc{
+	font-size: 11px !important;		
+}
+}
+
+/*Fin incidencias  Sprint 18 Pago de una Compra Especifica Cambios cmc*/
+/* Novatec Oculta X para filtros */
+.consultas .panel-tab-body .filters>ul>li a.header.setFilter span.arrow-left-smaller
+{
+    background-image: none !important;
+}
+/* Novatec Oculta X para filtros */
+/* Novatec Ajuste Menu Perfil tablet ini*/
+.dropdown-backdrop {
+    position: static !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    z-index: 990 !important;
+}
+/* Novatec Ajuste Menu Perfil tablet fin*/
+
+
+/*Banco - Botones quiero - 20180110 - ini - se incluyen estilos*/
+
+
+.new-like-btn-style {
+	background: #0069b1;
+	border: none;
+	border-radius: 6px;
+	box-shadow: 1px 1px 1px 0px #d4e6f7;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	font-family: "BBVA Web Book", Arial, sans-serif;
+	font-weight: normal;
+	color: #ffffff;
+	font-size: 16px;
+	height: 32px;
+	width: 62px;
+	position: relative;
+	text-align: center;
+}
+
+.arrow-like-btn-style:hover {
+	background: #ffffff;
+	color:#0069b1;
+}
+
+.arrow-like-btn-style:hover::before {
+	border-right: 15px solid #ffffff;
+}
+
+.arrow-like-btn-style::before {
+	border-top: 15.3px solid transparent;
+	border-bottom: 15.3px solid transparent;
+	border-right: 15px solid #0069b1;
+   	right: 13.5px;
+   	top: 0.6px;
+	float: left;
+	position: relative;
+	content: "";
+	outline: none;
+	box-shadow: none;
+}
+
+.arrow-like-btn-style:focus, .new-like-btn-style:focus {
+	outline: none;
+	border: none;
+}
+
+.new-like-btn-style:active {
+	outline: none;
+	border: none;
+	box-shadow: 0px -1px 1px 0px #bfbfbf inset;
+}
+
+.text-mod-btn-like .ui-button-text {
+	position: relative;
+	right: 10px;
+	top: 0px;
+}
+/*Banco - Estilos Multisesiones - 20190613 - inicio */
+
+
+.divmult {
+	text-align: center;
+	background-color: #FFFFFF;
+	text-align: center;
+	background-color: #FFFFFF;
+	margin-top: 12%;
+	margin-right: 18%;
+	margin-left: 18%;
+}
+
+.Tittlemult {
+	font-family: 'BBVA Web Medium';
+	font-weight: 100;
+	text-align: center;
+	width: 250px;
+}
+
+.Margmult {
+	padding-bottom: 8px;
+}
+
+.Textmult {
+	margin-left: 65px;
+	margin-right: 65px;
+	font-family: 'BBVA Web Light';
+	font-weight: 
+}
+
+.divpaddi {
+	padding-bottom: 10px;
+}
+
+@font-face {
+    font-family: "BentonSansBBVA-BookOne";
+    src: url("../fonts/bbva-book/BentonSansBBVA-Book.ttf");
+}
+
+
+.classtextsmall{
+    font-family: BentonSansBBVA-BookOne;
+    position: absolute;
+    font-size: 12px;
+    color: #666666;
+    margin-top: 6px;
+}
+.icono-cuadrado{
+    background-image:  url("../img/receive-money-dollar.svg");
+    color:#1464A5;
+ }
+.receive-money{
+    padding: 5px 32px;
+    background-image: url('../img/receive-money-dollar.svg');
+    background-size: 26px;
+    background-position: 4px 8px;
+    background-repeat: no-repeat;
+}
+.send-money{
+    padding: 5px 32px;
+    background-image: url('../img/send-money-dollar.svg');
+    background-size: 26px;
+    background-position: 4px 8px;
+    background-repeat: no-repeat;
+   
+}
+.send-money:hover{
+    color: rgb(255, 255, 255) !important;
+}
+
+.colorone{
+    fill:#1973B8 !important;
+}
+
+.colorone:hover{
+    fill:#9e2525 !important;
+}
+.steptrasfiya{
+    height: 100vh;
+    margin: 0;
+    overflow-y: scroll;
+    padding-top: 147px;
+    padding-bottom: 50px;
+    opacity: 0;
+    -webkit-transition: all .5s ease-out .6s;
+    transition: all .5s ease-out .6s;
+}
+.classvalorcount{
+    font-family: BentonSansBBVA-BookOne;
+    position: absolute;
+    font-size: 13px;
+    color: #666666;
+    margin-top: 1px;
+    margin-left: 5px;
+    line-height: 18px;
+    width: 52%;
+}
+
+.topClassvalue{
+    margin-left: 10px;
+    margin-top: -3%;
+}
+/*Banco - Estilos Multisesiones - 20190613 - fin */
+/*Banco - Botones quiero - 20180110 - fin - se incluyen estilos*/

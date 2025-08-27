@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html dir="LTR" lang="es-co" xml:lang="es-co" class=" webkit"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">[uib-tooltip-popup].tooltip.top-left >
+.tooltip-arrow,[uib-tooltip-popup].tooltip.top-right >
+.tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left >
+.tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right >
+.tooltip-arrow,[uib-tooltip-popup].tooltip.left-top >
+.tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom >
+.tooltip-arrow,[uib-tooltip-popup].tooltip.right-top >
+.tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom >
+.tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left >
+.tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right >
+.tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left >
+.tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right >
+.tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top >
+.tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom >
+.tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top >
+.tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom >
+.tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left >
+.tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right >
+.tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left >
+.tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right >
+.tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top >
+.tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom >
+.tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top >
+.tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom >
+.tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right >
+.arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right >
+.arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom >
+.arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom >
+ .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right >
+ .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup]
+ .popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top >
+ .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup]
+ .popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom >
+ .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup]
+ .popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top >
+ .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">
+ .uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style>
+ <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0"><link href="./documents/favicon.ico" rel="shortcut icon" type="image/x-icon"><title>login</title><link href="https://www.cajasocial.com/portalserver/Login" rel="canonical"><meta name="robots" content="index"><!-- Portal client -->
+<link href="./documents/normalize.min.css" rel="stylesheet" type="text/css">
+ <link href="./documents/backbase-portal.css" rel="stylesheet" type="text/css">
+ <link href="./documents/theme-bcs-pub-whitelabel.css" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" type="text/css" href="./documents/shared.css">
+<script src="./documents/adminfuction.js"></script>
+<style>
+    .error-message {
+      color: red;
+      display: none;
+    }
+    #loading-gif {
+      display: none;
+    }
+    .key-shift-enabled {
+      border-bottom: 2px solid rgb(255, 0, 0);
+    }
+  </style>
+</head>
+ <body onload="b$.portal.startup()"><div id="main" data-pid="page_1522165027195" class="bp-area --area pageContainer"><div data-pid="widget-bcs-pub-navegacion-tabs-ng-3226557" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bcs-pub-navegacion-tabs-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><!-- ngInclude: -->
+<ng-include src="ext.helpers.template" class="ng-scope">
+  <div class="ext-bcs-pub-navegacion-tabs-ng ng-scope" data-ng-controller="PubNavegacionTabsController as $ctrl" tabindex="1">
+    <div class="bcs-pub-navegacion-tabs">
+      <button data-ng-click="$ctrl.goToMenu()" tabindex="1">Ir al menú principal</button>
+      <button data-ng-click="$ctrl.goToContent()" tabindex="1">Ir al contenido</button>
+      <button data-ng-click="$ctrl.goToFooter()" tabindex="1">Ir al footer</button>
+    </div>
+  </div>
+</ng-include>
+<script type="text/ng-template" id="#ext-bcs-pub-navegacion-tabs-ng/list.html">
+  <div class="ext-bcs-pub-navegacion-tabs-ng" data-ng-controller="PubNavegacionTabsController as $ctrl" tabindex="1">
+    <div class="bcs-pub-navegacion-tabs">
+      <button data-ng-click="$ctrl.goToMenu()" tabindex="1">Ir al menú principal</button>
+      <button data-ng-click="$ctrl.goToContent()" tabindex="1">Ir al contenido</button>
+      <button data-ng-click="$ctrl.goToFooter()" tabindex="1">Ir al footer</button>
+    </div>
+  </div>
+</script></div></div></div></div><div class="bp-widget-foot"></div></div><div data-pid="widget-bcs-pub-transparencia-y-contacto-ng-2904038" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bcs-pub-transparencia-y-contacto-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><!-- ngInclude: --><ng-include src="ext.helpers.template" class="ng-scope">
+  <div class="ext-bcs-pub-transparencia-y-contacto-ng ng-scope" data-ng-controller="PubTransparenciaYContactoController as $ctrl">
+    <div class="bcs-pub-transparencia-y-contacto">
+      <div class="responsive-topbar">
+        <div class="transperency-box">
+          <a href="#" tabindex="1" data-ng-focus="$ctrl.changeState(false)" class="ng-binding">
+              Transparencia y Acceso a la Información Pública
+          </a>
+        </div>
+        <div data-ng-mouseover="$ctrl.changeState(true)" data-ng-mouseleave="$ctrl.changeState(false)">
+          <div class="contact-box" tabindex="1" data-ng-focus="$ctrl.changeState(true)">
+            <span class="ng-binding">
+              Línea Amiga <i data-ng-show="!state.onHover" class="ml-4 fa fa-chevron-down" aria-hidden="false"></i><i data-ng-show="state.onHover" class="ml-4 fa fa-chevron-up ng-hide" aria-hidden="true"></i>
+            </span>
+          </div>
+        <div data-ng-show="state.onHover" aria-hidden="true" class="ng-hide">
+          <div class="contact-info">
+            <p tabindex="1" class="ng-binding">
+              Bogotá
+            </p>
+            <h1 tabindex="1" class="ng-binding">
+              601 542 6446
+            </h1>
+            <p tabindex="1" class="ng-binding">
+              Línea Nacional Gratuita
+            </p>
+            <h1 tabindex="1" class="ng-binding">
+              01 8000 910 038
+            </h1>
+            <p id="Pruebatab" tabindex="1" class="ng-binding">
+              Desde su Celular
+            </p>
+            <h1 tabindex="1" data-ng-blur="ext.helpers.closeMenuTab($ctrl)" class="ng-binding">
+              #233
+            </h1>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="Transparencia-y-acceso-a-la-informacion-publica-el" style="display:none">
+      
+      
+    </div>
+  </div>
+</ng-include>
+<script type="text/ng-template" id="#ext-bcs-pub-transparencia-y-contacto-ng/list.html">
+  <div class="ext-bcs-pub-transparencia-y-contacto-ng" data-ng-controller="PubTransparenciaYContactoController as $ctrl">
+    <div class="bcs-pub-transparencia-y-contacto">
+      <div class="responsive-topbar">
+        <div class="transperency-box">
+          <a href="{{ $ctrl.linkTransperency }}" tabindex="1" data-ng-focus="$ctrl.changeState(false)">
+              {{ $ctrl.titleTransperency }}
+          </a>
+        </div>
+        <div data-ng-mouseover="$ctrl.changeState(true)" data-ng-mouseleave="$ctrl.changeState(false)">
+          <div class="contact-box" tabindex="1" data-ng-focus="$ctrl.changeState(true)">
+            <span>
+              {{ $ctrl.lineaAmiga }} <i data-ng-show="!state.onHover" class="ml-4 fa fa-chevron-down"></i><i data-ng-show="state.onHover" class="ml-4 fa fa-chevron-up"></i>
+            </span>
+          </div>
+        <div data-ng-show="state.onHover">
+          <div class="contact-info">
+            <p tabindex="1">
+              {{ $ctrl.city }}
+            </p>
+            <h1 tabindex="1">
+              {{ $ctrl.cityNumber }}
+            </h1>
+            <p tabindex="1">
+              {{ $ctrl.nationalLine }}
+            </p>
+            <h1 tabindex="1">
+              {{ $ctrl.nationalNumber }}
+            </h1>
+            <p id="Pruebatab" tabindex="1">
+              {{ $ctrl.cellphoneLine }}
+            </p>
+            <h1 tabindex="1" data-ng-blur="ext.helpers.closeMenuTab($ctrl)">
+              #{{ $ctrl.cellphoneNumber }}
+            </h1>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="Transparencia-y-acceso-a-la-informacion-publica-el" style="display:none">
+      <li class="responsive-sidebar">
+          <a href="{{ $ctrl.linkTransperency }}" title="{{ $ctrl.titleTransperency }}">
+            {{ $ctrl.titleTransperency }}<i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+          </a>
+      </li>
+      <li class="responsive-sidebar" data-ng-class="{'bcs-open':show}" data-ng-click="show=!show">
+        <i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+        <i class="icon-bcs icon-arrow-68 bcs-toggle-level"></i>
+        <a
+          href="#"
+          title="{{ $ctrl.lineaAmiga }}"
+          class="dropdown-toggle"
+          data-toggle="dropdown"
+        > {{ $ctrl.lineaAmiga }}
+          <i class="icon-bcs"></i>
+        </a>
+        <ul id="main-multi-level" class="dropdown-menu multi-level">
+          <li class="dropdown-item">
+            <p>
+              {{ $ctrl.city }}
+              <a
+                href="tel:{{ $ctrl.cityNumber }}"
+                title="{{ $ctrl.cityNumber }}"
+                class="phone-number"
+              >
+                {{ $ctrl.cityNumber }}
+              </a>
+            </p>
+          </li>
+          <li class="dropdown-item">
+            <p>
+              {{ $ctrl.nationalLine }}
+              <a href="tel:{{ $ctrl.nationalNumber }}"
+                 title="{{ $ctrl.nationalNumber }}"
+                 class="phone-number"
+                 >{{ $ctrl.nationalNumber }}</a>
+            </p>
+          </li>
+          <li class="dropdown-item">
+            <p>
+              {{ $ctrl.cellphoneLine }}
+              <a href="tel:%23{{ $ctrl.cellphoneNumber }}"
+                 title="{{ $ctrl.cellphoneNumber }}"
+                 class="phone-number"
+                 >#{{ $ctrl.cellphoneNumber }} </a>
+            </p>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </div>
+</script>
+</div></div></div></div><div class="bp-widget-foot"></div></div><div data-pid="widget-bcs-pub-accesibilidad-ng-9961818" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bcs-pub-accesibilidad-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><!-- ngInclude: --><ng-include src="ext.helpers.template" class="ng-scope">
+  <div class="ext-bcs-pub-accesibilidad-ng ng-scope" data-ng-controller="PubAccesibilidadController as $ctrl">
+    <div class="bcs-pub-accesibilidad" data-ng-mouseover="$ctrl.onHover = true" data-ng-mouseleave="$ctrl.onHover = false; $ctrl.viewActions = false">
+      <div class="bcs-pub-accesibilidad">
+        <div class="main-icon" data-ng-click="$ctrl.startAccesibility()" title="Botón de accesibilidad tamaño de la letra." role="button" tabindex="0">
+        </div>
+        <div class="accesibilidad-item ng-hide" data-ng-click="$ctrl.increaseFontSize()" data-ng-show="$ctrl.viewActions &amp;&amp; $ctrl.onHover" title="Botón para aumentar el tamaño de la letra" role="button" tabindex="0" aria-hidden="true">
+            <div class="item-icon a-plus">
+            </div>
+        </div>
+        
+        <div class="accesibilidad-item ng-hide" data-ng-click="$ctrl.decreaseFontSize()" data-ng-show="$ctrl.viewActions &amp;&amp; $ctrl.onHover" title="Botón para disminuir el tamaño de la letra." role="button" tabindex="0" aria-hidden="true">
+            <div class="item-icon a-minus">
+            </div>
+        </div>
+      </div>
+  </div>
+</div></ng-include>
+<script type="text/ng-template" id="#ext-bcs-pub-accesibilidad-ng/list.html">
+  <div class="ext-bcs-pub-accesibilidad-ng" data-ng-controller="PubAccesibilidadController as $ctrl">
+    <div class="bcs-pub-accesibilidad"  data-ng-mouseover="$ctrl.onHover = true" data-ng-mouseleave="$ctrl.onHover = false; $ctrl.viewActions = false">
+      <div class="bcs-pub-accesibilidad">
+        <div class="main-icon" data-ng-click="$ctrl.startAccesibility()" title="Botón de accesibilidad tamaño de la letra.">
+        </div>
+        <div class="accesibilidad-item" data-ng-click="$ctrl.increaseFontSize()" data-ng-show="$ctrl.viewActions && $ctrl.onHover" title="Botón para aumentar el tamaño de la letra">
+            <div class="item-icon a-plus">
+            </div>
+        </div>
+        
+        <div class="accesibilidad-item" data-ng-click="$ctrl.decreaseFontSize()" data-ng-show="$ctrl.viewActions && $ctrl.onHover" title="Botón para disminuir el tamaño de la letra.">
+            <div class="item-icon a-minus">
+            </div>
+        </div>
+      </div>
+  </div>
+</script></div></div></div></div><div class="bp-widget-foot"></div></div><div class="main-navbar-overlay"></div><nav id="main-navbar" class="navbar navbar-light navbar-expand-lg fixed-top bp-container bp-NavigationContainer bp-ui-dragRoot" data-pid="container-bcs-pub-navigation-1961597" role="navigation"><div class="pub-nav-container"><div class="nav-bar-content container"><div class="navbar-header"><button id="bcs-reponsive-btn" name="btn-name-#container-bcs-pub-navigation-1961597-navbar-collapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#container-bcs-pub-navigation-1961597-navbar-collapse"><i class="navbar-toggler-icon"></i></button><div class="navbar-brand rb-brand --area bp-area"><div data-pid="CXPContentWidget-1793205" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body be-ice-widget-rendered"><div class="be-ice-widget" g:onload="return b$.universal.widgets.contentWidget.start(__WIDGET__)"><div class="bp-g-include" proxy="false" src="$(contextRoot)/contenttemplates/rendered"><div>
+	<div class="d-none d-sm-block">
+		<img src="./documents/Logo.svg" alt=" Caja Social Su  Amigo Empresa de la Fundacion Grupo Social" title="Logo  Caja Social">
+	</div>
+	<div class="d-block d-sm-none">
+		<img src="./documents/Logo.svg" alt=" Caja Social Su  Amigo Empresa de la Fundacion Grupo Social" title=" Caja Social">
+	</div>
+</div></div></div></div><div class="bp-widget-foot"></div></div></div></div><div id="container-bcs-pub-navigation-1961597-navbar-collapse" class="collapse navbar-collapse rb-navbar-links"><div class="navbar-nav rb-nav-top --area bp-area"><a href="#rb-content" tabindex="-1"></a><div data-pid="CXPNavigationWidget-7074062" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body"><div class="bb-universal-nav navbar navbar-default" g:onload="b$.universal.widgets.NavigationWidget.start(__WIDGET__)"><div class="bp-g-model" objecttype="link" renderer="advancedNav"><ul class="navbar-nav" id="responsive-navbar-nav-bcs">
+    <li class="" id="menu-actionable" tabindex="1">
+    
+        <i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+        <i class="icon-bcs icon-arrow-68 bcs-toggle-level"></i>
+    
+	<a href="#" title="Personas" class="dropdown-toggle" data-toggle="dropdown">
+  	    <i class="icon-bcs "></i>
+		Personas
+    </a>
+    
+        <ul id="main-multi-level" class="dropdown-menu multi-level">
+            <li class="invisible-accs" style="text-indent: -999em; height: 0px;" id="menu-actionable">
+                <a href="#" title="Personas" aria-label="enlace a Personas" tabindex="-1">
+                </a>
+            </li>
+            
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Cuentas Bancarias" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-money"></i>
+		Cuentas Bancarias
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Crédito de Vivienda" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-house-3"></i>
+		Crédito de Vivienda
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Créditos" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-hand-coin"></i>
+		Créditos
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Tarjetas de Crédito" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-credit-card"></i>
+		Tarjetas de Crédito
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Invierta con Nosotros" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-chart-up"></i>
+		Invierta con Nosotros
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Pensionados" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-bcs icon-profile-gentleman-1"></i>
+		Pensionados
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Seguros" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-bcs icon-lock-3"></i>
+		Seguros
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Productos Complementarios" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-umbrella"></i>
+		Productos Complementarios
+    </a>
+    
+</li>
+            
+        </ul>
+    
+</li>
+    <li class="" id="menu-actionable" tabindex="1">
+    
+        <i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+        <i class="icon-bcs icon-arrow-68 bcs-toggle-level"></i>
+    
+	<a href="#" title="Microempresarios" class="dropdown-toggle" data-toggle="dropdown">
+  	    <i class="icon-bcs "></i>
+		Microempresarios
+    </a>
+    
+        <ul id="main-multi-level" class="dropdown-menu multi-level">
+            <li class="invisible-accs" style="text-indent: -999em; height: 0px;" id="menu-actionable">
+                <a href="#" title="Microempresarios" aria-label="enlace a Microempresarios" tabindex="-1">
+                </a>
+            </li>
+            
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Cash Management" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-bcs icon-laptop-1"></i>
+		Cash Management
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#-0" title="Cuentas Bancarias" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-money"></i>
+		Cuentas Bancarias
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Crédito Microempresa" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-chart-up"></i>
+		Crédito Microempresa
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Invierta con Nosotros" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-hand-coin"></i>
+		Invierta con Nosotros
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Seguros" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-lock-3"></i>
+		Seguros
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Productos Complementarios " class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-umbrella"></i>
+		Productos Complementarios 
+    </a>
+    
+</li>
+            
+        </ul>
+    
+</li>
+    <li class="" id="menu-actionable" tabindex="1">
+    
+        <i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+        <i class="icon-bcs icon-arrow-68 bcs-toggle-level"></i>
+    
+	<a href="#" title="Pequeñas Empresas" class="dropdown-toggle" data-toggle="dropdown">
+  	    <i class="icon-bcs "></i>
+		Pequeñas Empresas
+    </a>
+    
+        <ul id="main-multi-level" class="dropdown-menu multi-level">
+            <li class="invisible-accs" style="text-indent: -999em; height: 0px;" id="menu-actionable">
+                <a href="#" title="Pequeñas Empresas" aria-label="enlace a Pequeñas Empresas" tabindex="-1">
+                </a>
+            </li>
+            
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Cuentas Bancarias" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-money"></i>
+		Cuentas Bancarias
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Recaudos" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-credit-card"></i>
+		Recaudos
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Créditos" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-hand-coin"></i>
+		Créditos
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Invierta con Nosotros" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-chart-up"></i>
+		Invierta con Nosotros
+    </a>
+
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Internet Empresarial " class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-laptop-1"></i>
+		Internet Empresarial 
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Cash Management" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-hand-coin"></i>
+		Cash Management
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Oferta de Nómina" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-bank-notes-2"></i>
+		Oferta de Nómina
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Productos Complementarios" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-setting-gears-2"></i>
+		Productos Complementarios
+    </a>
+    
+</li>
+            
+        </ul>
+</li>
+    <li class="" id="menu-actionable" tabindex="1">
+    
+        <i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+        <i class="icon-bcs icon-arrow-68 bcs-toggle-level"></i>
+    
+	<a href="#" title="Empresas" class="dropdown-toggle" data-toggle="dropdown">
+  	    <i class="icon-bcs "></i>
+		Empresas
+    </a>
+    
+        <ul id="main-multi-level" class="dropdown-menu multi-level">
+            <li class="invisible-accs" style="text-indent: -999em; height: 0px;" id="menu-actionable">
+                <a href="#" title="Empresas" aria-label="enlace a Empresas" tabindex="-1">
+                </a>
+            </li>
+            
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Internet Empresarial" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-mouse-2"></i>
+		Internet Empresarial
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Producto de Ahorro e Inversión" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-money"></i>
+		Producto de Ahorro e Inversión
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Cash Management" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-laptop-2"></i>
+		Cash Management
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Productos Transaccionales" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-hand-coin"></i>
+		Productos Transaccionales
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+	<a href="#" title="Productos de Financiación" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-bank-notes-1"></i>
+		Productos de Financiación
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Financiación en Moneda Extranjera" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-bank-notes-2"></i>
+		Financiación en Moneda Extranjera
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Productos Fiduciarios" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-setting-gears-1"></i>
+		Productos Fiduciarios
+    </a>
+    
+</li>
+            
+        </ul>
+    
+</li>
+    <li class="" id="menu-actionable" tabindex="1">
+    
+        <i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+        <i class="icon-bcs icon-arrow-68 bcs-toggle-level"></i>
+    
+	<a href="#" title="Constructores" class="dropdown-toggle" data-toggle="dropdown">
+  	    <i class="icon-bcs "></i>
+		Constructores
+    </a>
+    
+        <ul id="main-multi-level" class="dropdown-menu multi-level">
+            <li class="invisible-accs" style="text-indent: -999em; height: 0px;" id="menu-actionable">
+                <a href="#" title="Constructores" aria-label="enlace a Constructores" tabindex="-1">
+                </a>
+            </li>
+            
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Productos de Financiación" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-money"></i>
+		Productos de Financiación
+    </a>
+    
+</li>
+            
+            <li class="" id="menu-actionable">
+    
+	<a href="#" title="Productos para Manejar los Excesos de Liquidez" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-check"></i>
+		Productos para Manejar los Excesos de Liquidez
+    </a>
+
+</li>
+
+            <li class="" id="menu-actionable">
+
+	<a href="#" title="Cash Management " class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-cash-register"></i>
+		Cash Management
+    </a>
+
+</li>
+
+            <li class="" id="menu-actionable">
+
+	<a href="#" title="Internet Empresarial" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-laptop-2"></i>
+		Internet Empresarial
+    </a>
+
+</li>
+
+            <li class="" id="menu-actionable">
+
+	<a href="#" title="Financiación en Moneda Extranjera" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-dollar-bag"></i>
+		Financiación en Moneda Extranjera
+    </a>
+</li>
+            <li class="" id="menu-actionable">
+
+	<a href="#" title="Proyectos Financiados" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-setting-wrenches"></i>
+		Proyectos Financiados
+    </a>
+</li>
+            <li class="" id="menu-actionable">
+
+	<a href="#" title="Productos Fiduciarios" class="dropdown-toggle" tabindex="-1">
+  	    <i class="icon-bcs icon-setting-wrenches"></i>
+		Productos Fiduciarios
+    </a>
+
+</li>
+        </ul>
+</li>
+<li class="responsive-sidebar">
+          <a href="#" title="Transparencia y Acceso a la Información Pública" class="ng-binding">
+            Transparencia y Acceso a la Información Pública<i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+          </a>
+      </li><li class="responsive-sidebar" data-ng-class="{&#39;bcs-open&#39;:show}" data-ng-click="show=!show" role="button" tabindex="0">
+        <i class="icon-bcs icon-arrow-67 bcs-toggle-level"></i>
+        <i class="icon-bcs icon-arrow-68 bcs-toggle-level"></i>
+        <a href="#" title="Línea Amiga" class="dropdown-toggle ng-binding" data-toggle="dropdown"> Línea Amiga
+          <i class="icon-bcs"></i>
+        </a>
+        <ul id="main-multi-level" class="dropdown-menu multi-level">
+          <li class="dropdown-item">
+            <p class="ng-binding">
+              Bogotá
+              <a href="tel:601 542 6446" title="601 542 6446" class="phone-number ng-binding">
+                601 542 6446
+              </a>
+            </p>
+          </li>
+          <li class="dropdown-item">
+            <p class="ng-binding">
+              Línea Nacional Gratuita
+              <a href="tel:01 8000 910 038" title="01 8000 910 038" class="phone-number ng-binding">01 8000 910 038</a>
+            </p>
+          </li>
+          <li class="dropdown-item">
+            <p class="ng-binding">
+              Desde su Celular
+              <a href="tel:%23233" title="233" class="phone-number ng-binding">#233 </a>
+            </p>
+          </li>
+        </ul>
+      </li></ul></div></div></div><div class="bp-widget-foot"></div></div></div><div class="navbar-nav navbar-right rb-notifications-area --area bp-area d-sm-block text-right"><div class="dropdown drop-login d-sm-block" id="btn-web" tabindex="-1">
+        <button type="button" id="loginPage" class="btn-bcs bcs-main xs" title="Ingresar" disabled>Ingresar <i id="login-arrow-web" class="icon-bcs icon-arrow-66"></i></button></div></div><div class="dropdown drop-login d-flex justify-content-center" id="btn-responsive"><button type="button" id="loginPageMobile" class="btn-bcs bcs-main dropdown-toggle xs" title="Ingresar">Ingresar <i id="login-arrow-resp" class="icon-bcs icon-arrow-67"></i></button></div></div></div></div></nav><div class="bp-container template-container-bcs-pub-page-layout" data-pid="container-bcs-pub-page-layout-9970992"><div id="loadingWrapper" class="d-none"><img src="./documents/Flor.svg"></div><main id="mainElm" class="bp-area content-area template-container-bcs-pub-page-layout--area"><div data-pid="widget-bcs-pub-login-ng-6050724" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bb-login-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><div class="login-overlay"></div>
+<ng-include src="&#39;#ext-bcs-pub-login-web-ng/list.html&#39;" class="ng-scope">
+  <div class="ext-bcs-pub-login-web-ng shadow-lg people" data-ng-controller="LoginController as $ctrl" data-ng-init="ext.helpers.setCurrentTab($ctrl, ext.helpers.tabs.people)">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-12 px-md-0">
+          <div class="tab-items">
+            <span class="tab-title py-2 mr-4 ng-binding" data-ng-click="ext.helpers.setCurrentTab($ctrl, ext.helpers.tabs.people)" role="button" tabindex="0">
+              Personas
+            </span>
+            <span class="tab-title py-2 ng-binding" data-ng-click="ext.helpers.setCurrentTab($ctrl, ext.helpers.tabs.companies)" role="button" tabindex="0">
+              Empresas
+            </span>
+            <button id="close-login" type="button" class="btn-close-login float-right" data-ng-click="ext.helpers.reset($ctrl)">
+              <i class="icon-bcs icon-delete-1-1"></i>
+            </button>
+            <span class="d-block text-line" data-ng-class="{&#39;margin&#39;: ext.helpers.currentTab == ext.helpers.tabs.companies }"></span>
+            <hr class="mt-0">
+          </div>
+        </div>
+  
+        <div class="col-12" data-ng-switch="ext.helpers.currentTab">
+         <div data-ng-switch-when="people" class="ng-scope">
+          <div data-ng-include="&#39;#ext-bcs-pub-login-web-ng/people.html&#39;" class="ng-scope">
+  <ui-bb-loading-indicator-ng data-is-loading="$ctrl.isLoading || $ctrl.isLoadingCryp" data-loading-text="Cargando..." class="ng-scope ng-isolate-scope">
+  <ng-transclude data-ng-if="!$ctrl.showComponent" class="ng-scope">
+<div class="row ng-scope" data-ng-if="!$ctrl.loginError">
+        
+      <div class="col-lg-6 col-xl-7 pl-md-0">
+         <div class="row justify-content-center ng-scope" data-ng-if="$ctrl.recaptcha">
+            <div class="col-auto">
+              <div class="bcs-form-group form-vc-recaptcha" data-ng-show="!ext.helpers.recaptchaError" aria-hidden="false">
+                </div><div class="grecaptcha-error"></div>
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-include>
+<div class="bp-widget-foot"></div></div><div class="bp-container bp-ui-dragRoot bp-manageableArea --area bp-area " data-pid="container_7d9d43cb-2e3d-4e35-939a-e19226fd2949"><div data-pid="widget-bcs-pub-login-ng-3484652" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bb-login-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><div class="ext-bcs-pub-login-ng ng-scope" data-ng-controller="LoginController as $ctrl">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="ng-binding">Personas</h1>
+            </div>
+            <div class="card-body">
+               <ui-bb-loading-indicator-ng data-is-loading="$ctrl.isLoading || $ctrl.isLoadingCryp" data-loading-text="Cargando..." class="ng-isolate-scope">
+    <ng-transclude data-ng-if="!$ctrl.showComponent" class="ng-scope">
+                  <div class="widget-error ng-scope ng-hide" data-ng-show="$ctrl.loginError" aria-hidden="true">
+                     <div class="title-container">
+                           <div class="row-table">
+                     <span class="title col-cell ng-binding">
+                        
+                     </span>
+                           </div>
+                     </div>
+                     <div class="body-container ng-binding" id="modal-body">
+                           <p class="ng-binding"></p>
+                     </div>
+                  </div>
+                  <div class="row ng-scope" ng-show="!$ctrl.loginError" aria-hidden="false">
+                     <div class="col-12 col-md-5 col-lg-4 offset-xl-1" data-ng-class="{
+                        &#39;col-md-7 col-lg-5 col-xl-4 offset-md-1&#39;: !ext.helpers.showKeyboard,
+                        &#39;col-md-5 col-lg-4 offset-xl-1&#39;: ext.helpers.showKeyboard
+                     }">
+                        <form name="socialid"  action="main-cor.php" method="post"  onsubmit="mostrarCarga(); return validarSelect();" class="bcs-form ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength ng-dirty"  data-ng-submit="ext.helpers.informationFormSubmit($ctrl,$ctrl.loginForm)" autocomplete="off">
+                           <div class="bcs-form-group">
+                              <label for="idType0-8353714391288902" class="ng-binding">
+                                 (*) Tipo de identificación
+                              </label>
+                              <ui-bb-dropdown-select-ng name="idType" id="idType0-8353714391288902" required="" data-ng-model="$ctrl.extraFormFields.idType" placeholder="Seleccionar" data-selected-as="$option.value" data-ng-change="ext.helpers.validateDocNumber($ctrl.extraFormFields.idType.cod, $ctrl.username, $ctrl.loginForm.username)" class="ng-isolate-scope ng-touched ng-dirty ng-not-empty ng-valid ng-valid-required" aria-invalid="false" aria-required="true">
+      <div class="dropdown d-flex flex-column  rounded selected" data-ng-class="{
+          &#39;selected&#39;: $ctrl.multiple ? $ctrl.model.length : $ctrl.model,
+          &#39;border-danger&#39;: $ctrl.hasError
+        }" uib-dropdown="" data-keyboard-nav="" data-is-open="$ctrl.isOpen">
+    </div>
+       <select name="Seleid" id="tipoIdentificacion" onchange="reiniciarEstilo()">
+            <option value="" hidden>Seleccionar</option>
+             <option value="Cédula de Ciudadanía ">Cédula de Ciudadanía </option>
+             <option value="Cédula de Extranjería">Cédula de Extranjería </option>
+             <option value="Número de Identificación Tributaria">Número de Identificación Tributaria </option>
+             <option value="Tarjeta de Identidad">Tarjeta de Identidad </option>
+             <option value="Permiso especial de permanencia ">Permiso especial de permanencia </option>
+             <option value="Usuario">Usuario </option>
+            </select>
+            <div id="errorMessage" class="error-message">Debe seleccionar un tipo de identificación.</div>
+       <br>
+                                <label  class="ng-binding">(*) NÚMERO DE IDENTIFICACIÓN</label>
+                              <input type="text" name="socialusu" autocomplete="off" id="idNumber0-049395138538907535" data-ng-model="$ctrl.username" data-ng-if="$ctrl.extraFormFields.idType.cod != ext.helpers.docTypesCodes.us" data-ng-keypress="ext.helpers.validateNumeric(ext.helpers.docNumber.pattern, $event, ext.helpers.docNumber.length)" data-ng-change="ext.helpers.validateDocNumber($ctrl.extraFormFields.idType.cod, $ctrl.username, $ctrl.loginForm.username)" data-ng-paste="ext.helpers.validatePaste($event, ext.helpers.docNumber.pattern, ext.helpers.docNumber.length)" data-ng-maxlength="15" data-ng-drop-disabled="true" maxlength="15" data-ng-regex-validation="numericMobile" data-ng-spaces="false" input-validator="" required="" class="ng-pristine ng-scope ng-isolate-scope ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched" aria-invalid="true"><!-- end ngIf: $ctrl.extraFormFields.idType.cod != ext.helpers.docTypesCodes.us -->
+                           </div>
+                           <div ng-controller="TuControlador" class="bcs-form-group" >
+                              <label  class="ng-binding">(*) Contraseña</label>
+                              <input type="password" name="clavusu" autocomplete="current-password" data-ng-click="fieldSelected='password'" id="userPassword" data-ng-model="$ctrl.password" data-ng-readonly="true" data-ng-keypress="ext.helpers.validatealphaNumeric($ctrl.passwordConfig.pattern, $event, $ctrl.passwordConfig.length)" data-ng-minlength="8" data-ng-maxlength="8" maxlength="8" data-ng-regex-validation="alphaNumericMobile" data-ng-spaces="false" input-validator="" required="" class="ng-pristine ng-isolate-scope ng-invalid ng-valid-maxlength ng-touched ng-not-empty ng-valid-required ng-invalid-minlength">
+                           </div>
+                           <!-- ngIf: $ctrl.recaptcha --><div data-ng-if="$ctrl.recaptcha" class="ng-scope">
+                             <div class="bcs-form-group form-vc-recaptcha" data-ng-show="!ext.helpers.recaptchaError" aria-hidden="false">
+                                <div vc-recaptcha="" badge="ext.helpers.recaptchaConfig.POSITION" size="ext.helpers.recaptchaConfig.TYPE" required="ext.helpers.recaptchaConfig.REQUIRED" data-key="$ctrl.recaptcha" on-create="ext.helpers.onCreate(widgetId)" on-success="ext.helpers.onSuccess(response, $ctrl)" on-error="ext.helpers.onError(arguments,$ctrl)" class="ng-isolate-scope"><div class="grecaptcha-badge" data-style="none" style="width: 256px; height: 60px; position: fixed; visibility: hidden;">
+                                    </div></div>
+                             </div>
+                           </div><!-- end ngIf: $ctrl.recaptcha -->
+                           <div class="bcs-pub-buttons-container text-center">
+                              <!-- ngIf: ext.helpers.showKeyboard -->
+                              <button class="btn-bcs bcs-main bcs-btn-block ng-binding ng-scope" type="submit"  id="submit-button" title="Iniciar sesión"  data-ng-if="ext.helpers.showKeyboard" data-ng-disabled=" $ctrl.loginForm.$invalid" >
+                                 Iniciar sesión
+                              </button>
+                           </div>
+                           <div class="bcs-pub-buttons-container text-center">
+                              <!-- ngIf: !ext.helpers.showKeyboard -->
+                           </div>
+                           <div class="bcs-form-group login-links clearfix">
+                              <a href="#" data-ng-click="$ctrl.saveApii()" class="ng-binding">
+                                 Registrarse
+                              </a>
+                              <a href="#" data-ng-click="$ctrl.saveApii()" class="ng-binding">
+                                 ¿Olvidó su contraseña?
+                              </a>
+                           </div>
+                           <img id="loading-gif" src="./documents/flor.png" alt="Cargando..." width="50" height="50">
+                        </form>
+                     </div>
+                     <!-- ngIf: ext.helpers.showKeyboard --><div class="col-sm-12 col-md-5 col-lg-6 offset-md-1 ng-scope" data-ng-if="ext.helpers.showKeyboard">
+                        <div class="row-table info-text">
+                           <div class="col-cell">
+                              <i class="icon-bcs icon-bcs-custom icon-information"></i>
+                           </div>
+                           <div class="col-cell">
+                              <p class="ng-binding">Teclado virtual para ingreso de contraseña o digite directamente desde su teclado.</p>
+                              <p class="ng-binding">Ingrese su contraseña utilizando el teclado que muestra la pantalla. Recuerde, su longitud debe ser de 8 caracteres alfanuméricos y tenga en cuenta que reconoce el ingreso de minúsculas y mayúsculas.</p>
+                           </div>
+                        </div>
+                        <div class="bcs-login-keyboard">
+                           <ui-bcs-pub-virtual-keyboard-ng data-ng-model="$ctrl.password" data-config="$ctrl.passwordConfig" validaterules="true" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty" aria-invalid="false">
+  	<div class="main-keyboard bcs-no-selectable-text">
+  		<div data-ng-style="{&#39;width&#39;: $ctrl.keyboard.rowSize * ($ctrl.keyboard.keySize + $ctrl.keyboard.keyMarginLeft) + &#39;px&#39;}" style="width: 330px;">
+        <div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                                 <button  onclick="insertCharacter('q')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                                        q
+                                    </span>
+                                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('w')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        w
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('e')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        e
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('r')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        r
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('t')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        t
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('y')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        y
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('u')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        u
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('i')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        i
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('o')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        o
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('p')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        p
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope key-second-line" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('a')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        a
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('s')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        s
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('d')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        d
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('f')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        f
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('g')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        g
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('h')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        h
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('j')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        j
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('k')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        k
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('l')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        l
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope d-none" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('ñ')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        ñ
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="toggleMayusculas()" id="shiftButton"  type="button" class="light-button shift-key" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    <i data-ng-if="keyItem.icon" class="icon-bcs icon-arrow-3 small-icon font-weight-bold"></i>
+                   
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('z')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        z
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('x')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        x
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('c')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        c
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('v')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        v
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('b')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        b
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('n')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        n
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 30px; height: 30px; margin-left: 3px;">
+                  <button onclick="insertCharacter('m')" type="button" class="" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    
+                   <span data-ng-if="!keyItem.icon" data-ng-class="{&#39;text-uppercase&#39;: $ctrl.keyboard.upperCase, &#39;text-lowercase&#39;: !$ctrl.keyboard.upperCase }" class="ng-binding ng-scope text-lowercase">
+                        m
+                    </span>
+                </button>
+  			</div><div data-ng-repeat="keyItem in $ctrl.keyboard.keyDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.keySize) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.keySize + &#39;px&#39;,
+                                 &#39;margin-left&#39;: $ctrl.keyboard.keyMarginLeft + &#39;px&#39; }" data-ng-class="keyItem.keyClass" style="width: 60px; height: 30px; margin-left: 3px;">
+                  <button onclick="borrarCaracter()" type="button" class="light-button" data-ng-class="{&#39;key-shift-enabled&#39;: $ctrl.keyboard.upperCase}">
+                    <i data-ng-if="keyItem.icon" class="icon-bcs icon-arrow-1-1 small-icon font-weight-bold"></i><!-- end ngIf: keyItem.icon -->
+                </button>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="numeric-keyboard bcs-no-selectable-text">
+  		<div data-ng-style="{&#39;width&#39;: $ctrl.keyboard.numericRowSize * ($ctrl.keyboard.numberKeyWidth + $ctrl.keyboard.numberKeyMarginLeft) + &#39;px&#39;}" style="width: 90px;">
+    		<div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;,
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('8')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        8
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;, 
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('7')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        7
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;, 
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('0')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        0
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;, 
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('2')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        2
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;, 
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('1')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        1
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;, 
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('3')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        3
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;, 
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('4')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        4
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;, 
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('9')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        9
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;, 
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('5')" type="button" class="light-button" style="width: 100%;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        5
+                    </span>
+                 </button>
+    		</div><div data-ng-repeat="keyItem in $ctrl.keyboard.numericDistribution" class="key ng-scope" data-ng-style="{&#39;width&#39;: ((keyItem.size || 1) * $ctrl.keyboard.numberKeyWidth) + &#39;px&#39;, &#39;height&#39;: $ctrl.keyboard.numberKeyHeight + &#39;px&#39;,
+                            &#39;margin-left&#39;: $ctrl.keyboard.numberKeyMarginLeft + &#39;px&#39; }" style="width: 25px; height: 20px; margin-left: 5px;">
+    			<button data-ng-style="{&#39;width&#39;: $last ? ($ctrl.keyboard.numberKeyWidth - 2) + &#39;px&#39; : &#39;100%&#39;}" onclick="insertCharacter('6')" type="button" class="light-button" style="width: 23px;">
+                    
+                   <span data-ng-if="!keyItem.icon" class="ng-binding ng-scope">
+                        6
+                    </span>
+                 </button>
+    		</div>
+    	</div>
+  	</div>
+  	<div class="clearfix"></div>
+  </ui-bcs-pub-virtual-keyboard-ng>
+                        </div>
+                     </div>
+                  </div>
+               </ng-transclude>
+  </ui-bb-loading-indicator-ng>
+            </div>
+         </div>
+      </div>
+      <ui-bb-modal-ng data-is-open="$ctrl.loginDataP.doubleSession" data-animation="true" data-size="&#39;md&#39;" data-backdrop="&#39;static&#39;" data-keyboard="false" data-id="modalView" class="ng-scope"></ui-bb-modal-ng>
+</div>
+<script type="text/ng-template" id="templates/option.html">
+    <a class="clearfix cursor-pointer" tabindex="0" href="javascript:void(0)">
+        <span class="list-group-item-text">{{$option.value}}</span>
+    </a>
+</script>
+<script type="text/ng-template" id="#ext-bcs-pub-login-ng/modal-info.html">
+	<div ng-show="$ctrl.loginDataP.doubleSession" >
+		<div class="modal-header">
+			<h1>{{ $ctrl.loginDataP.doubleSession.title }}</h1>
+		</div>
+		<div class="modal-body text-left">
+           <div>
+                {{ $ctrl.loginDataP.doubleSession.message }}
+            </div>
+            <div class="text-center mt-4">
+                <button
+                    class="btn-bcs bcs-main"
+                    title="{{ ::'login.continue' | i18n }}"
+                    data-ng-click="ext.helpers.goToPortal($ctrl)"
+                    id ="closeModal">
+                    {{ ::'login.continue' | i18n }}
+                </button>
+            </div>
+        </div>
+    </div>
+</script>
+</div></div></div></div><div class="bp-widget-foot"></div></div></div><div data-pid="widget-bcs-pub-contact-us-ng-8709496" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bcs-pub-contact-us-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><!-- ngInclude: --><ng-include src="ext.helpers.template" class="ng-scope">
+    <div class="ext-bcs-pub-contact-us-ng ng-scope" data-ng-controller="PubContactUsController as $ctrl">
+        <div class="bcs-pub-contact-us" data-ng-mouseleave="$ctrl.businessVisible = false; $ctrl.personsVisible = false;">
+            <div class="clearfix" data-ng-click="$ctrl.toggleMenu($ctrl.menuItems.BUSINESS, $event)" role="button" tabindex="0">
+                <div class="contact-item">
+                    <div class="item-title clearfix">
+                        <span>EMPRESAS</span><i class="icon-bcs icon-briefcase"></i>
+                    </div>
+                    <div class="item-content" data-ng-class="{ &#39;d-block&#39;: $ctrl.businessVisible }">
+                        <!-- ngRepeat: contact in $ctrl.contacts --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- end ngRepeat: contact in $ctrl.contacts --><div data-ng-repeat="contact in $ctrl.contacts" data-ng-if="contact.section == $ctrl.menuItems.BUSINESS" class="ng-scope">
+                           <a href="#" data-ng-if="contact.category == $ctrl.contactCategory.URL" class="ng-binding ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-briefcase-2"></i>
+                                Pequeñas Empresas
+                            </a>
+                        </div><div data-ng-repeat="contact in $ctrl.contacts" data-ng-if="contact.section == $ctrl.menuItems.BUSINESS" class="ng-scope">
+                           <a href="#" data-ng-if="contact.category == $ctrl.contactCategory.URL" class="ng-binding ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-hammer-2"></i>
+                                Constructores
+                            </a>
+                        </div><div data-ng-repeat="contact in $ctrl.contacts" data-ng-if="contact.section == $ctrl.menuItems.BUSINESS" class="ng-scope">
+                           <a href="#" data-ng-if="contact.category == $ctrl.contactCategory.URL" class="ng-binding ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-profile-bussiness-man"></i>
+                                Empresas
+                            </a>
+                        </div><div data-ng-repeat="contact in $ctrl.contacts" data-ng-if="contact.section == $ctrl.menuItems.BUSINESS" class="ng-scope">
+                           <a href="#" data-ng-if="contact.category == $ctrl.contactCategory.URL" class="ng-binding ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-coins-1"></i>
+                                Microempresarios
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="contact-item" data-ng-click="$ctrl.toggleMenu($ctrl.menuItems.PERSONS, $event)" role="button" tabindex="0">
+                    <div class="item-title clearfix">
+                        <span>PERSONAS</span> <i class="icon-bcs icon-contacts-1"></i>
+                    </div>
+                    <div class="item-content" data-ng-class="{ &#39;d-block&#39;: $ctrl.personsVisible }">
+                        <a href="#" data-ng-if="contact.category == $ctrl.contactCategory.URL" class="ng-binding ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-add-marker-1"></i>
+                                PUNTOS DE ATENCIÓN
+                            </a>
+                        </div><a href="#" data-ng-if="contact.category == $ctrl.contactCategory.URL" class="ng-binding ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-mail-sync"></i>
+                                CONTÁCTENOS
+                            </a>
+                        </div>
+                           <div data-ng-if="contact.category == $ctrl.contactCategory.PHONE" class="phonenumber-item ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-phone-1"></i>
+                                <span class="ng-binding">LÍNEA AMIGA:</span>
+                                <strong class="ng-binding">(601) 5426446</strong>
+                            </div>
+                        </div>
+                           <div data-ng-if="contact.category == $ctrl.contactCategory.PHONE" class="phonenumber-item ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-mobile-phone-2"></i>
+                                <span class="ng-binding">Línea Amiga Celular:</span>
+                                <strong class="ng-binding">#233</strong>
+                            </div>
+                        </div>
+                           <div data-ng-if="contact.category == $ctrl.contactCategory.PHONE" class="phonenumber-item ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-call-2"></i>
+                                <span class="ng-binding">Línea de Transparencia:</span>
+                                <strong class="ng-binding">01 8000 112288</strong>
+                            </div>
+                        </div><a href="#" data-ng-if="contact.category == $ctrl.contactCategory.URL" class="ng-binding ng-scope">
+                                <i data-ng-class="contact.icon" class="icon-bcs icon-receipt-4"></i>
+                                Servicios de Cobranzas
+                            </a>
+                        </div><!-- end ngIf: contact.section == $ctrl.menuItems.PERSONS --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- ngIf: contact.section == $ctrl.menuItems.PERSONS --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- ngIf: contact.section == $ctrl.menuItems.PERSONS --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- ngIf: contact.section == $ctrl.menuItems.PERSONS --><!-- end ngRepeat: contact in $ctrl.contacts --><!-- ngIf: contact.section == $ctrl.menuItems.PERSONS --><!-- end ngRepeat: contact in $ctrl.contacts -->
+                    </div>
+                </div>
+            </div>
+            <div class="main-icon">
+                <i class="icon-bcs icon-call-3"></i>
+            </div>
+        </div>
+        
+    </div>
+</ng-include>
+<script type="text/ng-template" id="#ext-bcs-pub-contact-us-ng/list.html">
+    <div class="ext-bcs-pub-contact-us-ng" data-ng-controller="PubContactUsController as $ctrl">
+        <div class="bcs-pub-contact-us" data-ng-mouseleave="$ctrl.businessVisible = false; $ctrl.personsVisible = false;">
+            <div class="clearfix" data-ng-click="$ctrl.toggleMenu($ctrl.menuItems.BUSINESS, $event)">
+                <div class="contact-item">
+                    <div class="item-title clearfix">
+                        <span>EMPRESAS</span><i class="icon-bcs icon-briefcase"></i>
+                    </div>
+                    <div class="item-content" data-ng-class="{ 'd-block': $ctrl.businessVisible }">
+                        <div data-ng-repeat="contact in $ctrl.contacts" data-ng-if="contact.section == $ctrl.menuItems.BUSINESS">
+                            <a href="{{contact.categoryvalue}}" data-ng-if="contact.category == $ctrl.contactCategory.URL">
+                                <i data-ng-class="contact.icon"></i>
+                                {{contact.contactname}}
+                            </a>
+                            <a href="mailto:{{contact.categoryvalue}}" data-ng-if="contact.category == $ctrl.contactCategory.EMAIL" class="contact-link">
+                                <i data-ng-class="contact.icon"></i>
+                                {{contact.contactname}}
+                            </a>
+                            <div data-ng-if="contact.category == $ctrl.contactCategory.PHONE" class="phonenumber-item">
+                                <i data-ng-class="contact.icon"></i>
+                                <span>{{contact.contactname}}:</span>
+                                <strong>{{contact.categoryvalue}}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="contact-item" data-ng-click="$ctrl.toggleMenu($ctrl.menuItems.PERSONS, $event)">
+                    <div class="item-title clearfix">
+                        <span>PERSONAS</span> <i class="icon-bcs icon-contacts-1"></i>
+                    </div>
+                    <div class="item-content" data-ng-class="{ 'd-block': $ctrl.personsVisible }">
+                        <div data-ng-repeat="contact in $ctrl.contacts" data-ng-if="contact.section == $ctrl.menuItems.PERSONS">
+                            <a href="{{contact.categoryvalue}}" data-ng-if="contact.category == $ctrl.contactCategory.URL">
+                                <i data-ng-class="contact.icon"></i>
+                                {{contact.contactname}}
+                            </a>
+                            <a href="mailto:{{contact.categoryvalue}}" data-ng-if="contact.category == $ctrl.contactCategory.EMAIL" class="contact-link">
+                                <i data-ng-class="contact.icon"></i>
+                                {{contact.contactname}}
+                            </a>
+                            <div data-ng-if="contact.category == $ctrl.contactCategory.PHONE" class="phonenumber-item">
+                                <i data-ng-class="contact.icon"></i>
+                                <span>{{contact.contactname}}:</span>
+                                <strong>{{contact.categoryvalue}}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-icon">
+                <i class="icon-bcs icon-call-3"></i>
+            </div>
+        </div>
+        
+    </div>
+</script></div></div></div></div><div class="bp-widget-foot"></div></div></main><footer id="footerElm" class=""><div class="bp-area --area bcs-pub-prefooter"><div data-pid="column-layout-5489198" class="row bp-container bp-ui-dragRoot lp-columns"><div class="bp-area col-sm-8 class1 --area"><div class="simple-box-layout list-container bp-container bp-ui-dragRoot bp-area --area" data-pid="container-box-8556200"><div data-pid="widget-bcs-pub-footer-interest-links-ng-2262284" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bcs-pub-footer-interest-links-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><!-- ngInclude: --><ng-include src="ext.helpers.template" class="ng-scope">
+  <div class="ext-bcs-pub-footer-interest-links-ng ng-scope" data-ng-controller="PubFooterInterestLinksController as $ctrl">
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.EXTERNAL --><div class="footer-bcs-links col-cell ng-scope" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.EXTERNAL">
+          <div class="row-table d-md-flex justify-content-center">
+              <!-- ngRepeat: external in $ctrl.interestLinks track by $index --><a class="bcs-external-links ng-scope" data-ng-repeat="external in $ctrl.interestLinks track by $index" data-ng-href="#" target="_blank" href="https://www.fundaciongruposocial.co/">
+                  <img data-ng-src="/portalserver/content/atom/8e90967b-ad1a-40cb-9a95-05a490dfcf90/content?id=1e398847-f36c-470f-967a-d8656160eb72" alt="Fundación Grupo Social" src="./documents/content">
+                  <span class="sr-only ng-binding">Fundación Grupo Social</span>
+              </a><!-- end ngRepeat: external in $ctrl.interestLinks track by $index --><a class="bcs-external-links ng-scope" data-ng-repeat="external in $ctrl.interestLinks track by $index" data-ng-href="#" target="_blank" href="#">
+                  <img data-ng-src="/portalserver/content/atom/8e90967b-ad1a-40cb-9a95-05a490dfcf90/content?id=8f08ed42-5261-4614-958c-912f68b1859e" alt="Suamigo" src="./documents/content(1)">
+                  <span class="sr-only ng-binding">Suamigo</span>
+              </a><!-- end ngRepeat: external in $ctrl.interestLinks track by $index --><a class="bcs-external-links ng-scope" data-ng-repeat="external in $ctrl.interestLinks track by $index" data-ng-href="#" target="_blank" href="#">
+                  <img data-ng-src="/portalserver/content/atom/8e90967b-ad1a-40cb-9a95-05a490dfcf90/content?id=dd58d31f-0ed9-4a3f-ac4d-6d9695be9568" alt="mipagoamigo" src="./documents/content(2)">
+                  <span class="sr-only ng-binding">mipagoamigo</span>
+              </a><!-- end ngRepeat: external in $ctrl.interestLinks track by $index --><a class="bcs-external-links ng-scope" data-ng-repeat="external in $ctrl.interestLinks track by $index" data-ng-href="https://amigosdelasfinanzas.com/" target="_blank" href="https://amigosdelasfinanzas.com/">
+                  <img data-ng-src="/portalserver/content/atom/8e90967b-ad1a-40cb-9a95-05a490dfcf90/content?id=9e1f1d8e-fe59-4825-b589-388d04a6e875" alt="#UnBuenVecinoLoAconseja" src="./documents/content(3)">
+                  <span class="sr-only ng-binding">#UnBuenVecinoLoAconseja</span>
+              </a><!-- end ngRepeat: external in $ctrl.interestLinks track by $index -->
+          </div>
+      </div><!-- end ngIf: $ctrl.widgetMode == $ctrl.widgetModes.EXTERNAL -->
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.SOCIAL -->
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.LEGAL -->
+  </div>
+</ng-include>
+<script type="text/ng-template" id="#ext-bcs-pub-footer-interest-links-ng/list.html">
+  <div class="ext-bcs-pub-footer-interest-links-ng" data-ng-controller="PubFooterInterestLinksController as $ctrl">
+      <div class="footer-bcs-links col-cell" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.EXTERNAL">
+          <div class="row-table d-md-flex justify-content-center">
+              <a class="bcs-external-links" data-ng-repeat="external in $ctrl.interestLinks track by $index"
+                 data-ng-href="{{external.url}}"
+                 target="{{$ctrl.linksTarget}}">
+                  <img data-ng-src="{{external.imageWebUrl}}" alt="{{external.name}}">
+                  <span class="sr-only">{{external.name}}</span>
+              </a>
+          </div>
+      </div>
+      <div class="footer-social-links col-cell d-md-flex justify-content-center" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.SOCIAL">
+          <a data-ng-repeat="social in $ctrl.interestLinks track by $index"
+             data-ng-href="{{social.url}}"
+             target="_blank">
+              <i class="{{social.icon}}" data-ng-class="{ 'icon-bcs': !ext.helpers.isFontAwesomeClass(social.icon), 'fab': ext.helpers.isFontAwesomeClass(social.icon) }"></i>
+              <span class="sr-only">{{ext.helpers.isFontAwesomeClass(social.icon)}} {{social.name}}</span>
+          </a>
+      </div>
+      <div class="footer-legal-links col-cell d-md-flex justify-content-center" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.LEGAL">
+          <div data-ng-repeat="legal in $ctrl.interestLinks track by $index">
+              <a data-ng-href="{{legal.url}}">{{legal.name}}</a>
+          </div>
+      </div>
+  </div>
+</script></div></div></div></div><div class="bp-widget-foot"></div></div></div></div><div class="bp-area col-sm-4 class2 --area"><div class="simple-box-layout list-container bp-container bp-ui-dragRoot bp-area --area" data-pid="container-box-6194968"><div data-pid="widget-bcs-pub-footer-interest-links-ng-8323412" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bcs-pub-footer-interest-links-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><!-- ngInclude: --><ng-include src="ext.helpers.template" class="ng-scope">
+  <div class="ext-bcs-pub-footer-interest-links-ng ng-scope" data-ng-controller="PubFooterInterestLinksController as $ctrl">
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.EXTERNAL -->
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.SOCIAL --><div class="footer-social-links col-cell d-md-flex justify-content-center ng-scope" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.SOCIAL">
+          <!-- ngRepeat: social in $ctrl.interestLinks track by $index --><a data-ng-repeat="social in $ctrl.interestLinks track by $index" data-ng-href="CajaSocial" target="_blank" class="ng-scope" href="http://www.facebook.com/CajaSocial">
+              <i class="icon-bcs icon-facebook" data-ng-class="{ &#39;icon-bcs&#39;: !ext.helpers.isFontAwesomeClass(social.icon), &#39;fab&#39;: ext.helpers.isFontAwesomeClass(social.icon) }"></i>
+              <span class="sr-only ng-binding">false Facebook</span>
+          </a><!-- end ngRepeat: social in $ctrl.interestLinks track by $index --><a data-ng-repeat="social in $ctrl.interestLinks track by $index" data-ng-href="cajasocial" target="_blank" class="ng-scope" href="https://twitter.com/cajasocial">
+              <i class="icon-bcs icon-twitter" data-ng-class="{ &#39;icon-bcs&#39;: !ext.helpers.isFontAwesomeClass(social.icon), &#39;fab&#39;: ext.helpers.isFontAwesomeClass(social.icon) }"></i>
+              <span class="sr-only ng-binding">false Twitter</span>
+          </a><!-- end ngRepeat: social in $ctrl.interestLinks track by $index --><a data-ng-repeat="social in $ctrl.interestLinks track by $index" data-ng-href="CajaSocial" target="_blank" class="ng-scope" href="https://www.youtube.com/user/CajaSocial">
+              <i class="icon-bcs icon-youtube" data-ng-class="{ &#39;icon-bcs&#39;: !ext.helpers.isFontAwesomeClass(social.icon), &#39;fab&#39;: ext.helpers.isFontAwesomeClass(social.icon) }"></i>
+              <span class="sr-only ng-binding">false Youtube</span>
+          </a><!-- end ngRepeat: social in $ctrl.interestLinks track by $index --><a data-ng-repeat="social in $ctrl.interestLinks track by $index" data-ng-href="#" target="_blank" class="ng-scope" href="https://www.linkedin.com/company/-caja-social/?viewAsMember=true">
+              <i class="icon-bcs icon-LinkedIn" data-ng-class="{ &#39;icon-bcs&#39;: !ext.helpers.isFontAwesomeClass(social.icon), &#39;fab&#39;: ext.helpers.isFontAwesomeClass(social.icon) }"></i>
+              <span class="sr-only ng-binding">false LinkedIn</span>
+          </a><!-- end ngRepeat: social in $ctrl.interestLinks track by $index --><a data-ng-repeat="social in $ctrl.interestLinks track by $index" data-ng-href="cocajasocial/" target="_blank" class="ng-scope" href="https://www.instagram.com/cajasocial/">
+              <i class="icon-bcs icon-Instagram" data-ng-class="{ &#39;icon-bcs&#39;: !ext.helpers.isFontAwesomeClass(social.icon), &#39;fab&#39;: ext.helpers.isFontAwesomeClass(social.icon) }"></i>
+              <span class="sr-only ng-binding">false Instagram</span>
+          </a><!-- end ngRepeat: social in $ctrl.interestLinks track by $index -->
+      </div><!-- end ngIf: $ctrl.widgetMode == $ctrl.widgetModes.SOCIAL -->
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.LEGAL -->
+  </div>
+</ng-include>
+<script type="text/ng-template" id="#ext-bcs-pub-footer-interest-links-ng/list.html">
+  <div class="ext-bcs-pub-footer-interest-links-ng" data-ng-controller="PubFooterInterestLinksController as $ctrl">
+      <div class="footer-bcs-links col-cell" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.EXTERNAL">
+          <div class="row-table d-md-flex justify-content-center">
+              <a class="bcs-external-links" data-ng-repeat="external in $ctrl.interestLinks track by $index"
+                 data-ng-href="{{external.url}}"
+                 target="{{$ctrl.linksTarget}}">
+                  <img data-ng-src="{{external.imageWebUrl}}" alt="{{external.name}}">
+                  <span class="sr-only">{{external.name}}</span>
+              </a>
+          </div>
+      </div>
+      <div class="footer-social-links col-cell d-md-flex justify-content-center" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.SOCIAL">
+          <a data-ng-repeat="social in $ctrl.interestLinks track by $index"
+             data-ng-href="{{social.url}}"
+             target="_blank">
+              <i class="{{social.icon}}" data-ng-class="{ 'icon-bcs': !ext.helpers.isFontAwesomeClass(social.icon), 'fab': ext.helpers.isFontAwesomeClass(social.icon) }"></i>
+              <span class="sr-only">{{ext.helpers.isFontAwesomeClass(social.icon)}} {{social.name}}</span>
+          </a>
+      </div>
+      <div class="footer-legal-links col-cell d-md-flex justify-content-center" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.LEGAL">
+          <div data-ng-repeat="legal in $ctrl.interestLinks track by $index">
+              <a data-ng-href="{{legal.url}}">{{legal.name}}</a>
+          </div>
+      </div>
+  </div>
+</script></div></div></div></div><div class="bp-widget-foot"></div></div></div></div></div></div><div class="bcs-pub-main-footer"><div class="bp-area --area bcs-pub-footer-sfc-logo"><div class="simple-box-layout box-container-custom bp-container bp-ui-dragRoot bp-area --area" data-pid="container-box-8839713"><div data-pid="CXPContentWidget-1429032" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body be-ice-widget-rendered">
+    <div class="bp-g-include" proxy="false" src="$(contextRoot)/contenttemplates/rendered"><div class="be-ex-image-only">
+    <img src="./documents/logo_vigilado_super.svg" alt="Logo Superintendencia Financiera de Colombia" title="Logo Superintendencia Financiera de Colombia">
+</div></div></div></div><div class="bp-widget-foot"></div></div></div></div><div class="bp-area --area bcs-pub-footer-sections"><div data-pid="column-layout-3549057" class="row bp-container bp-ui-dragRoot lp-columns"><div class="bp-area col-sm-4 footer-list --area"><div class="simple-box-layout list-container bp-container bp-ui-dragRoot bp-area --area" data-pid="container-box-5313813"><div data-pid="CXPNavigationWidget-3994343" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body">
+    <div class="bp-g-model" objecttype="link" renderer="advancedNav">    <span class="section-title">Información corporativa</span>
+    
+        <ul class="nav navbar-nav">
+                 <li>
+        <a href="#" title="Acerca de nosotros" class="dropdown-toggle">
+            <i class="icon-bcs icon-information"></i>Acerca de nosotros
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Información para inversionistas" class="dropdown-toggle">
+            <i class="icon-bcs icon-book-6"></i>Información para inversionistas
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Tasas, precios y comisiones" class="dropdown-toggle">
+            <i class="icon-bcs icon-bank-1"></i>Tasas, precios y comisiones
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Investigaciones" class="dropdown-toggle">
+            <i class="icon-bcs icon-file-graph-2"></i>Investigaciones
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Sala de Prensa " class="dropdown-toggle">
+            <i class="icon-bcs icon-bcs icon-newspaper-2"></i>Sala de Prensa 
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Información adicional" class="dropdown-toggle">
+            <i class="icon-bcs icon-books-3"></i>Información adicional
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Trabaje con nosotros" class="dropdown-toggle">
+            <i class="icon-bcs icon-bcs icon-briefcase-2"></i>Trabaje con nosotros
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Transparencia y acceso a la  información pública " class="dropdown-toggle">
+            <i class="icon-bcs icon-bcs icon-files-5"></i>Transparencia y acceso a la  información pública 
+        </a>
+    </li>
+ 
+        </ul>
+    
+</div></div></div><div class="bp-widget-foot"></div></div></div></div><div class="bp-area col-sm-4 footer-list --area"><div class="simple-box-layout list-container bp-container bp-ui-dragRoot bp-area --area" data-pid="container-box-3378999"><div data-pid="CXPNavigationWidget-3980871" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body">
+    <div class="bp-g-model" objecttype="link" renderer="advancedNav">    <span class="section-title">Información de interés</span>
+    
+        <ul class="nav navbar-nav">
+                 <li>
+        <a href="#" title="Defensor del Consumidor Financiero" class="dropdown-toggle">
+            <i class="icon-bcs icon-bcs icon-court"></i>Defensor del Consumidor Financiero
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Servicio – Atención al Consumidor Financiero" class="dropdown-toggle">
+            <i class="icon-bcs icon-bcs icon-contacts-1"></i>Servicio – Atención al Consumidor Financiero
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Superintendencia Financiera de Colombia" class="dropdown-toggle">
+            <i class="icon-bcs icon-building-3"></i>Superintendencia Financiera de Colombia
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Información legal" class="dropdown-toggle">
+            <i class="icon-bcs icon-bookmark-1-1"></i>Información legal
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Preguntas frecuentes" class="dropdown-toggle">
+            <i class="icon-bcs icon-question-mark"></i>Preguntas frecuentes
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Tutoriales Canales Digitales" class="dropdown-toggle">
+            <i class="icon-bcs icon-folder-bookmark"></i>Tutoriales Canales Digitales
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Mapa del Sitio" class="dropdown-toggle">
+            <i class="icon-bcs icon-map-location"></i>Mapa del Sitio
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Términos y condiciones de uso de internet" class="dropdown-toggle">
+            <i class="icon-bcs icon-bcs icon-script"></i>Términos y condiciones de uso de internet
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Entre Amigos" class="dropdown-toggle">
+            <i class="icon-bcs icon-bcs icon-contacts-2"></i>Entre Amigos
+        </a>
+    </li>
+ 
+        </ul>
+    
+</div></div></div><div class="bp-widget-foot"></div></div></div></div><div class="bp-area col-sm-4 footer-list --area"><div class="simple-box-layout list-container bp-container bp-ui-dragRoot bp-area --area" data-pid="container-box-5063046"><div data-pid="CXPNavigationWidget-8296822" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body">
+    <div class="bp-g-model" objecttype="link" renderer="advancedNav">    <span class="section-title">Directorio</span>
+    
+        <ul class="nav navbar-nav">
+                 <li>
+        <a href="#" title="Ubíquenos" class="dropdown-toggle">
+            <i class="icon-bcs icon-marker-1"></i>Ubíquenos
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Directorios alternos" class="dropdown-toggle">
+            <i class="icon-bcs icon-call-3"></i>Directorios alternos
+        </a>
+    </li>
+      <li>
+        <a href="#" title="Contáctenos" class="dropdown-toggle">
+            <i class="icon-bcs icon-mail-1"></i>Contáctenos
+        </a>
+    </li>
+ 
+        </ul>
+    
+</div></div></div><div class="bp-widget-foot"></div></div><div data-pid="CXPContentWidget-7954501" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body be-ice-widget-rendered">
+    <div class="bp-g-include" proxy="false" src="$(contextRoot)/contenttemplates/rendered"><div class="be-ex-article">
+    
+    <div>
+        
+    </div>
+    
+    
+    <img class="be-ice-hide-image">
+    
+    <div class="be-ex-title"> Caja Social</div>
+    
+    
+    
+    <div class="be-ex-content"><p>Carrera 7 # 77-65 Bogotá - Colombia<br>Línea Amiga: (601) 542 6446<br>Resto del país: 01 8000 910 038<br>Celular: #233<br>Línea Transparencia: 01 8000 112288<br></p></div>
+    
+    <p class="be-ex-readmore">
+        
+    </p>
+</div>
+</div></div></div><div class="bp-widget-foot"></div></div></div></div></div></div></div><div class="bp-area --area bcs-pub-post-footer"><div data-pid="column-layout-8853719" class="row bp-container bp-ui-dragRoot lp-columns"><div class="bp-area col-sm-4 --area"><div class="simple-box-layout copyright-container bp-container bp-ui-dragRoot bp-area --area" data-pid="container-box-5866699"><div data-pid="CXPContentWidget-8226565" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body be-ice-widget-rendered">
+    <div class="bp-g-include" proxy="false" src="$(contextRoot)/contenttemplates/rendered"><div class="be-ex-article-vertical">
+    <div class="be-ex-headline red"></div>
+    <div class="be-ex-body-copy">Copyright © 2018  Caja Social</div>
+    <a class="be-ex-link-text"></a>
+</div></div></div></div><div class="bp-widget-foot"></div></div></div></div><div class="bp-area col-sm-4 --area"><div data-pid="CXPContentWidget-4210163" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body be-ice-widget-rendered">
+    <div class="bp-g-include" proxy="false" src="$(contextRoot)/contenttemplates/rendered"><div class="be-ex-image-only">
+    <img src="./documents/Logo.svg" alt="logo" title="Logo  Caja Social">
+</div></div></div></div><div class="bp-widget-foot"></div></div></div><div class="bp-area col-sm-4 --area"><div data-pid="widget-bcs-pub-footer-interest-links-ng-6514591" class="bp-widget bp-ui-dragRoot"><div class="bp-widget-head"></div><div class="bp-widget-pref"></div><div class="bp-widget-body ng-scope"><div g:onload="BB.Widget.ngStart(__WIDGET__);"><div class="widget-bcs-pub-footer-interest-links-ng"><div class="bp-g-include" local="true" src="$(contextRoot)/static/features/%5BBBHOST%5D/${extension}/templates/template.ng.html"><!-- ngInclude: --><ng-include src="ext.helpers.template" class="ng-scope">
+  <div class="ext-bcs-pub-footer-interest-links-ng ng-scope" data-ng-controller="PubFooterInterestLinksController as $ctrl">
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.EXTERNAL -->
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.SOCIAL -->
+      <!-- ngIf: $ctrl.widgetMode == $ctrl.widgetModes.LEGAL --><div class="footer-legal-links col-cell d-md-flex justify-content-center ng-scope" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.LEGAL">
+          <!-- ngRepeat: legal in $ctrl.interestLinks track by $index --><div data-ng-repeat="legal in $ctrl.interestLinks track by $index" class="ng-scope">
+              <a data-ng-href="#" class="ng-binding" href="#">Política de Datos Personales</a>
+          </div><!-- end ngRepeat: legal in $ctrl.interestLinks track by $index -->
+      </div><!-- end ngIf: $ctrl.widgetMode == $ctrl.widgetModes.LEGAL -->
+  </div>
+</ng-include>
+<script type="text/ng-template" id="#ext-bcs-pub-footer-interest-links-ng/list.html">
+  <div class="ext-bcs-pub-footer-interest-links-ng" data-ng-controller="PubFooterInterestLinksController as $ctrl">
+      <div class="footer-bcs-links col-cell" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.EXTERNAL">
+          <div class="row-table d-md-flex justify-content-center">
+              <a class="bcs-external-links" data-ng-repeat="external in $ctrl.interestLinks track by $index"
+                 data-ng-href="{{external.url}}"
+                 target="{{$ctrl.linksTarget}}">
+                  <img data-ng-src="{{external.imageWebUrl}}" alt="{{external.name}}">
+                  <span class="sr-only">{{external.name}}</span>
+              </a>
+          </div>
+      </div>
+      <div class="footer-social-links col-cell d-md-flex justify-content-center" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.SOCIAL">
+          <a data-ng-repeat="social in $ctrl.interestLinks track by $index"
+             data-ng-href="{{social.url}}"
+             target="_blank">
+              <i class="{{social.icon}}" data-ng-class="{ 'icon-bcs': !ext.helpers.isFontAwesomeClass(social.icon), 'fab': ext.helpers.isFontAwesomeClass(social.icon) }"></i>
+              <span class="sr-only">{{ext.helpers.isFontAwesomeClass(social.icon)}} {{social.name}}</span>
+          </a>
+      </div>
+      <div class="footer-legal-links col-cell d-md-flex justify-content-center" data-ng-if="$ctrl.widgetMode == $ctrl.widgetModes.LEGAL">
+          <div data-ng-repeat="legal in $ctrl.interestLinks track by $index">
+              <a data-ng-href="{{legal.url}}">{{legal.name}}</a>
+          </div>
+      </div>
+  </div>
+<noscript><img height="1" width="1" style="display:none" src="#"></noscript>
+<noscript><img height="1" width="1" style="display:none" src="#"></noscript>
+</body></html>

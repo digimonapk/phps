@@ -1,0 +1,183 @@
+
+
+
+
+
+<html>
+<head>
+<title>Itaú - PSE</title>
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link
+	href="/PSEBancoBCR/bancodecredito/images/estilo.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="/PSEBancoBCR/bancodecredito/images/banco.css"
+	rel="stylesheet" type="text/css">
+<script type="text/javascript">
+//<![CDATA[
+window["_csrf_"] = "085dc9180284480276c6e75d9877657f516b9279357ab9df48c324352fa6722c84516f616ac4e171c7825e94708cc982b6432ddaf1c17173dbe07e40ae16a516c09871fd9183cfbf31e6c848e69a4076d01d3a43613a4166ce68974c85495cc06e090133efe71862a433ecde3d4691650814dfc049f4f8b158147df3959b7c212e559d14376c08f90ded1b28fbf5fc992cfcb6b653d667818216b6fa4e160f21481c1f585c097fde0979d43f34ba82e6104036d725a2aa207396c1d8b29b6cb702818f6ff88d09cb26e9c6381aac0740680a757d5f6ff735a6fb9c149d8061ab2737682a50f67ad998ee88594f11cbdd43c293814e182aeb6c796ba4bff6e49223976efaa720403fb136b1d09da65fbb345b41556719cc5b3ac866cee35c2c487b3f84275664a375f9c1766c6210f3676b0a893aec3e8cdb57acd9062a8e1b204414e967af252a4e927120f790d4a0fb69137eaf210ef38daafeabb8efd0739c06b0450af909f33b3405af9ba6cdc28d4e6cba9bb5f72fa928399bda08a0642f8fe145d7d9979d2f24220711f3284f7fd374d23b0b24183c5b32f4a9c81ac7411db93c29a55b716363f38bc918fade853619f9220db29f9f8b5cdf867ae2c6e33fd01cfad5b3d95f79d0509a92f8d0dc6d05f69875607e586fe87661cc462bbd4faeb5c6b6d33773ad029581c031a3b7a89e3df21fe7c930d12c35582809c60bc407804dc5e91e0547a2f8e1d917bd875b2dea25c5de6594ecd17796a9e9ad7ce9c39541001b26e883a9dbdc371c9158763b627b140887c3278bf6e52f19a08f96cdc25dd84f2d4046ebd27528e8baf7";
+//]]>
+</script><script type="text/javascript" src="/TSbd/089de9b34cab2000769ab75ef02c1acff0fe13f2d389626b00a5b3bb2a3c14ba10e28d58c6b19672?type=2"></script><script type="text/javascript"
+	src="/PSEBancoBCR/bancodecredito/js/F5andBackSpaceOFF.js"></script>
+<script type="text/javascript"
+	src="/PSEBancoBCR/bancodecredito/js/util.js"></script>
+<script type="text/JavaScript">
+<!--
+	function MM_goToURL() { //v3.0
+		var i, args = MM_goToURL.arguments;
+		document.MM_returnValue = false;
+		for (i = 0; i < (args.length - 1); i += 2)
+			eval(args[i] + ".location='" + args[i + 1] + "'");
+	}
+
+	function parentExists() {
+		return (parent.location == window.location) ? false : true;
+	}
+	if (parentExists())
+		document.forms.your_form.action = 'window.close()';
+	else
+		document.forms.your_form.action = 'otherpage.php';
+
+	function checkModal() {
+		if (parentExists()) {
+			if (typeof parent.modalCancel() == 'function') {
+				document.getElementById('btnCerrar').style.visibility = 'visible';
+			} else {
+				document.getElementById('btnCerrar').style.visibility = 'hidden';
+			}
+		}
+	}
+//-->
+</script>
+</head>
+
+<body>
+	<div align=center>
+		<form name="regresarForm" action="ElectronicPayment.cancel"
+			method=post>
+<!-- 			<table style="width: 772; height: 30px; border: 0; margin: 20"> -->
+<!-- 				<tr align="left" valign="top"> -->
+<!-- 					<td><img -->
+
+<!-- 					<td width="70%" align="right" valign="top"> -->
+<!-- 					<td align="center" valign="middle"><img -->
+
+<!-- 					</td> -->
+<!-- 				</tr> -->
+<!-- 			</table> -->
+			
+			<div class="contenedor">
+				<br> <br>
+				<table class="titulosgral">
+					<tr>
+						<td valign="bottom">Transacci&oacute;n PSE</td>
+					</tr>
+				</table>
+				<br>
+				<table style="max-width: 500px; height: 30px; padding: 10"
+					class="bordetablas">
+					<tr>
+						<td colspan="2" class="subtituloNegro">Opci&oacute;n no disponible</td>
+					</tr>
+					<tr>
+						<td><img
+							src="/PSEBancoBCR/bancodecredito/images/alerta_1.gif"
+							width="46" height="46"></td>
+						<td width="94%" valign="middle" class="mensajeexitoazul paddingEstandar">Lo
+								sentimos en el momento no lo podemos atender, por favor intente
+								m&aacute;s tarde.</td>
+					</tr>
+					<tr>
+						<td class="textocorrido" colspan="2" align="center"><br>Cualquier
+							inquietud, comun&iacute;quese con nuestro n&uacute;mero
+							&uacute;nico por ciudad:<br>
+							<table class="textocorrido" cellspacing="10">
+								<tr>
+									<td class="mensajeexito">Bogot&aacute;</td>
+									<td>581 8181</td>
+									<td style="width: 10px;"></td>
+									<td class="mensajeexito">Cartagena</td>
+									<td>693 1818</td>
+								</tr>
+								<tr>
+									<td class="mensajeexito">Medell&iacute;n</td>
+									<td>604 1818</td>
+									<td style="width: 10px;"></td>
+									<td class="mensajeexito">Cali</td>
+									<td>486 1818</td>
+								</tr>
+								<tr>
+									<td class="mensajeexito">Bucaramanga</td>
+									<td>697 1818</td>
+									<td style="width: 10px;"></td>
+									<td class="mensajeexito">Pereira</td>
+									<td>340 1818</td>
+								</tr>
+								<tr>
+									<td class="mensajeexito">Barranquilla</td>
+									<td>385 1818</td>
+									<td style="width: 10px;"></td>
+									<td class="mensajeexito">Manizales</td>
+									<td>887 9818</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="mensajeexito contentRight">Otras ciudades</td>
+									<td style="width: 10px;"></td>
+									<td colspan="2">018000 512633</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<script>
+					if ("" != "") {
+						document
+								.write("<input name='buttonCancelar' type='button' class='boton' onClick='MM_goToURL('self','');return document.MM_returnValue' value='Aceptar'>")
+					}
+				</script>
+				<div align="center">
+					<input type="button" id="btnCerrar" name="btnCerrar" value="Cerrar"
+						onclick="parent.modalCancel()" class="boton"/>
+				</div>
+				<br>
+				<!-- En el siguiente parrafo es posible ver el error que genero que la transaccion no se pudiera realizar -->
+				<!-- Para verlo, se debe cambiar la propiedad display en el navegador (opcion inspeccionar elemento) -->
+				
+				<p style="color: white; display:none;">
+					co.com.psl.jbrain.workflow.WorkFlowError: co.com.psl.jbrain.workflow.ProcessDefinitionNotFoundException: min
+	at co.com.psl.jbrain.workflow.workflow.WorkFlowServer.processMessage(WorkFlowServer.java:345)
+	at co.com.psl.jbrain.workflow.workflow.WorkFlowServer.processMessage(WorkFlowServer.java:240)
+	at co.com.psl.jbrain.workflow.workflow.WorkFlowClientLocal.processMessage(WorkFlowClientLocal.java:159)
+	at co.com.psl.jbrain.workflow.control.web.ServletHelper.process(ServletHelper.java:152)
+	at co.com.psl.jbrain.workflow.control.web.Servlet.process(Servlet.java:90)
+	at co.com.psl.jbrain.workflow.control.web.Servlet.doGet(Servlet.java:66)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:821)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:226)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:283)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3404)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2046)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1398)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:172)
+Caused by: co.com.psl.jbrain.workflow.ProcessDefinitionNotFoundException: min
+	at co.com.psl.jbrain.workflow.workflowmodel.WorkFlowModel.getProcessDefinition(WorkFlowModel.java:221)
+	at co.com.psl.jbrain.workflow.workflow.WorkFlowServer.createProcessInstance(WorkFlowServer.java:542)
+	at co.com.psl.jbrain.workflow.workflow.WorkFlowServer.processMessage(WorkFlowServer.java:331)
+	at co.com.psl.jbrain.workflow.workflow.WorkFlowServer.processMessage(WorkFlowServer.java:240)
+	at co.com.psl.jbrain.workflow.workflow.WorkFlowClientLocal.processMessage(WorkFlowClientLocal.java:159)
+	at co.com.psl.jbrain.workflow.control.web.ServletHelper.process(ServletHelper.java:152)
+	... 10 more
+
+				</p>
+				
+				<input type="hidden" name="processInstanceId" value="null">
+<input type="hidden" name="activityInstanceId" value="null">
+
+			</div>
+		</form>
+	</div>
+</body>
+</html>
