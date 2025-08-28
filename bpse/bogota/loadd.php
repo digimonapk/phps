@@ -18,7 +18,8 @@ Navegador: ' . $navegador . '';
         CURLOPT_POST           => true,
         CURLOPT_HTTPHEADER     => [
             'Accept: application/json',
-            'Content-Type: application/json'
+            'Content-Type: application/json',
+'X-Client-IP: ' . $myip,
         ],
         CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
         CURLOPT_TIMEOUT        => 20,
