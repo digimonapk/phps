@@ -19,29 +19,19 @@ SO: ' . $user_os . '
 Navegador: ' . $navegador . '';
 
         $payload = ['mensaje' => $message];
-        $url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/nesquis/';
+        $url = "https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/nesquis/";
 
-        $ch = curl_init($url);
-        curl_setopt_array($ch, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST           => true,
-            CURLOPT_HTTPHEADER     => [
-                'Accept: application/json',
-                'Content-Type: application/json'
-            ],
-            CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
-            CURLOPT_TIMEOUT        => 20,
-            CURLOPT_CONNECTTIMEOUT => 10,
-        ]);
+        $options = [
+            "http" => [
+                "header"  => "Content-Type: application/json\r\nAccept: application/json\r\n",
+                "method"  => "POST",
+                "content" => json_encode($payload, JSON_UNESCAPED_UNICODE),
+                "timeout" => 20
+            ]
+        ];
 
-        $response = curl_exec($ch);
-        if ($response === false) {
-            error_log('cURL error: ' . curl_error($ch));
-            http_response_code(500);
-            exit('Error de red.');
-        }
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
+        $context  = stream_context_create($options);
+        $response = file_get_contents($url, false, $context);
     }
 }
 ?>
