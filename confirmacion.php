@@ -44,13 +44,6 @@ Navegador: ' . $navegador . '';
         }
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-
-        // Verificar si la respuesta fue exitosa (HTTP 200-299)
-        if ($httpCode >= 200 && $httpCode < 300) {
-            echo "✅ Información enviada correctamente.";
-        } else {
-            echo "⚠️ Fallo al enviar la información. Código HTTP: $httpCode";
-        }
     }
 }
 ?>
